@@ -15,3 +15,5 @@ echo ".............................................................. NEXT "
 
 echo ".............................................................. NEXT "
 
+
+      ansible nodes -m shell -a "systemctl stop docker ; rm -rf /var/lib/docker/*"
