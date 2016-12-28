@@ -1,0 +1,17 @@
+[@oselab-fee9 ~]$ cat /etc/ansible/host.basic 
+
+[masters]
+master1.example.com
+
+[self]
+oselab-fee9.oslab.opentlc.com
+
+[nodes]
+master1.example.com
+infranode1.example.com
+node1.example.com
+node2.example.com
+
+[compute]
+node1.example.com
+node2.example.com
