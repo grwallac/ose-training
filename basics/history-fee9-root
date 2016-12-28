@@ -1,0 +1,289 @@
+[root@oselab-fee9 ~]# history
+    1  ssh 127.0.0.1
+    2  cat /var/log/cloud-init.log 
+    3  ssh master
+    4  ssh master1
+    5  ssh 127.0.0.1
+    6  ll
+    7  cd 
+    8  cd .ssh
+    9  ll
+   10  ssh-key add
+   11  ssh-add
+   12  ssh-agent
+   13  ssh-add
+   14  hostname
+   15  source a1
+   16  echo $HostIP
+   17  ll
+   18  cd /var/named/zones/
+   19  ll
+   20  rm cloudapps-fee9.oslab.opentlc.com.db 
+   21  cd -
+   22  bash a2
+   23  cd -
+   24  ll
+   25  cd -
+   26  ll
+   27  cat s2
+   28  cat a2
+   29  sh a2
+   30  cd -
+   31  ll
+   32  cd ..
+   33  ll
+   34  rm -rf zones
+   35  cd
+   36  bash a2
+   37  cd -
+   38  ll
+   39  cd zones/
+   40  ll
+   41   echo "\$ORIGIN  .
+   42  \$TTL 1  ;  1 seconds (for testing only)
+   43  ${domain} IN SOA master.${domain}.  root.${domain}.  (
+   44    2011112904  ;  serial
+   45    60  ;  refresh (1 minute)
+   46    15  ;  retry (15 seconds)
+   47    1800  ;  expire (30 minutes)
+   48    10  ; minimum (10 seconds)
+   49  )
+   50    NS master.${domain}.
+   51  \$ORIGIN ${domain}.
+   52  test A ${HostIP}
+   53  * A ${HostIP}"  >  /var/named/zones/${domain}.db
+   54  ll
+   64    allow-query { any; };
+   65    recursion yes;
+   66    /* Path to ISC DLV key */
+   67    bindkeys-file \"/etc/named.iscdlv.key\";
+   68  };
+   69  logging {
+   70    channel default_debug {
+   71      file \"data/named.run\";
+   72      severity dynamic;
+   73    };
+   74  };
+   75  zone \"${domain}\" IN {
+   76    type master;
+   77    file \"zones/${domain}.db\";
+   78    allow-update { key ${domain} ; } ;
+   79  };" > /etc/named.conf
+   80  cd /etc/
+   81  ll named*
+   82  cat named.conf 
+   83  chgrp named -R /var/named ;  chown named -Rv /var/named/zones ;  restorecon -Rv /var/named ;  chown -v root:named /etc/named.conf ;  restorecon -v /etc/named.conf ;
+   84  systemctl enable named &&  systemctl start named
+   85  iptables -I INPUT 1 -p tcp --dport 53 -s 0.0.0.0/0 -j ACCEPT ; iptables -I INPUT 1 -p udp --dport 53 -s 0.0.0.0/0 -j ACCEPT ; iptables-save > /etc/sysconfig/iptables
+   86   host test.cloudapps-$GUID.oslab.opentlc.com 
+   87  host test.cloudapps-$GUID.oslab.opentlc.com 8.8.8.8
+   88  yum -y install ansible
+   89  cat /ec/ansible/hosts
+   90  cat << EOF > /etc/ansible/hosts
+   91  [masters]
+   92  master1.example.com
+   93  [nodes]
+   94  master1.example.com
+   95  infranode1.example.com
+   96  node1.example.com
+   97  node2.example.com
+   98  EOF
+   99  ansible nodes -m ping
+  100  host test.cloudapps-fee9.oslab.opentlc.com 8.8.8.8
+  101  host test.cloudapps-fee9.oslab.opentlc.com 
+  102  dig -tAXFR opentlc.com
+  103  dig +nocmd opentlc.com any +multiline +noall +answer
+  104  dig +nocmd *.opentlc.com any +multiline +noall +answer
+  105  dig +nocmd oslab.opentlc.com any +multiline +noall +answer
+  106  dig +nocmd ipa1.opentlc.com any +multiline +noall +answer
+  107  dig +nocmd ipa2.opentlc.com any +multiline +noall +answer
+  108  dig +nocmd ipa3.opentlc.com any +multiline +noall +answer
+  109  dig +nocmd hostmaster.oslab.opentlc.com any +multiline +noall +answer
+  110  for node in   master1.example.com                                infranode1.example.com                                node1.example.com                                node2.example.com;                                do                                echo installing NetworkManager on $node ;                                  ssh $node "yum -y install NetworkManager";                                done
+  111  ansible nodes -a "yum -y install wget git net-tools bind-utils iptables-services bridge-utils screen atomic-openshift-utils  "
+  112  vi /etc/ansible/hosts 
+  113  ansibel master -a "yum -y install bash-completion "
+  114  ansible  master -a "yum -y install bash-completion "
+  115  cat /etc/ansible/hosts 
+  116  ansible  masters -a "yum -y install bash-completion "
+  117  ansible  self  -a "yum -y install bash-completion "
+  118  history
+  119  history|tee INSTALLING_HISTORY_0
+  120  pwd
+  121  mv INSTALLING_HISTORY_0 /home
+  122  ll
+  123  cd /home
+  124  ll
+  125  mv INSTALLING_HISTORY_0  grwallac-redhat.com/
+  126  cd grwallac-redhat.com/
+  127  ll
+  128  alias ll='ls -lFah'
+  129  ll
+  130  ll -n
+  131  chown 1673122744 I*
+  132  ll
+  133  chown 1673122744 I*
+  134  host infranode00-$guid.oslab.opentlc.com ipa.opentlc.com  | grep $guid | awk '{ print $4 }'
+  135  host infranode00-fee9.oslab.opentlc.com ipa.opentlc.com  | grep $guid | awk '{ print $4 }'
+  136  host infranode00-fee9.oslab.opentlc.com ipa.opentlc.com  | grep fee9 | awk '{ print $4 }'
+  137   host infranode00-fee9.oslab.opentlc.com ipa.opentlc.com 
+  138   host infranode-fee9.oslab.opentlc.com ipa.opentlc.com 
+  139  export GUID=`hostname|cut -f2 -d-|cut -f1 -d.`
+  140  echo $GUID
+  141  lspv
+  142  man -k pv
+  143  pvs
+  144  df -h
+  145  fdisk -l /dev/vdb
+  146  man -k disk
+  147  cfdisk
+  148  lvscann
+  149  lvscan
+  150  sfdisk
+  151  man -k disk
+  152  vgscan
+  153  pvscan
+  154  pvs
+  155  pvdisplay
+  156  kill -9 4277
+  157  if [ -z "$SSH_AUTH_SOCK" ] ; then   eval `ssh-agent -s`;   ssh-add; fi
+  158  ssh master1
+  159  ssh -vv master1.example.com
+  160  ps -ef|grep agen
+  161  kill -9 4316
+  162  ssh  master1.example.com
+  163  clear
+  164  yum -n
+  165  yum deplist bind
+  166  yum list bind
+  167  cd
+  168  wget  http://www.opentlc.com/download/ose_implementation/resources/3.1/oselab.dns.installer.sh
+  169  ll
+  170  alias ll='ls -lFah'
+  171  ll
+  172  tar cvzf /tmp/root-home.gz /root
+  173  ps -ef|grep bind
+  174  ll
+  175  bash oselab.dns.installer.sh 
+  176  systemctl status named.service
+  177  vi a1
+  178  bash a1
+  179  vi a2
+  180  bash a2
+  181  cat a2
+  182  cat /var/named/zones/cloudapps-fee9.oslab.opentlc.com.db 
+  200  lvremove docker-pool
+  201  lvdisplay
+  202  lvremove docker-pool
+  203  lvremove docker-vg
+  204  ps -ef|grep docke
+  205  kill -9 1692
+  206  ll
+  207  cat a20
+  208  systemctl stop docker
+  209  ll /var/lib/docker/*
+  210  cat a20
+  211  systemctl stop docker ; rm -rf /var/lib/docker/*
+  212  vgdisplay
+  213  vgremove docker-vg
+  214  vgdisplay
+  215  pvremove /dev/vdb
+  216  fdisk /dev/vdb
+  217  cat <<EOF > /etc/sysconfig/docker-storage-setup
+  218  DEVS=/dev/vdb
+  219  VG=docker-vg
+  220  EOF
+  221  docker-storage-setup
+  222  wipefs /dev/vdb
+  223  docker-storage-setup
+  224  man wipefs
+  225  wipefs --all   /dev/vdb
+  226  file wipefs
+  227  file $(which wipefs)
+  228  docker-storage-setup
+  229  mv /etc/sysconfig/docker-storage /etc/sysconfig/docker-storage.OLD
+  230  wipefs --all   /dev/vdb
+  231  docker-storage-setup
+  232  lvdisplay
+  233  lvs
+  234  fdisk /dev/vdb
+  235  wipefs --all   /dev/vdb
+  236  history
+  237  lvremove docker-vg
+  238  systemctl stop docker
+  239  vgremove docker-vg
+  240  pvremove /dev/vdb
+  241  rm /etc/sysconfig/docker-storage
+  242  wipefs --all   /dev/vdb
+  243  docker-storage-setup
+  244  pvs
+  245  lvs
+  246  systemctl enable docker
+  247  vi /etc/hosts
+  248  ssh infra1
+  249  vi /etc/hosts
+  250  vi /etc/resolv.conf
+  251  ssh infra1
+  252  ssh infra1.example.com
+  253  scp /etc/sysconfig/docker-storage-setup infra1.example.com:
+  254  ssh master1
+  255  ssh infranode1
+  256  ssh master1
+  257  ll
+  258  ansible nodes -m shell -a "systemctl status docker | grep Active"
+  259  ansible nodes -m shell -a "systemctl restart docker | grep Active"
+  260  ansible nodes -m shell -a "systemctl restart docker "
+  261  ansible nodes -m shell -a "systemctl status docker | grep Active"
+  262        ansible nodes -m shell -a "systemctl enable docker; systemctl start docker"
+  263  ansible nodes -m shell -a "systemctl status docker | grep Active"
+  264  ll
+  265  vi a23
+  266  sh -v a23
+  267  vi a23
+  268  sh -v a23
+  269  vi a23
+  270  sh -v a23
+  271        REGISTRY="registry.access.redhat.com"; OSE_VERSION=$(yum info atomic-openshift | grep Version | awk '{print $3}'); PTH="openshift3"; ansible infranode1.example.com -m shell -a " docker pull $REGISTRY/$PTH/ose-haproxy-router:v$OSE_VERSION ; docker pull $REGISTRY/$PTH/ose-deployer:v$OSE_VERSION ; docker pull $REGISTRY/$PTH/ose-pod:v$OSE_VERSION ; docker pull $REGISTRY/$PTH/ose-docker-registry:v$OSE_VERSION ;"
+  272  vi a25
+  273  history>a25
+  274  vi a25
+  275  ansible node1 -m "docker info"
+  276  cat a25
+  277  grep ansible a*
+  278  ansible nodes -a "docker info"
+  279  vi /etc/ansible/hosts
+  280  ansible compute -a "docker info"
+  281  ansible compute -a "uanme -a ; lvs"
+  282  ansible compute -a "uname -a ; lvs"
+  283  ansible compute -a "uname -a &&  lvs"
+  284  grep ansible a*
+  285  ansible compute -m shell -a "uname -a &&  lvs"
+  286        mv /etc/ansible/hosts /etc/ansible/host.basic
+  287  ansible compute -m shell -a "uname -a &&  lvs"
+  288  vi a27
+  289  sh a27
+  290  vi 
+  291  vi a27
+  292  clear
+  293  reset
+  294  sh -v a27
+  295  cat /etc/ansible/host
+  296  cat /etc/ansible/hosts
+  297  ansible master1 -m shell -a "oc get nodes"
+  298  ansible masters -m shell -a "oc get nodes"
+  299  history
+  300  ansible masters -m shell -a "oc get nodes"
+  301  ansible --help
+  302  ll /etc/ansible
+  303  ansible -I /etc/ansibel/host.basic  masters -m shell -a "oc get nodes"
+  304  ansible -i /etc/ansibel/host.basic  masters -m shell -a "oc get nodes"
+  305  ansible -i /etc/ansible/host.basic  masters -m shell -a "oc get nodes"
+  306        yum -y install atomic-openshift-utils
+  307  ansible -i /etc/ansible/host.basic  masters -m shell -a "oc get nodes"
+  308  screen
+  309  yum -y install screen
+  310  yum -y install tmux
+  311  screen
+  312  ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml
+  313  ssh  master1.example.com
+  314  history
