@@ -1,0 +1,8 @@
+LDAP groups
+    "ose-users" group - All users who have access to OpenShift
+    "portalapp" group - Developers in the "Portal App" Project
+    "paymentapp" group - Developers in the "Payment App" Project
+    "ose-production" group - Administrators and Operations team, have access to modify projects in production 
+    "ose-platform" group - users with full cluster administration control
+    
+---------------------
