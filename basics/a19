@@ -1,0 +1,17 @@
+  ansible nodes -a "yum -y install NetworkManager wget git net-tools atomic-openshift-utils bind-utils iptables-services bridge-utils tmux screen "
+echo ".............................................................. NEXT "
+
+      ansible masters -a "yum -y install bash-completion"
+echo ".............................................................. NEXT "
+
+      ansible self -a "yum -y install bash-completion"
+echo ".............................................................. NEXT "
+
+
+      ansible all -a "yum -y update"
+echo ".............................................................. NEXT "
+
+      ansible nodes -a "yum -y install docker"
+
+echo ".............................................................. NEXT "
+
