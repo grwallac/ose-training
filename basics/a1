@@ -1,0 +1,5 @@
+cat a1
+host infranode1-$GUID.oslab.opentlc.com ipa.opentlc.com |grep infranode | awk '{print $4}'
+HostIP=`host infranode1-$GUID.oslab.opentlc.com  ipa.opentlc.com |grep infranode | awk '{print $4}'`
+domain="cloudapps-$GUID.oslab.opentlc.com"
+ echo $HostIP $domain
