@@ -1,0 +1,18 @@
+### REGISTRY="registry.access.redhat.com";PTH="openshift3"
+### OSE_VERSION=$(yum info atomic-openshift | grep Version | awk '{print $3}')
+### for node in  node1 node2 
+### do
+### ssh $node "
+### docker pull $REGISTRY/$PTH/ose-deployer:v$OSE_VERSION ; \
+### docker pull $REGISTRY/$PTH/ose-sti-builder:v$OSE_VERSION ; \
+### docker pull $REGISTRY/$PTH/ose-pod:v$OSE_VERSION ; \
+### docker pull $REGISTRY/$PTH/ose-keepalived-ipfailover:v$OSE_VERSION ; \
+### docker pull $REGISTRY/$PTH/ruby-20-rhel7 ; \
+### docker pull $REGISTRY/$PTH/mysql-55-rhel7 ; \
+### docker pull openshift/hello-openshift:v1.2.1 ;
+### "
+### done
+
+
+REGISTRY="registry.access.redhat.com";PTH="openshift3"; OSE_VERSION=$(yum info atomic-openshift | grep Version | awk '{print $3}'); ansible 'nodes:!masters:!infranode1.example.com' -m shell -a " docker pull $REGISTRY/$PTH/ose-deployer:v$OSE_VERSION ; docker pull $REGISTRY/$PTH/ose-sti-builder:v$OSE_VERSION ; docker pull $REGISTRY/$PTH/ose-pod:v$OSE_VERSION ; docker pull $REGISTRY/$PTH/ose-keepalived-ipfailover:v$OSE_VERSION ; docker pull $REGISTRY/$PTH/ruby-20-rhel7 ; docker pull $REGISTRY/$PTH/mysql-55-rhel7 ; docker pull openshift/hello-openshift:v1.2.1 ;"
+
