@@ -1,0 +1,11 @@
+From "Advanced Topics with OpenShift Enterprise 3"
+
+In this lab our goal is to install and configure a Highly Available OpenShift Cluster, consisting of:
+    1 x Administration Server (oselab-GUID.oselab.opentlc.com, oselab.example.com)
+    1 x IPA Server ( idm.example.com, ipa.example.com)
+    1 x LoadBalancer (loadbalancer-GUID.oselab.opentlc.com, loadbalancer.example.com)
+    3 x OpenShift Master (master{1,2,3}-GUID.oselab.opentlc.com, master{1,2,3}.example.com)
+    2 x OpenShift Infrastructure Node (infranode{1,2}-GUID.oselab.opentlc.com, infranode{1,2}.example.com)
+    6 x OpenShift Worker Node (node{1-6}-GUID.oselab.opentlc.com, node{1-6}.example.com)
+    
+    
