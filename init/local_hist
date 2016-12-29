@@ -1,0 +1,2675 @@
+    1  2016-10-29 12:26:53 iterm
+    2  2016-10-29 12:28:50 cat /etc/*release
+    3  2016-10-29 12:30:44 cd Downloads/
+    4  2016-10-29 12:30:45 ll
+    5  2016-10-29 12:30:56 tar zxvf guake-0.8.7.tar.gz 
+    6  2016-10-29 12:30:58 ll
+    7  2016-10-29 12:31:00 cd guake-0.8.7/
+    8  2016-10-29 12:31:00 ll
+    9  2016-10-29 12:42:29 sudo -l
+   10  2016-10-29 12:42:41 sudo -i
+   11  2016-10-30 02:17:00 ps -e0f
+   12  2016-10-30 02:18:51 ps
+   13  2016-10-30 02:18:54 glances
+   14  2016-10-30 02:19:00 yum install glances
+   15  2016-10-30 02:19:04 sudo yum install glances
+   16  2016-10-30 02:19:23 glances
+   17  2016-10-30 02:25:23 pwd
+   18  2016-10-30 02:25:37 ./autogen.sh 
+   19  2016-10-30 02:26:02 pwd
+   20  2016-10-30 02:26:04 ll 
+   21  2016-10-30 02:26:05 cd ..
+   22  2016-10-30 02:26:06 ll
+   23  2016-10-30 02:26:09 rm -rf guake-0.8.7
+   24  2016-10-30 02:26:10 ll
+   25  2016-10-30 02:26:18 ll -h
+   26  2016-10-30 02:27:33 sosreport
+   27  2016-10-29 12:33:15 cd Downloads
+   28  2016-10-29 12:33:16 pwd
+   29  2016-10-29 12:33:17 ll
+   30  2016-10-29 12:33:22 more INSTALL 
+   31  2016-10-29 12:33:59 ./configure && make && make install
+   32  2016-10-29 12:34:03 ll
+   33  2016-10-29 12:34:12 cat configure.ac 
+   34  2016-10-29 12:34:14 ll
+   35  2016-10-29 12:34:25 more configure.ac 
+   36  2016-10-29 12:34:31 ll
+   37  2016-10-29 12:34:35 chmod +x co*
+   38  2016-10-29 12:34:37 ./configure.ac 
+   39  2016-10-29 12:34:45 more install.py 
+   40  2016-10-29 12:34:59 clear&& more install.py 
+   41  2016-10-29 12:35:08 ./install.py 
+   42  2016-10-29 12:35:24 sudo ./install.py 
+   43  2016-10-29 12:35:41 guake
+   44  2016-10-29 12:35:45 ll /usr/local
+   45  2016-10-29 12:36:38 sudo yum install guake
+   46  2016-10-29 12:36:56 yum repolista all
+   47  2016-10-29 12:37:07 sudo yum repolista all
+   48  2016-10-29 12:37:17 visudo
+   49  2016-10-29 12:37:23 sudo visudo
+   50  2016-10-29 12:38:02 id
+   51  2016-10-29 12:38:12 sudo visudo
+   52  2016-10-29 12:39:00 cd /etc/sudoers.d/
+   53  2016-10-29 12:39:01 ll
+   54  2016-10-29 12:39:07 sudo -i
+   55  2016-10-29 12:44:15 cd ..
+   56  2016-10-29 12:44:16 ll
+   57  2016-10-29 12:44:40 git clone https://github.com/Guake/guake.git
+   58  2016-10-29 12:44:49 yum install git
+   59  2016-10-29 12:44:54 sudo yum install git
+   60  2016-10-29 12:45:12 yum repolist all
+   61  2016-10-29 12:46:02 yum-config-manager --enable `yum repolist all|awk '{print $3}'`
+   62  2016-10-29 12:46:17 yum-config-manager --enable `yum repolist all|awk '{print $1}'`
+   63  2016-10-29 12:46:21 clear
+   64  2016-10-29 12:46:24 yum repolist all
+   65  2016-10-29 12:46:45 yum-config-manager --enable google-chrome
+   66  2016-10-29 12:46:51 sudo yum-config-manager --enable google-chrome
+   67  2016-10-29 12:47:02 yum repolist all
+   68  2016-10-29 12:47:28 sudo yum-config-manager --enable slack vivaldi rhel7-csb
+   69  2016-10-29 12:47:43 yum repolist all
+   70  2016-10-29 12:48:13 sudo yum-config-manager --disable  rhel7-csb
+   71  2016-10-29 12:48:17 yum repolist all
+   72  2016-10-29 12:48:26 yum install slack
+   73  2016-10-29 12:48:38 sudo yum install slack
+   74  2016-10-29 12:48:59 sudo -i
+   75  2016-10-29 12:52:02 yum repolist all
+   76  2016-10-29 12:52:07 sudo yum-config-manager --disable  rhel7-csb
+   77  2016-10-29 12:52:13 yum repolist all
+   78  2016-10-29 12:52:27 sudo yum install devtoolset-2
+   79  2016-10-29 12:52:41 yum install slack
+   80  2016-10-29 12:52:49 sudo yum install slack
+   81  2016-10-29 12:55:49 slack
+   82  2016-10-29 13:01:13 git
+   83  2016-10-29 13:01:16 gs
+   84  2016-10-29 13:01:40 sudo yum install atom
+   85  2016-10-29 13:35:39 atom
+   86  2016-10-29 16:56:59 ll
+   87  2016-10-29 16:57:08 tar xvzf pycharm-community-2016.2.3.tar.gz 
+   88  2016-10-29 16:57:12 ll
+   89  2016-10-29 16:57:26 ll bin
+   90  2016-10-29 16:57:33 cd ..
+   91  2016-10-29 16:57:34 ll
+   92  2016-10-29 16:57:41 mv pycharm-community-2016.2.3 /opt
+   93  2016-10-29 16:57:50 echo $PATH
+   94  2016-10-29 16:58:12 sudo mv pycharm-community-2016.2.3 /var
+   95  2016-10-29 16:58:15 cd /var
+   96  2016-10-29 16:58:15 ll
+   97  2016-10-29 16:58:22 df -h
+   98  2016-10-29 16:58:40 sudo mv pycharm-community-2016.2.3/ /opt
+   99  2016-10-29 16:58:42 cd /opt
+  100  2016-10-29 16:58:43 ll
+  101  2016-10-29 16:58:46 cd pycharm-community-2016.2.3/
+  102  2016-10-29 16:58:47 ll
+  103  2016-10-29 16:58:50 cd bin
+  104  2016-10-29 16:58:51 ll
+  105  2016-10-29 16:59:02 more pycharm.sh 
+  106  2016-10-29 16:59:23 ll
+  107  2016-10-29 16:59:35 echo $PATH
+  108  2016-10-29 16:59:45 ln -s 
+  109  2016-10-29 16:59:51 ln --help
+  110  2016-10-29 17:00:14 man ln
+  111  2016-10-29 17:00:26 ll
+  112  2016-10-29 17:00:44 ln -s /usr/local/bin/pycharn pycharm.sh
+  113  2016-10-29 17:01:03 ln -s pycharm.sh /usr/local/bin
+  114  2016-10-29 17:01:08 sudo ln -s pycharm.sh /usr/local/bin
+  115  2016-10-29 17:01:09 cd
+  116  2016-10-29 17:01:13 pycharm
+  117  2016-10-29 17:01:16 pycharm.sh
+  118  2016-10-29 17:01:24 cd /usr/local/bin
+  119  2016-10-29 17:01:24 ll
+  120  2016-10-29 17:01:36 rm pycharm.sh 
+  121  2016-10-29 17:01:39 sudo rm pycharm.sh 
+  122  2016-10-29 17:01:40 ll
+  123  2016-10-29 17:01:42 cd ..
+  124  2016-10-29 17:01:43 ll
+  125  2016-10-29 17:01:50 cd -
+  126  2016-10-29 17:01:55 cd /opt/pycharm-community-2016.2.3/
+  127  2016-10-29 17:01:56 ll
+  128  2016-10-29 17:02:05 cd bin
+  129  2016-10-29 17:02:06 ll
+  130  2016-10-29 17:02:37 ln -s `pwd`/pycharm.sh /usr/local/bin/pycharm
+  131  2016-10-29 17:02:39 sudo ln -s `pwd`/pycharm.sh /usr/local/bin/pycharm
+  132  2016-10-29 17:02:42 ll
+  133  2016-10-29 17:02:46 cd /usr/local/bin
+  134  2016-10-29 17:02:46 ll
+  135  2016-10-29 17:02:50 cd
+  136  2016-10-29 17:02:52 pycharm
+  137  2016-10-29 17:04:47 cd /tmp
+  138  2016-10-29 17:04:47 ll
+  139  2016-10-29 17:04:57 cd /
+  140  2016-10-29 17:05:05 find . -name "*installer*" -ls
+  141  2016-10-29 17:05:12 find . -name "*installer*" -ls 2>/dev/null
+  142  2016-10-29 17:05:22 cd
+  143  2016-10-29 17:05:28 cd .PyCharm2016.2/system/tmp/
+  144  2016-10-29 17:05:29 ll
+  145  2016-10-29 17:05:39 sudo ./launcher_installer.sh 
+  146  2016-10-29 17:05:45 ll
+  147  2016-10-29 17:05:55 sudo launcher_installer.sh
+  148  2016-10-29 17:05:59 cat launcher_installer.sh 
+  149  2016-10-29 17:06:20 cat l*
+  150  2016-10-29 17:06:23 vi l*
+  151  2016-10-29 17:06:28 cat l*
+  152  2016-10-29 17:06:37 sudo sh launcher_installer.sh 
+  153  2016-10-29 17:06:56 cd /usr/local/bin
+  154  2016-10-29 17:06:56 ll
+  155  2016-10-29 17:07:02 cd -
+  156  2016-10-29 17:07:03 ll
+  157  2016-10-29 17:07:10 cd /opt/pycharm-community-2016.2.3/
+  158  2016-10-29 17:07:16 find . -name launcher -ls
+  159  2016-10-29 17:07:25 find . -name "*laun*" -ls
+  160  2016-10-29 17:07:48 fg
+  161  2016-10-29 17:16:55 history
+  162  2016-10-29 17:17:25 ll
+  163  2016-10-29 17:17:30 cd bin
+  164  2016-10-29 17:17:55 ln -s `pwd`/pycharm.sh /usr/local/bin/charm
+  165  2016-10-29 17:17:58 sudo ln -s `pwd`/pycharm.sh /usr/local/bin/charm
+  166  2016-10-29 17:18:03 cd /usr/local/bin
+  167  2016-10-29 17:18:03 ll
+  168  2016-10-29 17:18:06 charm
+  169  2016-10-29 17:19:35 cd 
+  170  2016-10-29 17:19:36 pwd
+  171  2016-10-29 17:19:37 ll
+  172  2016-10-29 17:19:44 rm grwallac/
+  173  2016-10-29 17:19:47 rm grwallac
+  174  2016-10-29 17:19:49 ll
+  175  2016-10-29 17:19:52 cd /home
+  176  2016-10-29 17:19:53 ll
+  177  2016-10-29 17:19:58 cd
+  178  2016-10-29 17:20:00 pwd
+  179  2016-10-29 17:20:01 ll
+  180  2016-10-29 17:20:03 ll -R
+  181  2016-10-29 17:20:16 cd Downloads/
+  182  2016-10-29 17:20:30 ll
+  183  2016-10-29 17:20:35 cd guake-0.8.7/
+  184  2016-10-29 17:20:35 ll
+  185  2016-10-29 17:20:42 ./run_test.sh 
+  186  2016-10-29 17:20:51 ./dev.sh 
+  187  2016-10-29 17:20:54 ll
+  188  2016-10-29 17:21:07 more README.rst 
+  189  2016-10-29 17:21:23 sudo yum install terminator
+  190  2016-10-30 02:15:42 terminator
+  191  2016-10-30 02:17:52 man terminator
+  192  2016-10-30 02:18:18 terminator
+  193  2016-10-30 02:33:08 man terminator
+  194  2016-10-30 23:20:34 df -ha
+  195  2016-10-30 23:20:40 df -h
+  196  2016-10-30 23:20:58 clear
+  197  2016-10-30 23:21:00 df -h
+  198  2016-10-30 23:22:03 lsfs
+  199  2016-10-30 23:22:57 cd /dev
+  200  2016-10-30 23:23:00 ll sd*
+  201  2016-10-30 23:23:36 mount -t hfsplus /dev/sdb1 /mnt/external
+  202  2016-10-30 23:23:42 sudo mount -t hfsplus /dev/sdb1 /mnt/external
+  203  2016-10-30 23:23:48 mkdir /mnt/external
+  204  2016-10-30 23:23:51 sudo mkdir /mnt/external
+  205  2016-10-30 23:23:55 sudo mount -t hfsplus /dev/sdb1 /mnt/external
+  206  2016-10-30 23:25:53 ll /dev/sd*
+  207  2016-10-30 23:26:02 cat /etc/fstab
+  208  2016-10-30 23:26:07 clear
+  209  2016-10-30 23:26:16 fdisk /dev/sdb1
+  210  2016-10-30 23:26:23 ll s*
+  211  2016-10-30 23:27:41 df
+  212  2016-10-30 23:27:46 ll sd*
+  213  2016-10-30 23:27:54 fdisk /dev/sda2
+  214  2016-10-30 23:39:53 blkid
+  215  2016-10-30 23:40:47 shutdown -r now
+  216  2016-10-30 02:33:40 glances
+  217  2016-10-30 02:33:48 netstat
+  218  2016-10-30 02:34:01 netstat -pant
+  219  2016-10-30 02:34:33 swapon
+  220  2016-10-30 02:33:43 top
+  221  2016-10-31 12:05:21 sudo -i
+  222  2016-11-03 00:21:27 ssh 31.220.66.98
+  223  2016-11-03 00:21:53 ssh root@31.220.66.98
+  224  2016-10-30 23:46:21 blkid
+  225  2016-10-30 23:46:24 sudo -i
+  226  2016-11-07 16:56:30 docker
+  227  2016-11-07 16:56:43 yum -y install docker
+  228  2016-11-07 16:57:32 sudo yum -y install docker
+  229  2016-11-07 17:48:05 docker search sql
+  230  2016-11-07 17:48:14 service docker start
+  231  2016-11-07 17:48:38 sudo service docker start
+  232  2016-11-07 17:48:43 docker search sql
+  233  2016-11-07 17:48:49 ps -ef|grep docker
+  234  2016-11-07 17:49:00 sudo docker search mysql
+  235  2016-11-07 17:49:20 sudo docker search sql
+  236  2016-11-07 17:49:29 sudo docker search openshift
+  237  2016-11-07 17:49:58 sudo docker search openshift-hello
+  238  2016-11-07 17:50:17 sudo docker pull openshift-hello
+  239  2016-11-07 17:50:30 sudo docker pull hello-openshift
+  240  2016-11-07 17:50:56 sudo docker pull openshift/hello-opens
+  241  2016-11-07 17:51:12 docker image
+  242  2016-11-07 17:51:18 sudo docker images
+  243  2016-11-07 17:51:55 sudo docker rmi  openshift/hello-openshift
+  244  2016-11-07 17:51:58 sudo docker images
+  245  2016-11-07 17:52:48 sudo docker pull mysql
+  246  2016-11-08 07:15:06 ifconfig -a
+  247  2016-11-08 07:15:13 ifconfig 
+  248  2016-11-08 07:15:20 clear;ifconfig 
+  249  2016-11-08 07:15:34 ping 8.8.8.8
+  250  2016-11-11 00:51:32 dnf
+  251  2016-11-14 22:12:46 rpm -qa|grep etcd
+  252  2016-11-14 22:12:54 rpm -qa|grep term
+  253  2016-11-14 22:13:22 rpm -QA terminator-0.98-3.el7.noarch
+  254  2016-11-14 22:13:27 rpm -Q terminator-0.98-3.el7.noarch
+  255  2016-11-14 22:13:33 rpm -qA terminator-0.98-3.el7.noarch
+  256  2016-11-14 22:13:38 man rpm
+  257  2016-11-14 22:13:59 rpm -ql terminator-0.98-3.el7.noarch
+  258  2016-11-14 22:15:19 rpm -qi terminator-0.98-3.el7.noarch
+  259  2016-11-14 22:15:35 rpm -qa|grep docker
+  260  2016-11-14 22:15:44 for i in `rpm -qa|grep docker`; do rpm -qi $i; echo; done
+  261  2016-11-14 22:19:11 pwe
+  262  2016-11-14 22:19:12 pwd
+  263  2016-11-14 22:19:16 cd Desktop/
+  264  2016-11-14 22:19:36 mv openshift-git-45.423f434/ ~/Downloads/
+  265  2016-11-14 22:20:34 cd ~/Downloads/
+  266  2016-11-14 22:20:36 atom .
+  267  2016-11-15 02:42:17 pwd
+  268  2016-11-15 02:42:20 cd Desktop/
+  269  2016-11-15 02:42:21 ll
+  270  2016-11-15 02:42:32 ll *.desktop
+  271  2016-11-15 02:42:42 mv *.desktop ArchiveL/
+  272  2016-11-15 02:42:46 ll
+  273  2016-11-15 02:43:19 reboot
+  274  2016-11-15 09:58:41 cd Downloads/
+  275  2016-11-15 09:58:42 ls -ltr
+  276  2016-11-15 09:59:00 rpm -i audacity-2.1.3-0.7.20161109git53a5c93.fc26.src.rpm
+  277  2016-11-15 09:59:18 rpm -qa|grep audi
+  278  2016-11-16 19:57:50 find  / -print0
+  279  2016-11-16 20:00:09 find / -name "*.xml" -ls -exec cat {} \;
+  280  2016-11-16 19:58:18 sudo find / -type d -ls
+  281  2016-11-16 19:58:51 glances
+  282  2016-11-16 20:04:11 top
+  283  2016-11-16 20:04:33 ps -ef|grep gpg
+  284  2016-11-16 20:04:43 man renice
+  285  2016-11-16 20:06:44 sudo renice -10 21658
+  286  2016-11-16 20:06:47 glances
+  287  2016-11-16 20:00:57 ps -ef|grep gpg
+  288  2016-11-16 20:01:11 kdump -p 21658
+  289  2016-11-16 20:01:16 kdump
+  290  2016-11-16 20:02:00 pstat -p 21658
+  291  2016-11-16 20:02:05 stat
+  292  2016-11-16 20:02:11 stat -p 21658
+  293  2016-11-16 20:02:14 man stat
+  294  2016-11-16 20:02:24 ll
+  295  2016-11-16 20:02:27 stat yad_status 
+  296  2016-11-16 20:02:45 find . -type f -exec stat {} \;
+  297  2016-11-16 20:17:02 gpg --list-keys
+  298  2016-11-16 20:17:19 gpg -k
+  299  2016-11-16 20:17:28 gpg -K
+  300  2016-11-16 20:17:53 gpg --fingerprint
+  301  2016-11-16 20:18:17 gpg --export
+  302  2016-11-16 10:54:06 sudo systemctl enable docker.service
+  303  2016-11-16 10:54:41 alias s='sudo ' && alias si='sudo -i'
+  304  2016-11-16 10:54:52 s systemctl start docker.service
+  305  2016-11-16 10:54:57 ps -ef|grep doc
+  306  2016-11-16 19:55:50 gpg2 --gen-key
+  307  2016-11-16 20:10:50 gpg2 --fingerprint grwallac@redhat.com
+  308  2016-11-16 20:13:05 cd .gpg
+  309  2016-11-16 20:13:07 ll
+  310  2016-11-16 20:13:12 ls -lFart
+  311  2016-11-16 20:13:17 cd .gnupg
+  312  2016-11-16 20:13:17 ll
+  313  2016-11-16 20:13:22 cat pubring.gpg
+  314  2016-11-16 20:13:24 ll
+  315  2016-11-16 20:13:29 cat gpg.conf 
+  316  2016-11-16 20:13:31 ll
+  317  2016-11-16 20:15:08 gpg2 --list-userids
+  318  2016-11-16 20:15:28 gpg --dry-run
+  319  2016-11-16 20:15:42 ll
+  320  2016-11-16 20:15:50 cat pubring.gpg
+  321  2016-11-16 20:15:52 ll
+  322  2016-11-16 20:15:57 man gpg
+  323  2016-11-16 20:22:06 clear
+  324  2016-11-16 20:26:03 gpg --output grwallac.gpg --export grwallac@redhat.com
+  325  2016-11-16 20:26:05 ls -ltr
+  326  2016-11-16 20:26:13 cat revoke.asc 
+  327  2016-11-16 20:26:21 cat grwallac.gpg 
+  328  2016-11-16 20:26:26 ll
+  329  2016-11-16 20:26:29 ls -ltr
+  330  2016-11-16 20:26:41 cat grwallac.gpg
+  331  2016-11-16 20:27:23 gpg --armor  --export grwallac@redhat.com
+  332  2016-11-16 20:27:44 gpg --armor  --export grwallac@redhat.com|tee grwallac.asc.gpp
+  333  2016-11-16 20:27:46 ls -ltr
+  334  2016-11-16 20:27:51 cat grwallac.asc.gpp 
+  335  2016-11-16 20:28:17 fpr
+  336  2016-11-16 21:40:07 ssh root@153.92.32.144
+  337  2016-11-16 21:40:38 ping 153.92.32.144
+  338  2016-11-16 21:41:31 ping 153.92.32.79
+  339  2016-11-16 21:41:43 telnet 153.92.32.79
+  340  2016-11-16 21:42:04 ssh -l root  153.92.32.79
+  341  2016-11-16 21:42:10 ssh -vv -l root  153.92.32.79
+  342  2016-11-16 21:42:34 ssh -vv -l root  153.92.32.178
+  343  2016-11-16 21:42:50 curl 153.92.32.178
+  344  2016-11-16 21:43:00 curl 153.92.32.178:443
+  345  2016-11-16 21:44:29 ssh root@172.17.0.1
+  346  2016-11-16 21:46:13 ssh glw@172.17.0.1
+  347  2016-11-16 21:46:55 sudo -i
+  348  2016-11-16 21:47:04 clear;sudo -i
+  349  2016-12-28 12:58:08 ssh 153.92.32.7
+  350  2016-11-20 22:35:42 ssh 153.92.32.7 -l root
+  351  2016-11-20 22:35:54 ssh root@153.92.32.7
+  352  2016-11-20 22:36:04 ssh root@10.0.0.3
+  353  2016-11-20 22:38:06 ssh 153.92.32.7 -l cloud-user
+  354  2016-11-20 22:38:16 man ssh
+  355  2016-11-20 22:38:39 ssh -l cloud-user 153.92.32.7
+  356  2016-11-20 22:38:45 ssh -vv -l cloud-user 153.92.32.7
+  357  2016-11-20 22:39:37 cd .ssh
+  358  2016-11-20 22:39:38 ll
+  359  2016-11-20 22:39:41 ll -F
+  360  2016-11-20 22:39:43 cd 
+  361  2016-11-20 22:39:48 cd .ssh
+  362  2016-11-20 22:39:49 ll
+  363  2016-11-20 22:39:50 ls -l
+  364  2016-11-20 22:39:55 whoami
+  365  2016-11-20 22:40:04 echo $HOSTNAME
+  366  2016-11-20 22:40:19 pwd
+  367  2016-11-20 22:40:22 ll -R
+  368  2016-11-20 22:40:42 find . -name "*id_?sa*" -ls
+  369  2016-11-20 22:40:45 pwd
+  370  2016-11-20 22:41:12 cd /
+  371  2016-11-20 22:41:20 find . -name known_hosts -ls
+  372  2016-11-20 22:41:27 find . -name known_hosts -ls 2>/dev/null
+  373  2016-11-20 22:41:32 cd 
+  374  2016-11-20 22:41:34 pwd
+  375  2016-11-20 22:41:37 cd .ssh
+  376  2016-11-20 22:41:40 ls -lFa
+  377  2016-11-20 22:41:46 cat known_hosts 
+  378  2016-11-20 22:42:02 cd 
+  379  2016-11-20 22:42:09 find . -name "*.pem" -ls
+  380  2016-11-20 22:43:04 find . -name "id_rsa" -ls
+  381  2016-11-20 22:43:10 cd Desktop/
+  382  2016-11-20 22:43:12 cd root/
+  383  2016-11-20 22:43:16 cd gregw/
+  384  2016-11-20 22:43:17 ll
+  385  2016-11-20 22:43:21 cd gregw.ssh/
+  386  2016-11-20 22:43:22 ll
+  387  2016-11-20 22:43:36 cd
+  388  2016-11-20 22:43:41 cd .gpg
+  389  2016-11-20 22:43:47 ls -lFa|more
+  390  2016-11-20 22:43:58 pwd
+  391  2016-11-20 22:44:02 cd grwallac/
+  392  2016-11-20 22:44:02 ll
+  393  2016-11-20 22:44:09 ls -lFa
+  394  2016-11-20 22:44:11 cd archiveset/
+  395  2016-11-20 22:44:12 ll
+  396  2016-11-20 22:44:14 cd ..
+  397  2016-11-20 22:44:15 ll
+  398  2016-11-20 22:44:16 cd ..
+  399  2016-11-20 22:44:20 ls -lFa|more
+  400  2016-11-20 22:44:41 cd .pki
+  401  2016-11-20 22:44:42 ll
+  402  2016-11-20 22:44:45 ll -F
+  403  2016-11-20 22:44:53 cd ../.thunderbird/
+  404  2016-11-20 22:44:53 ll
+  405  2016-11-20 22:44:55 cd ..
+  406  2016-11-20 22:44:58 cd -
+  407  2016-11-20 22:44:59 ll
+  408  2016-11-20 22:45:00 cat RedHat.default/
+  409  2016-11-20 22:45:03 cd RedHat.default/
+  410  2016-11-20 22:45:04 ll
+  411  2016-11-20 22:45:07 cat prefs.js 
+  412  2016-11-20 22:45:12 cd ..
+  413  2016-11-20 22:45:14 ll
+  414  2016-11-20 22:45:27 ls -lFa
+  415  2016-11-20 22:45:32 rm -rf .thunderbird/
+  416  2016-11-20 22:45:53 find / -name id_rsa -ls 2>/dev/null
+  417  2016-11-20 22:45:59 sudo -i
+  418  2016-11-20 22:53:44 grep keygen *
+  419  2016-11-20 22:54:26 find . -type f -exec grep -Hn keygen {} \;
+  420  2016-11-20 22:54:55 ssh-keygen
+  421  2016-11-20 22:55:02 cd
+  422  2016-11-20 22:55:04 cd .ssh
+  423  2016-11-20 22:55:06 ls -lFa
+  424  2016-11-20 22:55:23 ssh-keygen -t dsa -s 4096
+  425  2016-11-20 22:55:40 ssh-keygen -t dsa -b 4096
+  426  2016-11-20 22:56:11 ssh-keygen -t dsa 
+  427  2016-11-20 22:56:18 ll
+  428  2016-11-20 22:56:34 cat id_dsa_*
+  429  2016-11-20 22:56:42 cat id_dsa.pub 
+  430  2016-11-20 23:03:40 ll
+  431  2016-11-20 23:03:42 cd ..
+  432  2016-11-20 23:04:02 ssh -i .ssh/id_dsa glw@153.92.32.7
+  433  2016-11-20 23:04:48 ssh -vv -i .ssh/id_dsa glw@153.92.32.7
+  434  2016-11-20 23:05:31 sudo -i
+  435  2016-11-20 23:07:47 cd
+  436  2016-11-20 23:07:50 cd .ssh
+  437  2016-11-20 23:07:50 ll
+  438  2016-11-20 23:08:10 cat known_hosts 
+  439  2016-11-20 23:08:22 mv known_hosts known_hosts.0
+  440  2016-11-20 23:09:02 ssh -vv -i id_dsa -l glw 153.92.32.7
+  441  2016-11-20 23:13:00 ssh -vv -l root 153.92.32.7
+  442  2016-11-20 23:13:22 ssh -vv  root@153.92.32.7
+  443  2016-11-20 23:15:13 ssh -vv  glw@153.92.32.7
+  444  2016-11-20 23:16:17 cat id_dsa.pub 
+  445  2016-11-20 23:17:39 ssh -vv  glw@153.92.32.7
+  446  2016-11-20 23:19:21 ssh -vv  root@153.92.32.7
+  447  2016-11-20 23:19:28 sudo -i
+  448  2016-11-20 23:19:42 ssh -vv  root@153.92.32.7
+  449  2016-11-20 23:19:45 sudo -i
+  450  2016-11-20 23:20:50 ssh -vv  153.92.32.7
+  451  2016-11-20 23:21:04 ll
+  452  2016-11-20 23:21:07 rm known_hosts
+  453  2016-11-20 23:21:11 ssh -vv  153.92.32.7
+  454  2016-11-20 23:21:28 ssh-keygen
+  455  2016-11-20 23:21:40 ll
+  456  2016-11-20 23:21:47 cat id_rsa.pub 
+  457  2016-11-20 23:24:32 ssh -vv  153.92.32.7
+  458  2016-11-20 23:24:39 m known_hosts
+  459  2016-11-20 23:24:44 rm known_hosts
+  460  2016-11-20 23:24:48 ssh -v  153.92.32.7
+  461  2016-11-20 23:25:17 ll
+  462  2016-11-20 23:25:25 ll /root/.ssh
+  463  2016-11-20 23:25:28 sudo ll /root/.ssh
+  464  2016-11-20 23:25:54 sudo ls -lFa /root/.ssh
+  465  2016-11-20 23:26:17 ssh -v  153.92.32.7
+  466  2016-11-20 23:26:39 ssh -v  10.0.0.3
+  467  2016-11-20 23:45:03 ssh 192.168.0.199 
+  468  2016-11-20 23:46:27 ssh -vv -l root 192.168.0.199 
+  469  2016-11-20 23:47:11 ssh -vv -l root 153.92.33.68
+  470  2016-11-20 23:47:32 ssh -vv root@153.92.33.68
+  471  2016-11-20 23:47:36 ll
+  472  2016-11-20 23:47:38 rm known_hosts
+  473  2016-11-20 23:47:43 ssh -vv root@153.92.33.68
+  474  2016-11-20 23:48:15 ssh -vv root@153.92.35.157
+  475  2016-11-20 23:48:57 ssh -vv root@153.92.35.157:25
+  476  2016-11-20 23:49:45 ssh -vv root@31.220.65.182
+  477  2016-11-20 23:50:10 ssh -vv root@153.92.33.68
+  478  2016-11-21 10:48:39 pwd
+  479  2016-11-21 10:48:40 ll
+  480  2016-11-21 10:48:54 cd
+  481  2016-11-21 10:48:56 cd /home
+  482  2016-11-21 10:48:56 ll
+  483  2016-11-21 10:49:12 cd rhel-liveuser/
+  484  2016-11-21 10:49:15 sudo -i
+  485  2016-11-21 11:01:56 last
+  486  2016-11-21 11:02:04 last|more
+  487  2016-11-21 11:03:05 cal
+  488  2016-11-21 11:03:10 cal oct 2016
+  489  2016-11-21 11:03:17 cal 0ct 2016
+  490  2016-11-21 11:03:23 cal 102016
+  491  2016-11-21 11:03:28 cal 2016
+  492  2016-11-21 11:05:06 curl mojo.redhat.com
+  493  2016-11-21 11:14:48 pwd
+  494  2016-11-21 11:14:51 cd Desktop/
+  495  2016-11-21 11:14:58 ll
+  496  2016-11-21 11:15:05 view Update\ SSH\ Key.desktop 
+  497  2016-11-21 18:43:38 ssh 31.220.64.41
+  498  2016-11-21 18:44:10 ssh -vv -i id_rsa 31.220.64.41
+  499  2016-11-21 18:44:45 ssh -vv -i id_dsa 31.220.64.41
+  500  2016-11-21 18:58:42 ssh -v -i id_dsa 31.220.64.41
+  501  2016-11-21 19:24:03 cat id_dsa.pub
+  502  2016-11-21 19:25:36 passwd
+  503  2016-11-21 19:26:43 ll
+  504  2016-11-21 19:26:51 rm id*
+  505  2016-11-21 19:26:52 ll
+  506  2016-11-21 19:26:57 ssh-keygen
+  507  2016-11-21 19:27:09 cat id_rsa.pub 
+  508  2016-11-21 19:28:00 ll
+  509  2016-11-21 17:48:55 cd .ssh
+  510  2016-11-21 17:49:02 cat id_rsa.pub 
+  511  2016-11-21 18:32:48 virsh
+  512  2016-11-21 18:43:11 terminator
+  513  2016-11-21 18:57:41 cat id_rsa.pub
+  514  2016-11-21 18:58:16 fg
+  515  2016-11-21 19:07:13 ll
+  516  2016-11-21 19:07:25 mkdir keys
+  517  2016-11-21 19:07:33 cp -p * keys
+  518  2016-11-21 19:07:40 rm id_dsa*
+  519  2016-11-21 19:08:03 ll
+  520  2016-11-21 19:08:09 ssh-keygen -t dsa
+  521  2016-11-21 19:08:19 ll
+  522  2016-11-21 19:08:26 cat id_dsa.pub
+  523  2016-11-21 19:08:54 history
+  524  2016-11-21 19:23:45 ssh 31.220.64.41
+  525  2016-11-21 19:25:19 ssh -i id_dsa 31.220.64.41
+  526  2016-11-21 19:28:13 ll
+  527  2016-11-21 19:28:35 scp id_rsa*  31.220.64.41:
+  528  2016-11-21 19:28:44 ssh -i id_dsa 31.220.64.41
+  529  2016-11-21 19:32:02 ssh -i id_rsa 31.220.64.41
+  530  2016-11-21 19:32:17 ssh -vv -i id_rsa 31.220.64.41
+  531  2016-11-21 19:32:38 ll
+  532  2016-11-21 19:32:40 rm known_hosts
+  533  2016-11-21 19:32:48 clear; ssh -v -i id_rsa 31.220.64.41
+  534  2016-11-21 19:33:51 clear
+  535  2016-11-21 19:35:10 clear; ssh -v -i id_rsa 31.220.64.41
+  536  2016-11-21 19:34:27 cat .bashrc
+  537  2016-11-21 19:36:10 ssh 31.220.64.41
+  538  2016-11-21 19:37:39 cd .ssh
+  539  2016-11-21 19:37:43 ssh-add id*
+  540  2016-11-21 19:37:58 ll
+  541  2016-11-21 19:38:16 chmod 0600 id_rsa.pub 
+  542  2016-11-21 19:38:20 ssh-add id*
+  543  2016-11-21 19:38:36 ssh-add id_rsa
+  544  2016-11-21 19:40:05 ssh 31.220.64.41
+  545  2016-11-23 13:44:26 ping google.com
+  546  2016-11-24 09:54:57 ll
+  547  2016-11-23 20:59:30 ssh 31.220.64.41
+  548  2016-11-23 23:01:57 ssh 31.220.66.109
+  549  2016-11-23 23:02:39 cd 
+  550  2016-11-23 23:02:41 cd .ssh
+  551  2016-11-23 23:02:42 ll
+  552  2016-11-23 23:02:46 cat id_rsa.pub 
+  553  2016-11-23 23:05:13 history
+  554  2016-11-23 23:05:23 ssh-add id_rsa
+  555  2016-11-23 23:05:32 ssh 31.220.66.109
+  556  2016-11-23 23:06:10 ssh root@31.220.66.109
+  557  2016-11-23 23:08:56 ll
+  558  2016-11-23 23:09:06 cd keys
+  559  2016-11-23 23:09:06 ll
+  560  2016-11-23 23:09:22 mv id_rsa.pub id_rsa.pub0
+  561  2016-11-23 23:09:28 mv id_rsa id_rsa.0
+  562  2016-11-23 23:09:29 ll
+  563  2016-11-23 23:09:37 mv id_dsa id_dsa.0
+  564  2016-11-23 23:09:45 mv id_dsa.pub id_dsa.pub.0
+  565  2016-11-23 23:09:47 ll
+  566  2016-11-23 23:09:58 mv id_rsa.pub0 id_rsa.pub.0
+  567  2016-11-23 23:09:58 ll
+  568  2016-11-23 23:10:00 cd ..
+  569  2016-11-23 23:10:01 ll
+  570  2016-11-23 23:10:08 cd keys/
+  571  2016-11-23 23:10:09 ll
+  572  2016-11-23 23:10:14 cp known_hosts known_hosts.1
+  573  2016-11-23 23:10:16 cd ..
+  574  2016-11-23 23:10:16 ll
+  575  2016-11-23 23:10:26 cp known_hosts known_hosts.2
+  576  2016-11-23 23:10:31 cp -p * keys/
+  577  2016-11-23 23:10:32 ll
+  578  2016-11-23 23:10:43 ssh-keygen -t rsa
+  579  2016-11-23 23:10:59 ll
+  580  2016-11-23 23:11:02 cat id_rsa.pub 
+  581  2016-11-23 23:11:33 ll
+  582  2016-11-23 23:12:41 ssh-add id_rsa
+  583  2016-11-23 23:12:54 ssh 176.126.88.148
+  584  2016-11-23 23:14:34 cd keys
+  585  2016-11-23 23:14:36 ll
+  586  2016-11-23 23:14:50 ssh-add id_???
+  587  2016-11-23 23:14:59 ssh-add id_???.?
+  588  2016-11-23 23:15:09 ssh 176.126.88.148
+  589  2016-11-23 23:20:37 ssh 31.220.65.62
+  590  2016-11-24 09:32:52 cat all-employees 
+  591  2016-11-24 09:33:16 ll
+  592  2016-11-24 09:33:21 tail -f all-employees 
+  593  2016-11-24 09:51:54 ll
+  594  2016-11-24 09:51:58 ls -lFah
+  595  2016-11-24 09:52:02 alias|grep ll
+  596  2016-11-24 09:52:06 cd
+  597  2016-11-24 09:52:09 grep ll *
+  598  2016-11-24 09:52:17 which ll
+  599  2016-11-24 09:52:33 grep -Hn "color=auto" *
+  600  2016-11-24 09:52:39 cd /etc
+  601  2016-11-24 09:52:46 grep -Hn "color=auto" * 2>/dev/null
+  602  2016-11-24 09:52:56 grep -rHn "color=auto" * 2>/dev/null
+  603  2016-11-24 09:53:41 sudo vi profile.d/colorls.sh
+  604  2016-11-24 09:54:19 grep -rHn "color=auto" * 2>/dev/null|grep ll
+  605  2016-11-24 09:54:29 grep -rHn "color=auto" * 2>/dev/null|grep ls
+  606  2016-11-24 09:54:46 su -
+  607  2016-11-24 09:54:50 sudo -i
+  608  2016-11-23 13:50:18 history
+  609  2016-11-23 13:50:27 clear; ssh -v -i id_rsa 31.220.64.41
+  610  2016-11-23 13:52:27 clear; ssh -v  31.220.64.41
+  611  2016-11-23 13:52:32 history
+  612  2016-11-23 13:52:38 ll .ssh
+  613  2016-11-23 13:52:47 ssh-add .ssh/id_rsa
+  614  2016-11-23 13:52:54 clear; ssh -v  31.220.64.41
+  615  2016-11-24 09:55:42 ssh 176.126.88.51
+  616  2016-11-24 09:56:13 ssh-add ~/.ssh/id_???
+  617  2016-11-24 09:56:17 ssh 176.126.88.51
+  618  2016-11-24 09:58:03 ssh -o PubkeyAuthentication=no 176.126.88.51
+  619  2016-11-24 09:58:17 ll .ssh
+  620  2016-11-24 09:58:55 ssh -v -p 22 grwallac@176.126.88.51
+  621  2016-11-24 09:59:40 ssh-add -D
+  622  2016-11-24 09:59:42 ssh -v -p 22 grwallac@176.126.88.51
+  623  2016-11-24 10:05:12 vi a
+  624  2016-11-24 10:07:17 ssh root@176.126.88.51
+  625  2016-11-24 10:14:02 pwd
+  626  2016-11-24 10:14:05 cd .ssh
+  627  2016-11-24 10:14:08 cd keys
+  628  2016-11-24 10:14:09 ll
+  629  2016-11-24 10:14:46 scp  root@176.126.88.51:/home/ceph/.ssh/id_rsa id_rsa_ceph
+  630  2016-11-24 10:15:08 scp  root@176.126.88.51:/home/ceph/.ssh/id_rsa.pub  id_rsa_ceph.pub
+  631  2016-11-24 10:15:17 ll
+  632  2016-11-24 10:15:40 ssh-add id_rsa_ceph 
+  633  2016-11-24 10:15:53 ssh-add id_rsa
+  634  2016-11-24 10:16:09 ssh ceph@176.126.88.51
+  635  2016-11-24 10:17:08 vi sshd_config
+  636  2016-11-24 10:23:14 pwd
+  637  2016-11-24 12:37:42 ssh 176.126.88.251
+  638  2016-11-24 12:37:53 ll
+  639  2016-11-24 12:37:54 cd ..
+  640  2016-11-24 12:38:01 ssh-add id*
+  641  2016-11-24 12:38:09 ll
+  642  2016-11-24 12:38:17 ssh -v 176.126.88.251
+  643  2016-11-24 12:38:34 cd keys
+  644  2016-11-24 12:38:35 ll
+  645  2016-11-24 12:38:38 cat sshd_config 
+  646  2016-11-24 12:40:03 clear;cat sshd_config 
+  647  2016-11-24 12:43:26 clear;cat sshd_config |sort -u
+  648  2016-11-24 12:45:46 ssh -v 176.126.88.251
+  649  2016-11-24 12:45:53 ssh -v -l root 176.126.88.251
+  650  2016-11-24 12:46:04 ssh -v -l root@176.126.88.251
+  651  2016-11-24 12:46:09 ssh -v root@176.126.88.251
+  652  2016-11-24 12:46:17 ssh-add -D
+  653  2016-11-24 12:46:19 ssh -v root@176.126.88.251
+  654  2016-11-24 12:46:32 clear;cat sshd_config |sort -u
+  655  2016-11-24 12:47:25 ssh -v root@176.126.88.251
+  656  2016-11-24 12:47:32 clear;cat sshd_config |sort -u
+  657  2016-11-24 13:33:18 ssh -v root@176.126.88.251
+  658  2016-11-24 13:35:11 ll
+  659  2016-11-24 13:35:15 cd ..
+  660  2016-11-24 13:35:15 ll
+  661  2016-11-24 13:35:54 scp id_rsa.pub root@176.126.88.251:/home/grwallac/.ssh/authorizedkeys
+  662  2016-11-24 13:36:11 ssh -v root@176.126.88.251
+  663  2016-11-24 13:36:20 ssh -v 176.126.88.251
+  664  2016-11-24 13:36:43 ssh -v root@176.126.88.251
+  665  2016-11-24 13:37:38 ssh -v 176.126.88.251
+  666  2016-11-24 13:37:58 ssh-add id_rsa
+  667  2016-11-24 13:38:03 ssh -v 176.126.88.251
+  668  2016-11-24 13:38:15 cd kyes
+  669  2016-11-24 13:38:17 cd keys
+  670  2016-11-24 13:38:18 ll
+  671  2016-11-24 13:38:50 scp sshd_config  root@176.126.88.251:/etc/ssh/sshd_config_pam
+  672  2016-11-24 13:39:07 ssh -v root@176.126.88.251
+  673  2016-11-24 13:41:00 ssh root@176.126.88.251
+  674  2016-11-24 13:52:27 ssh -l grwallac 176.126.88.251
+  675  2016-11-26 04:57:42 reboot
+  676  2016-11-26 05:23:18 cd //
+  677  2016-11-26 05:23:21 cd 
+  678  2016-11-26 05:23:23 cd .ssh
+  679  2016-11-26 05:23:24 ll
+  680  2016-11-26 05:23:36 ssh-key add id_rsa
+  681  2016-11-26 05:23:41 ssh-add id_rsa
+  682  2016-11-26 05:23:48 cd
+  683  2016-11-26 05:23:51 history
+  684  2016-11-26 05:24:00 ssh -l grwallac 176.126.88.251
+  685  2016-11-26 21:49:31 ll
+  686  2016-11-26 21:49:35 ssh -l grwallac 176.126.88.251
+  687  2016-11-27 21:17:58 ifconfig
+  688  2016-11-27 21:18:54 ifconfig|egrep -v "virbr|lo|docker"
+  689  2016-11-27 21:19:13 ifconfig|egrep -A 7 -v "virbr|lo|docker"
+  690  2016-11-27 21:19:20 clear;ifconfig|egrep -A 7 -v "virbr|lo|docker"
+  691  2016-11-27 21:19:36 while :; do clear; ifconfig; sleep 2s; don
+  692  2016-11-27 21:19:52 while :; do clear; ifconfig; sleep 2s; done
+  693  2016-11-27 21:20:53 ping google.com
+  694  2016-11-27 21:24:52 reboot
+  695  2016-11-29 12:07:18 ssh 192.168.0.101
+  696  2016-11-29 12:07:30 ssh-key add ~/.ssh/id_rsa
+  697  2016-11-29 12:07:37 ssh-add ~/.ssh/id_rsa
+  698  2016-11-29 12:07:49 ssh 192.168.0.101
+  699  2016-11-29 12:10:31 cd Downloads/
+  700  2016-11-29 12:10:34 atom .
+  701  2016-11-29 12:17:43 ssh -l grwallac@-redhat.com 192.168.0.101
+  702  2016-11-29 12:18:44 ssh -l grwallac@-redhat.com 31.220.65.99
+  703  2016-11-29 12:18:59 ssh -v -l grwallac@-redhat.com 31.220.65.99
+  704  2016-11-29 12:19:23 ssh -v -l grwallac-redhat.com 31.220.65.99
+  705  2016-11-29 12:36:04 ssh -l grwallac-redhat.com@3b2b.oslab.opentlc.com
+  706  2016-11-29 12:36:13 ssh  grwallac-redhat.com@3b2b.oslab.opentlc.com
+  707  2016-11-29 12:36:32 ssh  grwallac-redhat.com@oslab-3b2b.oslab.opentlc.com
+  708  2016-11-29 12:36:52 dig  oslab-3b2b.oslab.opentlc.com
+  709  2016-11-29 12:37:13 ssh -l grwallac-redhat.com  oslab-3b2b.oslab.opentlc.com
+  710  2016-11-29 12:37:55 ssh grwallac-redhat.com@31.220.65.99
+  711  2016-11-29 13:13:27 vi a
+  712  2016-11-29 13:16:21 cd
+  713  2016-11-29 13:17:01 ssh -i ./.ssh/id_rsa grwallac-redhat.com 31.220.65.99
+  714  2016-11-29 13:21:10 ssh-add ./.ssh/id_rsa
+  715  2016-11-29 13:21:28 ssh grwallac-redhat.com 31.220.65.99
+  716  2016-11-29 13:21:42 ssh grwallac-redhat.com@31.220.65.99
+  717  2016-11-30 07:07:14 ssh grwallac-redhat.com@31.220.65.99
+  718  2016-11-30 11:48:41 atom 
+  719  2016-11-30 14:23:34 ssh grwallac-redhat.com@31.220.65.99
+  720  2016-11-30 11:36:04 pwd
+  721  2016-11-30 11:36:08 cd Desktop/
+  722  2016-11-30 11:36:13 mkdir SRC
+  723  2016-11-30 11:36:16 cd SRC
+  724  2016-11-30 11:36:24 git clone https://github.com/openshift/openshift-docs.git
+  725  2016-11-30 11:36:33 ll
+  726  2016-11-30 11:36:34 cd openshift-docs/
+  727  2016-11-30 11:36:35 ll
+  728  2016-11-30 11:47:09 ssh grwallac-redhat.com@oselab-f00d.oslab.opentlc.com
+  729  2016-11-30 17:42:52 ssh grwallac-redhat.com@31.220.65.99
+  730  2016-11-30 17:43:10 history|grep redhat
+  731  2016-11-30 17:43:56 ssh grwallac-redhat.com@31.220.66.1 ### module3
+  732  2016-11-30 14:38:11 ssh grwallac-redhat.com@31.220.66.1
+  733  2016-11-30 18:27:56 pwd
+  734  2016-11-30 18:27:58 cd Desktop/
+  735  2016-11-30 18:27:59 ll
+  736  2016-11-30 18:28:02 cd URLs/
+  737  2016-11-30 18:28:10 export D=`pwd`
+  738  2016-11-30 18:28:12 cd ..
+  739  2016-11-30 18:28:16 cd Music/
+  740  2016-11-30 18:29:09 ll
+  741  2016-11-30 18:29:11 cd
+  742  2016-11-30 18:29:13 cd Desktop/
+  743  2016-11-30 18:29:15 cd ArchiveL/
+  744  2016-11-30 18:29:16 ll
+  745  2016-11-30 18:29:28 ll *.desktop
+  746  2016-11-30 18:29:31 ll *.desktop|wc
+  747  2016-11-30 18:29:52 more redhat-internal-setup-guide.desktop
+  748  2016-11-30 18:30:01 ll *.desktop|more
+  749  2016-11-30 18:30:19 chmod 0664 *.desktop
+  750  2016-11-30 18:30:23 ll *.desktop|more
+  751  2016-11-30 18:30:36 mv *.desktop $D
+  752  2016-11-30 18:30:39 ll *.desktop|more
+  753  2016-11-30 18:30:42 cd $D
+  754  2016-11-30 18:30:42 ll
+  755  2016-11-30 18:30:45 exit
+  756  2016-12-01 14:00:25 pwd
+  757  2016-12-01 14:00:27 cd
+  758  2016-12-01 14:00:29 ll
+  759  2016-12-01 14:00:32 cd Desktop/
+  760  2016-12-01 14:00:33 ll
+  761  2016-12-01 14:00:37 cd ArchiveL/
+  762  2016-12-01 14:00:37 ll
+  763  2016-12-01 14:00:40 cd SRC/
+  764  2016-12-01 14:00:41 ll
+  765  2016-12-01 14:01:01 git clone https://github.com/openshift/openshift-docs.git
+  766  2016-12-01 14:01:05 ll
+  767  2016-12-01 14:01:07 cd openshift-docs/
+  768  2016-12-01 14:01:11 git pull
+  769  2016-12-01 06:17:55 history
+  770  2016-12-01 06:18:00 ssh grwallac-redhat.com@31.220.66.1 ### module3
+  771  2016-12-01 10:45:06 hostname
+  772  2016-12-01 10:45:09 cd 
+  773  2016-12-01 10:45:12 cd Downloads/
+  774  2016-12-01 10:45:13 ll
+  775  2016-12-01 10:45:31 mv Labs_Module04_Security.adoc.bin Labs_Module04_Security.adoc
+  776  2016-12-01 10:45:44 mv Labs_Module04_Security_Open.adoc.bin Labs_Module04_Security_Open.adoc
+  777  2016-12-01 10:52:14 history
+  778  2016-12-01 10:52:21 ssh grwallac-redhat.com@31.220.66.1 ### module3
+  779  2016-12-01 11:36:03 history|grep MOD
+  780  2016-12-01 11:36:06 history|grep mod
+  781  2016-12-01 11:36:10 ssh grwallac-redhat.com@31.220.66.1 ### module3
+  782  2016-12-02 06:17:07 cd 
+  783  2016-12-02 06:17:09 cd Downloads/
+  784  2016-12-02 06:17:11 ls -ltr
+  785  2016-12-02 06:17:24 ll *.bin
+  786  2016-12-02 06:17:34 for i in `ls *.bin`; do echo $i; done
+  787  2016-12-02 06:18:12 for i in `ls *.bin`; do echo $i; mv $i `echo ${i}|sed 's/\.bin//'`; done
+  788  2016-12-02 06:18:21 ll Labs*
+  789  2016-12-02 11:30:48 oc
+  790  2016-12-02 11:32:59 ls -ltr
+  791  2016-12-02 11:33:21 gunzip oc-3.3.1.5-linux.tar.gz 
+  792  2016-12-02 11:33:23 ll
+  793  2016-12-02 11:33:25 ls -ltr
+  794  2016-12-02 11:33:32 tar xvf oc-3.3.1.5-linux.tar 
+  795  2016-12-02 11:33:34 ll
+  796  2016-12-02 11:33:36 oc
+  797  2016-12-02 11:33:39 ./oc
+  798  2016-12-02 11:33:49 echo $PATH
+  799  2016-12-02 11:34:03 mv oc /usr/local/bin
+  800  2016-12-02 11:34:05 sudo mv oc /usr/local/bin
+  801  2016-12-02 11:34:08 oc
+  802  2016-12-02 11:34:34 oc login https://master.workshop.openshift.opentlc.com --token=rODavJlzwqLWcjWkjzj6xUu4aIV3Xl4BwoRbnEluxgQ
+  803  2016-12-02 11:34:52 oc status
+  804  2016-12-02 11:35:48 echo $GUID
+  805  2016-12-02 11:36:32 oc get svc
+  806  2016-12-02 11:39:13 GUID=mydemo
+  807  2016-12-02 11:43:52 oc get projects
+  808  2016-12-02 11:44:06 GUID=mydemo
+  809  2016-12-02 11:44:06 oc new-project pipeline-${GUID}-dev --description="Cat of the Day Development Environment" --display-name="Cat Of The Day - Dev"
+  810  2016-12-02 11:44:07 oc new-project pipeline-${GUID}-test --description="Cat of the Day Testing Environment" --display-name="Cat Of The Day - Test"
+  811  2016-12-02 11:45:14 oc new-project pipeline-${GUID}-prod --description="Cat of the Day Production Environment" --display-name="Cat Of The Day - Prod"
+  812  2016-12-02 11:45:41 GUID=glwtest
+  813  2016-12-02 11:45:49 oc new-project pipeline-${GUID}-dev --description="Cat of the Day Development Environment" --display-name="Cat Of The Day - Dev"
+  814  2016-12-02 11:45:50 oc new-project pipeline-${GUID}-test --description="Cat of the Day Testing Environment" --display-name="Cat Of The Day - Test"
+  815  2016-12-02 11:45:52 oc new-project pipeline-${GUID}-prod --description="Cat of the Day Production Environment" --display-name="Cat Of The Day - Prod"
+  816  2016-12-02 11:46:04 oc get projects
+  817  2016-12-02 11:46:28 oc project pipeline-glwtest-dev
+  818  2016-12-02 11:48:14 oc new-app jenkins-persistent -p JENKINS_PASSWORD=openshiftpipelines  -n pipeline-glwtest-dev
+  819  2016-12-02 11:48:22 oc version
+  820  2016-12-02 11:48:39 oc status
+  821  2016-12-02 11:54:15 oc patch dc jenkins -p '{"spec": {"template": {"spec": {"containers":[{ "name":"jenkins", "livenessProbe": {"initialDelaySeconds": 5000} }]}}}}'
+  822  2016-12-02 12:01:22 oc patch dc jenkins -p '{"spec": {"template": {"spec": {"containers":[{ "name":"jenkins", "livenessProbe": {"initialDelaySeconds": 1000 } }]}}}}'
+  823  2016-12-02 12:04:10 oc new-app jenkins-persistent -p JENKINS_PASSWORD=openshiftpipelines  -n pipeline-glwtest-dev
+  824  2016-12-02 12:04:17 oc patch dc jenkins -p '{"spec": {"template": {"spec": {"containers":[{ "name":"jenkins", "livenessProbe": {"initialDelaySeconds": 1000 } }]}}}}'
+  825  2016-12-02 12:05:53 oc new-project pipeline-${GUID}-dev --description="Cat of the Day Development Environment" --display-name="Cat Of The Day - Dev"
+  826  2016-12-02 12:06:24 history
+  827  2016-12-02 12:06:34 GUID=glw
+  828  2016-12-02 12:06:46 oc new-project pipeline-${GUID}-dev --description="Cat of the Day Development Environment" --display-name="Cat Of The Day - Dev"
+  829  2016-12-02 12:06:52 oc project
+  830  2016-12-02 12:07:11 oc patch dc jenkins -p '{"spec": {"template": {"spec": {"containers":[{ "name":"jenkins", "livenessProbe": {"initialDelaySeconds": 1000 } }]}}}}'
+  831  2016-12-02 12:07:22 oc new-project pipeline-${GUID}-dev --description="Cat of the Day Development Environment" --display-name="Cat Of The Day - Dev"
+  832  2016-12-02 12:07:38 oc get project
+  833  2016-12-02 12:08:00 oc new-project pipeline-glw-dev --description="Cat of the Day Development Environment" --display-name="Cat Of The Day - Dev"
+  834  2016-12-02 12:09:08 find / -name "*purge*" -ls
+  835  2016-12-02 12:09:19 find / -name "*purge*" -ls 2>/dev/null
+  836  2016-12-02 12:09:31 ll
+  837  2016-12-02 12:11:41 oc new-project pipeline-${GUID}-dev --description="Cat of the Day Development Environment" --display-name="Cat Of The Day - Dev"
+  838  2016-12-02 12:11:42 oc new-project pipeline-${GUID}-test --description="Cat of the Day Testing Environment" --display-name="Cat Of The Day - Test"
+  839  2016-12-02 12:11:45 oc new-project pipeline-${GUID}-prod --description="Cat of the Day Production Environment" --display-name="Cat Of The Day - Prod"
+  840  2016-12-02 12:11:51 oc get pods
+  841  2016-12-02 12:11:56 oc project
+  842  2016-12-02 12:13:27 oc get projects
+  843  2016-12-02 12:15:55 oc project pipeline-${GUID}-dev
+  844  2016-12-02 12:16:02 oc get pod
+  845  2016-12-02 12:16:13 echo $GUID
+  846  2016-12-02 12:16:27 oc new-app jenkins-persistent -p JENKINS_PASSWORD=openshiftpipelines  -n pipeline-${GUID}-dev
+  847  2016-12-02 12:16:41 history|grep 1000
+  848  2016-12-02 12:16:48 oc patch dc jenkins -p '{"spec": {"template": {"spec": {"containers":[{ "name":"jenkins", "livenessProbe": {"initialDelaySeconds": 1000 } }]}}}}'
+  849  2016-12-02 12:23:39 oc logs
+  850  2016-12-02 12:23:44 oc get pods
+  851  2016-12-02 12:23:56 oc logs jenkins-2-7eff8
+  852  2016-12-02 12:24:00 oc get pods
+  853  2016-12-02 12:24:08 oc logs -f jenkins-2-7eff8
+  854  2016-12-02 12:45:11 oc policy add-role-to-group system:image-puller system:serviceaccounts:pipeline-${GUID}-test -n pipeline-${GUID}-dev
+  855  2016-12-02 12:45:13 oc policy add-role-to-group system:image-puller system:serviceaccounts:pipeline-${GUID}-prod -n pipeline-${GUID}-dev
+  856  2016-12-02 12:46:11 clear; oc policy add-role-to-group system:image-puller system:serviceaccounts:pipeline-${GUID}-prod -n pipeline-${GUID}-dev
+  857  2016-12-02 12:46:26 echo $GUID
+  858  2016-12-02 12:46:58 oc policy add-role-to-group system:image-puller system:serviceaccounts:pipeline-glw-test -n pipeline-glw-dev
+  859  2016-12-02 12:47:39 oc policy add-role-to-group system:image-puller system:serviceaccounts:pipeline-glwtest-test -n pipeline-glw-dev
+  860  2016-12-02 12:48:43 oc new-app https://github.com/StefanoPicozzi/cotd.git -n pipeline-${GUID}-dev
+  861  2016-12-02 12:49:39 oc get pods
+  862  2016-12-02 12:49:53 history
+  863  2016-12-02 12:50:06 oc login https://master.workshop.openshift.opentlc.com --token=rODavJlzwqLWcjWkjzj6xUu4aIV3Xl4BwoRbnEluxgQ
+  864  2016-12-02 12:50:54 oc get pods
+  865  2016-12-02 13:29:34 byobu-enable
+  866  2016-12-02 13:26:30 yum -y install byobyu
+  867  2016-12-02 13:26:33 yum -y install byobu
+  868  2016-12-02 13:26:43 sudo yum -y install byobu
+  869  2016-12-02 13:27:02 sudo yum -y install tmux
+  870  2016-12-02 13:27:08 sudo yum -y install byobu
+  871  2016-12-02 13:28:12 byobu
+  872  2016-12-02 13:33:20 byobu&
+  873  2016-12-02 13:33:22 62;9;c
+  874  2016-12-02 13:33:41 [2~~
+  875  2016-12-02 13:33:44 cea
+  876  2016-12-02 13:33:46 est
+  877  2016-12-02 13:33:41 sa~
+  878  2016-12-02 13:33:47 lrre
+  879  2016-12-02 13:35:58 byobu
+  880  2016-12-02 13:30:32 find . -exec grep -Hn "xChat" {} \;
+  881  2016-12-02 13:31:36 grep -rHn pidgin *
+  882  2016-12-02 13:31:49 grep -riHn pidgin *
+  883  2016-12-02 13:31:55 cd /etc
+  884  2016-12-02 13:31:56 grep -riHn pidgin *
+  885  2016-12-02 13:32:02 grep -riHn pidgin * 2>/dev/null
+  886  2016-12-02 13:32:35 grep -riHn pidgin.desktop  * 2>/dev/null
+  887  2016-12-02 13:32:38 cd /
+  888  2016-12-02 13:32:41 grep -riHn pidgin.desktop  * 2>/dev/null
+  889  2016-12-02 13:34:25 cd
+  890  2016-12-02 13:34:34 vi windows_ssh_sessions
+  891  2016-12-02 13:35:51 sh windows_ssh_sessions 
+  892  2016-12-02 13:36:40 screen -ls
+  893  2016-12-02 13:36:43 ps -ef
+  894  2016-12-02 13:36:46 glances
+  895  2016-12-02 13:58:19 reboot
+  896  2016-11-27 21:31:42 ping google.com
+  897  2016-11-28 18:00:46 pwd
+  898  2016-11-28 18:01:29 find . -type f -exec grep -Hni mileage {} \;
+  899  2016-11-28 18:02:45 more ./.config/google-chrome/Default/Web\ Data
+  900  2016-11-28 18:05:57 CX845287
+  901  2016-12-03 20:24:04 id
+  902  2016-12-03 20:41:37 journalctl -u sshd.service
+  903  2016-12-03 20:41:54 sudo journalctl -u sshd.service
+  904  2016-12-03 20:42:19 chkconfig --list
+  905  2016-12-03 20:42:37 sudo -i
+  906  2016-12-03 20:55:02 lid
+  907  2016-12-03 20:55:33 cd /etc/sysconfig
+  908  2016-12-03 20:55:44 ll
+  909  2016-12-03 20:55:52 grep bash *
+  910  2016-12-03 20:56:02 cd skel
+  911  2016-12-03 20:56:02 ll
+  912  2016-12-03 20:56:05 pwd
+  913  2016-12-03 20:56:08 cd /etc/skel
+  914  2016-12-03 20:56:08 ll
+  915  2016-12-03 20:56:13 cat .bashrc
+  916  2016-12-03 20:57:04 visudo
+  917  2016-12-03 20:57:07 id
+  918  2016-12-03 20:57:11 sudo visudo
+  919  2016-12-03 20:58:20 man shutdown
+  920  2016-12-03 20:59:15 clear;reset
+  921  2016-12-03 20:59:22 cd /boot/grub2
+  922  2016-12-03 20:59:26 sudo -i
+  923  2016-12-04 20:33:17 nmcli -f all dev wifi list
+  924  2016-12-04 20:33:31 nmcli -f all dev wifi list|more
+  925  2016-12-04 20:34:22 nmcli -f all dev wifi list|sort -k3
+  926  2016-12-04 20:30:36 man nmcli-examples(7)
+  927  2016-12-04 20:30:39 man nmcli-examples
+  928  2016-12-04 20:31:06 nmcli
+  929  2016-12-04 20:31:10 man nmcli-examples
+  930  2016-12-04 20:31:21 nmcli device wifi list
+  931  2016-12-04 20:31:46 nmcli device wifi list|sort
+  932  2016-12-04 20:32:45 man nmcli-examples
+  933  2016-12-04 20:35:16 ip -v
+  934  2016-12-04 20:35:18 ip -V
+  935  2016-12-04 20:59:48 nmcli general status
+  936  2016-12-04 21:00:02 nmcli general logging
+  937  2016-12-04 21:00:18 nmcli connection show --active
+  938  2016-12-04 21:00:39 nmcli device status
+  939  2016-12-04 21:02:12 nmcli -p con show wifi
+  940  2016-12-04 21:02:21 nmcli -p con show
+  941  2016-12-04 21:02:45 nmcli -p con show Marriott_GUEST
+  942  2016-12-04 21:03:58 nmcli dev wifi list
+  943  2016-12-04 22:38:45 vol_id
+  944  2016-12-04 22:50:49 blkid
+  945  2016-12-04 22:51:05 cat /etc/fstab
+  946  2016-12-04 22:52:12 ll /dev/disk
+  947  2016-12-04 22:52:19 ll /dev/disk/by-uuid/
+  948  2016-12-04 22:52:25 ll /dev/disk/by-path/
+  949  2016-12-04 22:52:33 ll /dev/disk/by*
+  950  2016-12-04 22:52:40 clearll /dev/disk/by*
+  951  2016-12-04 22:52:44 clear;ll /dev/disk/by*
+  952  2016-12-04 22:53:06 lspart
+  953  2016-12-04 22:53:13 vglist
+  954  2016-12-04 22:53:16 man -k vg
+  955  2016-12-04 22:53:22 vgdisplay
+  956  2016-12-04 22:53:32 vgs
+  957  2016-12-04 22:53:43 clear;sudo vgs
+  958  2016-12-04 22:53:53 clear;sudo vgdisplay
+  959  2016-12-04 22:54:09 man -k vg
+  960  2016-12-04 22:54:23 man -k vg|grep ^vg
+  961  2016-12-04 22:54:53 man -k lv|grep ^lv
+  962  2016-12-04 22:55:22 lvmconfig
+  963  2016-12-04 22:55:46 lvdisplay
+  964  2016-12-04 22:55:49 sudo lvdisplay
+  965  2016-12-04 22:56:00 sudo lspv
+  966  2016-12-04 22:56:05 sudo lsvg
+  967  2016-12-05 08:27:10 subscription-manager list --available
+  968  2016-12-05 08:27:48 sudo subscription-manager list --available
+  969  2016-12-05 08:28:23 yum -n install atomic-openshift-utils
+  970  2016-12-05 08:30:45 yum -n install atomic-openshift-utils|more
+  971  2016-12-05 08:31:04 yum info  atomic-openshift-utils|more
+  972  2016-12-05 11:29:59 apm install todo-show
+  973  2016-12-05 11:30:13 clear
+  974  2016-12-05 11:30:20 sudo apm install todo-show
+  975  2016-12-05 11:30:34 yum update atom
+  976  2016-12-05 11:30:38 sudo yum update atom
+  977  2016-12-05 11:30:56 sudo install -y atom
+  978  2016-12-05 11:31:11 sudo yum -y install atom
+  979  2016-12-05 11:31:17 yum searc atom
+  980  2016-12-05 11:31:20 sudo -i
+  981  2016-12-05 17:37:55 touch immutable
+  982  2016-12-05 17:38:05 getfacl immutable 
+  983  2016-12-05 17:38:29 setfacl -m g: immutable 
+  984  2016-12-05 17:38:39 setfacl -m g:--- immutable 
+  985  2016-12-05 17:39:08 setfacl -x g:rw  immutable 
+  986  2016-12-05 17:39:56 setfacl -x g:apache  immutable 
+  987  2016-12-05 17:40:05 setfacl -m g:apache  immutable 
+  988  2016-12-05 17:40:08 ll immutable 
+  989  2016-12-05 17:40:29 setfacl -m g:apache:r immutable 
+  990  2016-12-05 17:40:56 getfacl immutable 
+  991  2016-12-05 17:41:16 setfacl -m u:bin:r immutable 
+  992  2016-12-05 17:41:19 getfacl immutable 
+  993  2016-12-05 17:41:51 setfacl -x u::rw immutable 
+  994  2016-12-05 17:42:19 setfacl -m u::r immutable 
+  995  2016-12-05 17:42:21 getfacl immutable 
+  996  2016-12-05 17:42:28 setfacl -m u:: immutable 
+  997  2016-12-05 17:42:34 setfacl -m u::\  immutable 
+  998  2016-12-05 17:42:51 rm immutable 
+  999  2016-12-05 17:42:59 getfacl immutable 
+ 1000  2016-12-05 17:49:08 find . -name "*.iso" -ls
+ 1001  2016-12-05 17:51:37 df -h
+ 1002  2016-12-05 17:51:56 df -h |sort -k2
+ 1003  2016-12-05 17:52:01 df -h |sort -k2 -n
+ 1004  2016-12-05 17:53:03 find . -name "*.iso" -ls
+ 1005  2016-12-05 18:07:22 system-config-lvm
+ 1006  2016-12-05 18:07:30 yum list|grep system
+ 1007  2016-12-05 18:07:38 yum list|grep ^system
+ 1008  2016-12-05 18:39:13 blkid
+ 1009  2016-12-05 18:39:46 e2label /dev/dm-3
+ 1010  2016-12-05 18:39:50 sudo e2label /dev/dm-3
+ 1011  2016-12-05 18:40:01 e2label /dev/sda1
+ 1012  2016-12-05 18:40:04 sudo e2label /dev/sda1
+ 1013  2016-12-05 18:41:58 swapon
+ 1014  2016-12-05 18:42:06 swapon -s
+ 1015  2016-12-05 18:47:27 yum list httpd
+ 1016  2016-12-05 18:47:43 yum whereis httpd
+ 1017  2016-12-05 18:47:48 yum --help
+ 1018  2016-12-05 18:48:06 clear;yum search httpd
+ 1019  2016-12-05 18:48:47 clear;yum search vshttpd
+ 1020  2016-12-05 18:49:03 yum install httpd
+ 1021  2016-12-05 18:49:06 sudo yum install httpd
+ 1022  2016-12-05 18:49:30 yum search vsftpd
+ 1023  2016-12-05 18:49:49 yum install ftpd
+ 1024  2016-12-05 18:49:55 resetr
+ 1025  2016-12-05 18:49:57 reset
+ 1026  2016-12-05 18:50:00 sudo -i
+ 1027  2016-12-05 10:18:10 zsh
+ 1028  2016-12-05 10:18:23 csh
+ 1029  2016-12-05 10:18:59 grep grw /etc/passwd
+ 1030  2016-12-05 10:20:33 sudo chsh  -s grwallac
+ 1031  2016-12-05 10:30:02 cd 
+ 1032  2016-12-05 10:30:05 cd Desktop/
+ 1033  2016-12-05 10:30:07 cd ArchiveL/
+ 1034  2016-12-05 10:30:11 cd SRC/
+ 1035  2016-12-05 10:30:16 git clone https://github.com/etsauer/rdu-consulting-demo.git
+ 1036  2016-12-05 10:30:20 atom .
+ 1037  2016-12-05 10:34:32 ll
+ 1038  2016-12-05 10:34:35 cd rdu-consulting-demo/
+ 1039  2016-12-05 10:34:36 ll
+ 1040  2016-12-05 11:27:11 pwd
+ 1041  2016-12-05 11:27:12 atom .
+ 1042  2016-12-05 11:34:56 cd 
+ 1043  2016-12-05 11:34:59 cd Downloads/
+ 1044  2016-12-05 11:34:59 ll
+ 1045  2016-12-05 11:35:01 ls -ltr
+ 1046  2016-12-05 11:35:34 yum install ./atom.x86_64.rpm 
+ 1047  2016-12-05 11:35:47 sudo su
+ 1048  2016-12-05 11:53:46 ll
+ 1049  2016-12-05 11:53:47 cd 
+ 1050  2016-12-05 11:53:51 cd Desktop/
+ 1051  2016-12-05 11:53:51 ll
+ 1052  2016-12-05 11:53:54 cd ArchiveL/
+ 1053  2016-12-05 11:53:55 ll
+ 1054  2016-12-05 11:53:59 atom .
+ 1055  2016-12-05 12:03:32 yum install golang
+ 1056  2016-12-05 12:03:36 sudo yum install golang
+ 1057  2016-12-05 13:07:04 wireshark
+ 1058  2016-12-05 13:07:11 sniff
+ 1059  2016-12-05 13:08:26 sudo yum install wireshark
+ 1060  2016-12-05 13:09:19 tcpdump
+ 1061  2016-12-05 13:10:21 sudo yum -y install tcpdump
+ 1062  2016-12-05 13:11:22 tcpdump
+ 1063  2016-12-05 13:11:25 ip
+ 1064  2016-12-05 13:11:32 nmcli
+ 1065  2016-12-05 13:11:34 nmcli list
+ 1066  2016-12-05 13:11:40 ifconfig 
+ 1067  2016-12-05 13:15:50 vbox
+ 1068  2016-12-05 13:15:57 cd /opt
+ 1069  2016-12-05 13:15:58 ll
+ 1070  2016-12-05 13:16:03 docker
+ 1071  2016-12-05 13:16:11 vagrant
+ 1072  2016-12-05 13:16:21 sudo yum -y install vagrant
+ 1073  2016-12-05 13:16:33 kvm
+ 1074  2016-12-05 13:16:39 man -k kvm
+ 1075  2016-12-05 13:16:49 qemu-kvm
+ 1076  2016-12-06 08:35:42 atom script_ryan.sh
+ 1077  2016-12-06 07:10:16 export GUID=4091
+ 1078  2016-12-06 07:10:23 ssh oselab-$GUID.oslab.opentlc.com
+ 1079  2016-12-06 07:10:42 history|grep ssh
+ 1080  2016-12-06 07:11:36 ssh grwallac-redhat.com@oselab-$GUID.oslab.opentlc.com
+ 1081  2016-12-06 07:47:42 export GUID=d4ae
+ 1082  2016-12-06 07:47:43 ssh grwallac-redhat.com@oselab-$GUID.oslab.opentlc.com
+ 1083  2016-12-06 07:52:46 echo $GUID
+ 1084  2016-12-06 07:53:07 reset
+ 1085  2016-12-06 07:53:19 ssh grwallac-redhat.com@oselab-d4ae.oslab.opentlc.com
+ 1086  2016-12-07 12:46:22 cd ..
+ 1087  2016-12-07 12:46:23 ll
+ 1088  2016-12-07 12:46:26 cd ..
+ 1089  2016-12-07 12:46:27 ll
+ 1090  2016-12-07 12:46:34 find . -name Stuff -ls
+ 1091  2016-12-07 12:46:59 tar xvtf b|grep tuff
+ 1092  2016-12-07 12:47:08 tar vtf b|grep tuff
+ 1093  2016-12-07 12:47:12 tar vtzf b|grep tuff
+ 1094  2016-12-07 12:49:06 ll
+ 1095  2016-12-07 12:49:10 sh build_6.sh 
+ 1096  2016-12-07 12:49:33 vi build_6.sh 
+ 1097  2016-12-07 12:50:14 clear
+ 1098  2016-12-07 12:50:17 sh build_6.sh 
+ 1099  2016-12-07 12:50:33 oc logs -f bc/policyquote
+ 1100  2016-12-07 12:51:56 vi build_6.sh 
+ 1101  2016-12-07 12:56:25 sh build_6.sh 
+ 1102  2016-12-07 12:56:38 oc logs -f bc/policyquote
+ 1103  2016-12-07 12:56:57 oc get pods
+ 1104  2016-12-07 12:57:15 oc delete policyquote-1-build
+ 1105  2016-12-07 12:57:29 oc delete pod policyquote-1-build
+ 1106  2016-12-07 12:57:33 oc get pods
+ 1107  2016-12-07 12:57:46 oc delete pod policyquote-mysql-1-a0rpf
+ 1108  2016-12-07 12:57:53 oc get dc
+ 1109  2016-12-07 12:58:06 oc delete dc policyquote
+ 1110  2016-12-07 12:58:12 oc delete dc policyquote-mysql
+ 1111  2016-12-07 12:58:22 oc get bc
+ 1112  2016-12-07 12:58:30 oc delete bc policyquote
+ 1113  2016-12-07 12:58:36 oc get services
+ 1114  2016-12-07 12:58:43 oc delete policyquote
+ 1115  2016-12-07 12:58:49 oc delete service policyquote
+ 1116  2016-12-07 12:58:55 oc delete service policyquote-mysql
+ 1117  2016-12-07 12:59:01 ls
+ 1118  2016-12-07 12:59:04 vi build_6.sh 
+ 1119  2016-12-07 12:59:27 oc get bc
+ 1120  2016-12-07 12:59:31 oc get pods
+ 1121  2016-12-07 12:59:55 sh build_6.sh 
+ 1122  2016-12-07 13:00:12 oc get pods
+ 1123  2016-12-07 13:00:30 oc logs policyquote-mysql-1-deploy
+ 1124  2016-12-07 13:00:39 oc get pods
+ 1125  2016-12-07 13:00:55 oc log policyquote-1-build
+ 1126  2016-12-07 13:01:04 oc log policyquote-1-build -f
+ 1127  2016-12-07 13:05:35 oc get pods
+ 1128  2016-12-07 13:05:55 oc get logs policyquote-mysql-1-fwzig
+ 1129  2016-12-07 13:06:04 oc logs policyquote-mysql-1-fwzig
+ 1130  2016-12-07 13:09:10 oc get pvc
+ 1131  2016-12-07 13:10:06 history
+ 1132  2016-12-07 13:11:33 vi clean_6.sh
+ 1133  2016-12-07 13:13:03 ll
+ 1134  2016-12-07 13:13:09 view processserver-mysql-persistent-s2i.yaml
+ 1135  2016-12-07 13:13:33 oc unbind
+ 1136  2016-12-07 13:15:46 oc delete pvc
+ 1137  2016-12-07 13:15:55 oc get pvc
+ 1138  2016-12-07 13:16:08 oc delete pvc policyquote-mysql-pvc
+ 1139  2016-12-07 13:16:17 ls -ltr
+ 1140  2016-12-07 13:16:20 cat clean_6.sh 
+ 1141  2016-12-07 13:16:47 cat clean_6.sh |awk '{print $4-$NF}'
+ 1142  2016-12-07 13:16:51 cat clean_6.sh |awk '{print $4 $NF}'
+ 1143  2016-12-07 13:17:26 alias ocd='oc delete '
+ 1144  2016-12-07 13:17:49 oc get pod
+ 1145  2016-12-07 13:18:30 ocd pod `oc get pod|grep policyquote|awk '{print $1}'`
+ 1146  2016-12-07 13:18:40 cat clean_6.sh 
+ 1147  2016-12-07 13:18:54 ocd dc policyquote
+ 1148  2016-12-07 13:19:04 oc get dc
+ 1149  2016-12-07 13:19:31 ocd dc `oc get dc|grep policyquote|awk '{print $1}'`
+ 1150  2016-12-07 13:19:41 cat clean_6.sh 
+ 1151  2016-12-07 13:19:54 ocd bc `oc get bc|grep policyquote|awk '{print $1}'`
+ 1152  2016-12-07 13:20:12 ocd service `oc get service|grep policyquote|awk '{print $1}'`
+ 1153  2016-12-07 13:20:27 oc get pod
+ 1154  2016-12-07 13:32:12 oc get pv
+ 1155  2016-12-07 13:32:30 ll
+ 1156  2016-12-07 13:32:38 history|grep login
+ 1157  2016-12-07 13:32:45 oc login https://master.workshop.openshift.opentlc.com --token=rODavJlzwqLWcjWkjzj6xUu4aIV3Xl4BwoRbnEluxgQ
+ 1158  2016-12-07 13:33:46 sh build_6.sh 
+ 1159  2016-12-07 13:34:06 oc get dc
+ 1160  2016-12-07 13:34:23 history|grep awk
+ 1161  2016-12-07 13:35:04 oc delete pvc `oc get pvc|grep policyquote|awk '{print $1}'`
+ 1162  2016-12-07 13:35:18 history|grep delete
+ 1163  2016-12-07 13:35:48 oc delete pod `oc get pod|grep policyquote|awk '{print $1}'`
+ 1164  2016-12-07 13:36:30 oc delete dc `oc get dc|grep policyquote|awk '{print $1}'`
+ 1165  2016-12-07 13:36:55 oc delete bc `oc get bc|grep policyquote|awk '{print $1}'`
+ 1166  2016-12-07 13:37:30 oc delete service `oc get service|grep policyquote|awk '{print $1}'`
+ 1167  2016-12-07 13:40:41 oc delete rc `oc get rc|grep policyquote|awk '{print $1}'`
+ 1168  2016-12-07 13:40:56 oc get all
+ 1169  2016-12-07 13:41:09 oc get all|grep policy
+ 1170  2016-12-07 13:42:13 gs
+ 1171  2016-12-07 13:43:50 reset;oc get all|grep policy
+ 1172  2016-12-07 13:44:55 ll
+ 1173  2016-12-07 13:45:18 sh build_6.sh 
+ 1174  2016-12-07 13:53:30 history|grep log
+ 1175  2016-12-07 13:53:47 oc log policyquote-1-build
+ 1176  2016-12-07 14:00:07 pwd
+ 1177  2016-12-07 14:00:08 ll
+ 1178  2016-12-07 14:00:20 cd ..
+ 1179  2016-12-07 14:00:20 ll
+ 1180  2016-12-07 14:00:23 cd ..
+ 1181  2016-12-07 14:00:24 ll
+ 1182  2016-12-07 14:00:32 cd x
+ 1183  2016-12-07 14:00:34 cd xpaas/
+ 1184  2016-12-07 14:00:35 ll
+ 1185  2016-12-07 14:00:38 cd process-server/
+ 1186  2016-12-07 14:00:38 ll
+ 1187  2016-12-07 14:00:46 export source=`pwd`
+ 1188  2016-12-07 14:00:49 cd ../../..
+ 1189  2016-12-07 14:00:49 ll
+ 1190  2016-12-07 14:08:57 cd bxms-xpaas-policyquote
+ 1191  2016-12-07 14:08:58 ll
+ 1192  2016-12-07 14:09:09 mkdir misc
+ 1193  2016-12-07 14:09:28 cd misc/
+ 1194  2016-12-07 14:09:38 cp -pr $src/* .
+ 1195  2016-12-07 14:09:43 ll
+ 1196  2016-12-07 14:09:48 cd ..
+ 1197  2016-12-07 14:09:52 rm -rf misc
+ 1198  2016-12-07 14:09:54 ll
+ 1199  2016-12-07 14:09:58 rm -rf misc
+ 1200  2016-12-07 14:10:01 sudo rm -rf misc
+ 1201  2016-12-07 14:10:02 ll
+ 1202  2016-12-07 14:10:05 mkdir misc
+ 1203  2016-12-07 14:10:13 history|grep export
+ 1204  2016-12-07 14:10:22 ll $source
+ 1205  2016-12-07 14:10:28 cp $source/* .
+ 1206  2016-12-07 14:10:28 ll
+ 1207  2016-12-07 14:10:40 rm *.sh
+ 1208  2016-12-07 14:10:41 ll
+ 1209  2016-12-07 14:10:44 rm log*
+ 1210  2016-12-07 14:10:44 ll
+ 1211  2016-12-07 14:11:15 rm *yaml
+ 1212  2016-12-07 14:11:16 ll
+ 1213  2016-12-07 14:11:24 rm *.json
+ 1214  2016-12-07 14:11:24 ll
+ 1215  2016-12-07 14:11:29 git pull 
+ 1216  2016-12-07 14:11:35 c dmisc
+ 1217  2016-12-07 14:11:37 cd misc
+ 1218  2016-12-07 14:11:38 ll
+ 1219  2016-12-07 14:12:47 history
+ 1220  2016-12-07 14:12:57 cp -pr $source/*
+ 1221  2016-12-07 14:13:01 cp -pr $source/* .
+ 1222  2016-12-07 14:13:02 ll
+ 1223  2016-12-07 14:13:07 cd ..
+ 1224  2016-12-07 14:13:09 git source
+ 1225  2016-12-07 14:13:29 git status
+ 1226  2016-12-07 14:13:37 git add misc
+ 1227  2016-12-07 14:13:40 git status
+ 1228  2016-12-07 14:14:03 ll
+ 1229  2016-12-07 14:14:04 cd misc
+ 1230  2016-12-07 14:14:05 ll
+ 1231  2016-12-07 14:14:16 rm log*
+ 1232  2016-12-07 14:14:26 git commit -m "added my stuff"
+ 1233  2016-12-07 14:15:13 oc completion -
+ 1234  2016-12-07 14:15:19 oc completion -h
+ 1235  2016-12-07 14:18:01 brew install
+ 1236  2016-12-07 14:18:29 ll
+ 1237  2016-12-07 14:18:32 cat bash_completion.sh 
+ 1238  2016-12-07 14:19:16 ll
+ 1239  2016-12-07 14:19:21 git status
+ 1240  2016-12-07 14:19:39 echo $PATH
+ 1241  2016-12-07 14:20:28 ll
+ 1242  2016-12-07 14:20:35 cp bash_completion.sh  ~
+ 1243  2016-12-07 14:20:52 vi ~/.bashrc
+ 1244  2016-12-07 14:21:22 source bash_completion.sh 
+ 1245  2016-12-07 14:21:24 ll
+ 1246  2016-12-07 14:23:33 policyquote_app="http://policyquote-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/"
+ 1247  2016-12-07 14:23:54 kieserver_password='kieserver1!'
+ 1248  2016-12-07 14:24:21 reset;kieserver_password='kieserver1!'
+ 1249  2016-12-07 14:24:39 policyquote_app="http://policyquote-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com"
+ 1250  2016-12-07 14:25:28 policyquote_app="http://policyquote-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com"|jq
+ 1251  2016-12-07 14:25:46 vi checker.sh
+ 1252  2016-12-07 14:26:34 policyquote_app="http://policyquote-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com"vi checker.sh 
+ 1253  2016-12-07 14:26:41 vi checker.sh 
+ 1254  2016-12-07 14:27:40 chmod +x checker.sh 
+ 1255  2016-12-07 14:27:43 ./checker.sh 
+ 1256  2016-12-07 14:28:01 vi checker.sh 
+ 1257  2016-12-07 14:28:57 ./checker.sh 
+ 1258  2016-12-07 14:29:23 git status
+ 1259  2016-12-07 14:29:42 git add bash_completion.sh checker.sh
+ 1260  2016-12-07 14:29:51 alias gs='git status'
+ 1261  2016-12-07 14:29:52 gs
+ 1262  2016-12-07 14:30:04 git commit -m "new scripts"
+ 1263  2016-12-07 14:30:07 git push
+ 1264  2016-12-07 14:30:14 ll
+ 1265  2016-12-07 14:30:19 history
+ 1266  2016-12-06 09:36:16 ssh grwallac-redhat.com@oselab-d4ae.oslab.opentlc.com
+ 1267  2016-12-07 00:55:15 cd 
+ 1268  2016-12-07 00:55:18 cd Downloads/
+ 1269  2016-12-07 00:55:25 ssh -i "rh-demo.pem" ec2-user@ec2-35-162-69-164.us-west-2.compute.amazonaws.com
+ 1270  2016-12-07 00:58:23 ssh -i "rh-demo.pem" ec2-user@jump.gregstraining.com
+ 1271  2016-12-07 00:58:38 dig gregstraining.com
+ 1272  2016-12-07 01:13:24 ssh -i "rh-demo.pem" ec2-user@jump.gregstraining.com
+ 1273  2016-12-07 01:13:31 ssh -i "rh-demo.pem" ec2-user@ec2-35-162-69-164.us-west-2.compute.amazonaws.com
+ 1274  2016-12-07 01:14:07 ssh -i rh-demo.pem ec2-user@ec2-35-162-69-164.us-west-2.compute.amazonaws.com
+ 1275  2016-12-07 01:15:55 ssh -i "rh-demo.pem" ec2-user@testing.gregstraining.com
+ 1276  2016-12-07 01:16:03 ssh -i rh-demo.pem  ec2-user@testing.gregstraining.com
+ 1277  2016-12-07 01:16:11 dig testing.gregstraining.com
+ 1278  2016-12-07 01:16:25 dig jump.gregstraining.com
+ 1279  2016-12-07 01:16:50 while :; do clear; dig +short testing.gregstraining.com; echo; dig jump.gregstraining.com; echo; sleep 3; done
+ 1280  2016-12-07 01:17:56 while :; do clear; dig testing.gregstraining.com; echo; dig jump.gregstraining.com; echo; sleep 3; done
+ 1281  2016-12-07 01:18:24 ssh -i rh-demo.pem  ec2-user@35.162.69.164
+ 1282  2016-12-07 01:18:41 telnet 35.162.69.164
+ 1283  2016-12-07 01:18:48 dig 35.162.69.164
+ 1284  2016-12-07 01:18:56 traceroute 35.162.69.164
+ 1285  2016-12-07 01:19:00 tracert
+ 1286  2016-12-07 01:19:10 yum install traceroute
+ 1287  2016-12-07 01:19:15 sudo yum install traceroute
+ 1288  2016-12-07 01:19:52 sudo yum install traceroute 
+ 1289  2016-12-07 01:20:46 traceroute 35.162.69.164
+ 1290  2016-12-07 01:21:04 dig 35.162.69.164
+ 1291  2016-12-07 01:21:13 ssh -i rh-demo.pem  ec2-user@35.162.69.164
+ 1292  2016-12-07 01:22:28 ssh -i "rh-demo.pem" ec2-user@ec2-35-162-69-164.us-west-2.compute.amazonaws.com
+ 1293  2016-12-07 01:23:03 ssh -i "rh-demo.pem" root@ec2-35-163-10-95.us-west-2.compute.amazonaws.com
+ 1294  2016-12-07 01:23:13 ll *.pem
+ 1295  2016-12-07 01:23:21 chmod 0600 *.pem
+ 1296  2016-12-07 01:23:23 ssh -i "rh-demo.pem" root@ec2-35-163-10-95.us-west-2.compute.amazonaws.com
+ 1297  2016-12-07 01:23:38 ssh -i "rh-demo.pem" openvpnas@ec2-35-163-10-95.us-west-2.compute.amazonaws.com
+ 1298  2016-12-07 01:30:29 pwd
+ 1299  2016-12-07 02:29:30 cd
+ 1300  2016-12-07 02:29:36 cd .ssh
+ 1301  2016-12-07 02:29:38 ll
+ 1302  2016-12-07 02:29:44 cat id_rsa.pub 
+ 1303  2016-12-07 02:40:39 ssh root@172.17.161.3
+ 1304  2016-12-07 02:40:57 ssh root@10.3.9.251
+ 1305  2016-12-07 02:41:15 ssh cloud-user@10.3.9.251
+ 1306  2016-12-07 02:42:53 ssh root@10.3.10.60
+ 1307  2016-12-07 02:43:07 ssh cloud-user@10.3.10.60
+ 1308  2016-12-07 06:14:11 history|grep \#
+ 1309  2016-12-07 06:14:17 ssh grwallac-redhat.com@31.220.66.1 ### module3
+ 1310  2016-12-07 06:14:46 history|grep ssh|grep grwallac
+ 1311  2016-12-07 06:15:05 ssh grwallac-redhat.com@31.220.66.1 ### module3
+ 1312  2016-12-07 07:14:56 oc
+ 1313  2016-12-07 07:38:11 oc login https://master.workshop.openshift.opentlc.com:443
+ 1314  2016-12-07 07:39:14 cd
+ 1315  2016-12-07 07:39:18 cd Desktop/
+ 1316  2016-12-07 07:39:20 cd ArchiveL/
+ 1317  2016-12-07 07:39:21 ll
+ 1318  2016-12-07 07:39:24 cd SRC/
+ 1319  2016-12-07 07:40:00 git clone https://github.com/gpe-mw-training/bxms-advanced-infrastructure-lab.git
+ 1320  2016-12-07 07:40:08 ll
+ 1321  2016-12-07 07:40:18 cd bxms-advanced-infrastructure-lab/
+ 1322  2016-12-07 07:40:52 ll
+ 1323  2016-12-07 07:41:17 oc events -w
+ 1324  2016-12-07 07:41:25 oc get events -w
+ 1325  2016-12-07 07:41:30 oc get events 
+ 1326  2016-12-07 07:41:38 ll
+ 1327  2016-12-07 07:41:50 cd xpaas/
+ 1328  2016-12-07 07:41:50 ll
+ 1329  2016-12-07 07:41:52 cd common/
+ 1330  2016-12-07 07:41:52 ll
+ 1331  2016-12-07 07:42:14 atom xpaas-gogs-persistent.yaml 
+ 1332  2016-12-07 07:43:19 oc get pods
+ 1333  2016-12-07 07:43:27 oc project
+ 1334  2016-12-07 07:47:09 atom myfile.json 
+ 1335  2016-12-07 07:56:35 cat myfile.json |oc create -f -
+ 1336  2016-12-07 07:56:41 oc get pods
+ 1337  2016-12-07 07:56:45 oc get pv
+ 1338  2016-12-07 07:56:56 oc get pvc
+ 1339  2016-12-07 07:59:21 {     "kind": "List",;     "apiVersion": "v1",;     "metadata": {},;     "items": [;         {             "apiVersion": "v1",;             "kind": "PersistentVolumeClaim",;             "metadata": {;                 "labels": {;                     "app": "gogs",;                     "group": "xpaas",;                     "template": "xpaas-gogs-peristent";                 },;                 "name": "gogs-postgresql-pvc";             },;             "spec": {;                 "accessModes": [;                     "ReadWriteOnce";                 ],;                 "resources": {;                     "requests": {;                         "storage": "512Mi";                     };                 }
+ 1340  2016-12-07 07:59:21 ]
+ 1341  2016-12-07 07:59:21 }
+ 1342  2016-12-07 07:59:38 vi build
+ 1343  2016-12-07 07:59:48 sh build
+ 1344  2016-12-07 07:59:59 oc get events -w
+ 1345  2016-12-07 08:18:05 clear
+ 1346  2016-12-07 08:18:28 oc login https://master.na.openshift.opentlc.com
+ 1347  2016-12-07 08:18:50 oc get pods
+ 1348  2016-12-07 08:19:03 oc describe projects
+ 1349  2016-12-07 08:19:18 oc describe project
+ 1350  2016-12-07 08:19:33 oc project
+ 1351  2016-12-07 08:22:13 ll
+ 1352  2016-12-07 08:22:16 history
+ 1353  2016-12-07 08:22:31 cat myfile.json |oc create -f -
+ 1354  2016-12-07 08:22:36 oc get pv
+ 1355  2016-12-07 08:22:42 oc get pvc
+ 1356  2016-12-07 08:22:49 oc process -f xpaas-gogs-persistent.yaml -v APPLICATION_NAME=gogs,POSTGRESQL_USER=gogs,GOGS_POSTGRESQL_PASSWORD=gogs,VOLUME_CAPACITY=512Mi | oc create -f -
+ 1357  2016-12-07 08:22:59 oc get events -w
+ 1358  2016-12-07 08:29:01 oc get pods
+ 1359  2016-12-07 08:29:33 oc get routes
+ 1360  2016-12-07 08:34:00 reset
+ 1361  2016-12-07 08:34:44 gogspod=$(oc get pod | grep "^gogs"|awk '{print $1}')
+ 1362  2016-12-07 08:34:56 echo $gogspod
+ 1363  2016-12-07 08:36:26 oc exec $gogspod -- cat /etc/gogs/conf/app.ini
+ 1364  2016-12-07 08:37:03 oc exec $gogspod -- cat /etc/gogs/conf/app.ini > gogs-app.ini
+ 1365  2016-12-07 08:37:07 ls -ltr
+ 1366  2016-12-07 08:37:34 atom .
+ 1367  2016-12-07 08:40:02 oc create configmap gogs --from-file=gogs-app.ini
+ 1368  2016-12-07 08:40:55 oc set volume dc/gogs --add --overwrite --name=config-volume -m /etc/gogs/conf/ --source='{"configMap":{"name":"gogs","items":[{"key":"gogs-app.ini","path":"app.ini"}]}}'
+ 1369  2016-12-07 08:41:29 atom .
+ 1370  2016-12-07 08:42:31 oc get dc/gogs
+ 1371  2016-12-07 08:42:40 oc describe dc/gogs
+ 1372  2016-12-07 08:49:55 pwd
+ 1373  2016-12-07 08:51:50 ll
+ 1374  2016-12-07 08:53:32 oc get route
+ 1375  2016-12-07 08:53:46 curl nexus-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com
+ 1376  2016-12-07 08:55:55 oc get pods
+ 1377  2016-12-07 09:07:31 pwd
+ 1378  2016-12-07 09:07:36 cd ../../..
+ 1379  2016-12-07 09:07:38 ll
+ 1380  2016-12-07 09:07:54 git clone https://github.com/gpe-mw-training/bxms-xpaas-policyquote
+ 1381  2016-12-07 09:08:01 cd bxms-xpaas-policyquote/
+ 1382  2016-12-07 09:08:32 oc get route
+ 1383  2016-12-07 09:10:50 git remote add gogs-s2i grwallac-redhat.com:Scruffy\!2022@http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1384  2016-12-07 09:11:56 git remote add gogs-s2i grwallac-redhat.com:Scruffy\!2022@http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/grwallac/policyquote.git
+ 1385  2016-12-07 09:13:04 git push gogs-s2i master
+ 1386  2016-12-07 09:13:14 git remote add gogs-s2i grwallac-redhat.com:Scruffy\!2022@http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1387  2016-12-07 09:13:26 git push gogs-s2i master
+ 1388  2016-12-07 09:13:34 pwd
+ 1389  2016-12-07 09:13:35 ll
+ 1390  2016-12-07 09:13:37 cd ..
+ 1391  2016-12-07 09:13:38 ll
+ 1392  2016-12-07 09:13:46 rm -rf bxms-xpaas-policyquote/
+ 1393  2016-12-07 09:13:49 history
+ 1394  2016-12-07 09:13:55 git clone https://github.com/gpe-mw-training/bxms-xpaas-policyquote
+ 1395  2016-12-07 09:14:02 cd bxms-xpaas-policyquote/
+ 1396  2016-12-07 09:14:03 ll
+ 1397  2016-12-07 09:16:05 git remote gogs-s21 grwallac:Spike09@http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/grwallac/policyquote.git
+ 1398  2016-12-07 09:16:31 git remote add gogs-s21 grwallac:Spike09@http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/grwallac/policyquote.git
+ 1399  2016-12-07 09:16:43 git push gogs-s2i master
+ 1400  2016-12-07 09:17:31 git remote add origin http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/grwallac/policyquote.git
+ 1401  2016-12-07 09:18:18 git remote add gogs-s21 grwallac:Spike09@http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1402  2016-12-07 09:18:54 git remote add origin http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/grwallac/policyquote.git
+ 1403  2016-12-07 09:19:08 cd ..
+ 1404  2016-12-07 09:19:09 ll
+ 1405  2016-12-07 09:19:14 rm -rf bxms-xpaas-policyquote/
+ 1406  2016-12-07 09:19:18 history
+ 1407  2016-12-07 09:19:29 git clone https://github.com/gpe-mw-training/bxms-xpaas-policyquote
+ 1408  2016-12-07 09:19:36 ls -ltr
+ 1409  2016-12-07 09:19:40 cd *xp*
+ 1410  2016-12-07 09:19:41 ll
+ 1411  2016-12-07 09:19:49 git remote add origin http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/grwallac/policyquote.git
+ 1412  2016-12-07 09:20:05 git remote add gogs-s2i  http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/grwallac/policyquote.git
+ 1413  2016-12-07 09:20:17 git push gogs-s2i master
+ 1414  2016-12-07 09:21:22 pwd
+ 1415  2016-12-07 09:21:27 cd ..
+ 1416  2016-12-07 09:21:28 ll
+ 1417  2016-12-07 09:21:39 cd bxms-advanced-infrastructure-lab/xpaas/
+ 1418  2016-12-07 09:21:40 ll
+ 1419  2016-12-07 09:21:42 cd decision-server/
+ 1420  2016-12-07 09:21:43 ll
+ 1421  2016-12-07 09:22:06 oc create -f decisionserver-63-is.yaml
+ 1422  2016-12-07 09:22:49 oc create -f decisionserver-basic-s2i.yaml 
+ 1423  2016-12-07 09:23:30 curl -XGET http://gogs:3000/decision-server-s2i/policyquote.git
+ 1424  2016-12-07 09:25:02 vi build_5.sh
+ 1425  2016-12-07 09:30:45 bash build_5.sh 
+ 1426  2016-12-07 09:31:12 oc logs -f bc/policyquote-app
+ 1427  2016-12-07 09:33:52 oc logs -f policyquote-app-1-build
+ 1428  2016-12-07 09:35:35 historyu
+ 1429  2016-12-07 09:35:36 history
+ 1430  2016-12-07 09:37:36 powd
+ 1431  2016-12-07 09:37:37 pwd
+ 1432  2016-12-07 09:37:38 cd ..
+ 1433  2016-12-07 09:37:39 ll
+ 1434  2016-12-07 09:37:46 history
+ 1435  2016-12-07 09:37:56 git clone https://github.com/gpe-mw-training/bxms-xpaas-policyquote
+ 1436  2016-12-07 09:37:58 ll
+ 1437  2016-12-07 09:38:00 cd bxms-xpaas-policyquote/
+ 1438  2016-12-07 09:38:01 ll
+ 1439  2016-12-07 09:38:38 git remote add gogs-s21 http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1440  2016-12-07 09:38:52 git push gogs-s2i master
+ 1441  2016-12-07 09:41:03 git remote add gogs-s21 http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1442  2016-12-07 09:41:07 ll
+ 1443  2016-12-07 09:41:10 cd .git
+ 1444  2016-12-07 09:41:11 ll
+ 1445  2016-12-07 09:41:15 vi config
+ 1446  2016-12-07 09:41:26 cd ..
+ 1447  2016-12-07 09:41:30 git remote add gogs-s21 http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1448  2016-12-07 09:41:36 git push gogs-s2i master
+ 1449  2016-12-07 09:42:01 cd -
+ 1450  2016-12-07 09:42:03 ll
+ 1451  2016-12-07 09:42:07 vi config
+ 1452  2016-12-07 09:42:13 cd ..
+ 1453  2016-12-07 09:42:22 git remote add origin http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1454  2016-12-07 09:42:33 git remote add  http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1455  2016-12-07 09:43:15 cd ..
+ 1456  2016-12-07 09:43:15 ll
+ 1457  2016-12-07 09:43:19 rm -rf bxms-xpaas-policyquote/
+ 1458  2016-12-07 09:43:27 git clone https://github.com/gpe-mw-training/bxms-xpaas-policyquote
+ 1459  2016-12-07 09:43:30 cd -
+ 1460  2016-12-07 09:43:31 ll
+ 1461  2016-12-07 09:43:40 git remote add origin http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1462  2016-12-07 09:43:58 git remote add gogs-s2i  http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1463  2016-12-07 09:44:08 git push -u origin master
+ 1464  2016-12-07 09:44:55 ll
+ 1465  2016-12-07 09:44:59 git pull
+ 1466  2016-12-07 09:45:15 git remote add origin http://gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1467  2016-12-07 09:45:18 cd ..
+ 1468  2016-12-07 09:45:19 ll
+ 1469  2016-12-07 09:45:21 rm -rf bxms-xpaas-policyquote/
+ 1470  2016-12-07 09:45:24 git clone https://github.com/gpe-mw-training/bxms-xpaas-policyquote
+ 1471  2016-12-07 09:45:27 cd -
+ 1472  2016-12-07 09:46:11 git remote add origin http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1473  2016-12-07 09:46:24 git remote add gogs-s2i  http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1474  2016-12-07 09:46:36 git push gogs-s2i master
+ 1475  2016-12-07 09:46:53 history
+ 1476  2016-12-07 09:47:07 oc logs -f policyquote-app-1-build
+ 1477  2016-12-07 09:47:39 oc get templates
+ 1478  2016-12-07 09:47:49 pwd
+ 1479  2016-12-07 09:47:51 cd ..
+ 1480  2016-12-07 09:47:51 ll
+ 1481  2016-12-07 09:48:09 cd decision-server/
+ 1482  2016-12-07 09:48:10 ll
+ 1483  2016-12-07 09:48:32 oc create -f decisionserver-basic-s2i.yaml
+ 1484  2016-12-07 09:48:44 bash build_5.sh 
+ 1485  2016-12-07 10:40:40 oc get pods
+ 1486  2016-12-07 10:47:36 oc logs -f policyquote-app-1-build
+ 1487  2016-12-07 10:47:49 oc get app
+ 1488  2016-12-07 10:48:42 oc delete dc policyquote-app -n grwallac-redhat-com-bxms-infra
+ 1489  2016-12-07 10:49:30 bash build_5.sh 
+ 1490  2016-12-07 10:49:55 oc delete service policyquote-app
+ 1491  2016-12-07 10:50:11 oc delete route policyquote-app
+ 1492  2016-12-07 10:50:30 oc delete imagestream policyquote-app
+ 1493  2016-12-07 10:50:44 oc delete bc policyquote-app
+ 1494  2016-12-07 10:51:35 oc describe service
+ 1495  2016-12-07 10:52:07 vi a
+ 1496  2016-12-07 10:53:42 ls -ltr
+ 1497  2016-12-07 10:53:48 sh a
+ 1498  2016-12-07 10:53:59 ls -ltr
+ 1499  2016-12-07 10:54:09 cat a
+ 1500  2016-12-07 10:54:18 oc describe resources
+ 1501  2016-12-07 10:54:20 oc describe resource
+ 1502  2016-12-07 10:59:58 sh a
+ 1503  2016-12-07 11:00:09 ll
+ 1504  2016-12-07 11:00:11 atom .
+ 1505  2016-12-07 11:03:33 oc delete dc policyquote-app
+ 1506  2016-12-07 11:03:34 oc delete service policyquote-app
+ 1507  2016-12-07 11:03:35 oc delete route policyquote-app
+ 1508  2016-12-07 11:03:36 oc delete is policyquote-app
+ 1509  2016-12-07 11:03:39 oc delete bc policyquote-app
+ 1510  2016-12-07 11:35:01 history >h
+ 1511  2016-12-07 11:35:03 vi h
+ 1512  2016-12-07 11:38:12 cat h
+ 1513  2016-12-07 11:38:15 pwd
+ 1514  2016-12-07 11:38:18 ll
+ 1515  2016-12-07 11:38:26 ll ..
+ 1516  2016-12-07 11:38:31 mkdir ../Stuff
+ 1517  2016-12-07 11:38:32 ll
+ 1518  2016-12-07 11:38:37 mv *.out ../Stuff/
+ 1519  2016-12-07 11:38:42 mv h ../Stuff/
+ 1520  2016-12-07 11:38:43 ll
+ 1521  2016-12-07 11:38:47 mv a ../Stuff/
+ 1522  2016-12-07 11:38:50 more build_5.sh 
+ 1523  2016-12-07 11:39:18 mv build_5.sh ../Stuff/
+ 1524  2016-12-07 11:39:19 ll
+ 1525  2016-12-07 11:39:23 cd ..
+ 1526  2016-12-07 11:39:23 ll
+ 1527  2016-12-07 11:39:27 cd Stuff/
+ 1528  2016-12-07 11:39:28 ll
+ 1529  2016-12-07 11:39:30 cat h
+ 1530  2016-12-07 11:39:41 cd ../bxms-xpaas-policyquote/
+ 1531  2016-12-07 11:39:53 oc create -f decisionserver-63-is.yaml
+ 1532  2016-12-07 11:40:02 cd -
+ 1533  2016-12-07 11:40:03 ll
+ 1534  2016-12-07 11:40:06 cd ..
+ 1535  2016-12-07 11:40:07 ll
+ 1536  2016-12-07 11:40:09 cd decision-server/
+ 1537  2016-12-07 11:40:10 ll
+ 1538  2016-12-07 11:40:17 oc create -f decisionserver-63-is.yaml
+ 1539  2016-12-07 11:40:37 ll
+ 1540  2016-12-07 11:40:40 cd ../Stuff/
+ 1541  2016-12-07 11:40:40 ll
+ 1542  2016-12-07 11:40:46 cat build_5.sh 
+ 1543  2016-12-07 11:40:56 cp build_5.sh build_5.sh.sav
+ 1544  2016-12-07 11:40:59 vi build_5.sh
+ 1545  2016-12-07 11:41:59 ll
+ 1546  2016-12-07 11:42:25 bash -x build_5.sh 2>err.our 1>std.out
+ 1547  2016-12-07 11:42:29 ll
+ 1548  2016-12-07 11:42:33 cat std.out 
+ 1549  2016-12-07 11:42:35 ll
+ 1550  2016-12-07 11:42:40 cat err.our 
+ 1551  2016-12-07 11:42:47 mv err.our err.out
+ 1552  2016-12-07 11:43:25 oc logs -f policyquote-app-1-build
+ 1553  2016-12-07 11:43:40 vi build_5.sh
+ 1554  2016-12-07 11:44:27 history |grep delete|b
+ 1555  2016-12-07 11:44:31 history |grep delete|tee b
+ 1556  2016-12-07 11:44:35 vi b
+ 1557  2016-12-07 11:44:59 sh b
+ 1558  2016-12-07 11:45:07 ll
+ 1559  2016-12-07 11:45:34 bash -x build_5.sh 2>err.out 1>std.out
+ 1560  2016-12-07 11:45:41 cat err.out
+ 1561  2016-12-07 11:45:44 cat std.out 
+ 1562  2016-12-07 11:45:47 history
+ 1563  2016-12-07 11:45:53 oc logs -f policyquote-app-1-build
+ 1564  2016-12-07 11:49:33 sh b
+ 1565  2016-12-07 11:51:19 bash build_5.sh && oc logs -f policyquote-app-1-build
+ 1566  2016-12-07 11:52:00 reset; bash build_5.sh && oc logs -f policyquote-app-1-build
+ 1567  2016-12-07 11:56:18 history
+ 1568  2016-12-07 11:56:24 history|grep policyqu
+ 1569  2016-12-07 11:57:23 ll
+ 1570  2016-12-07 11:57:24 cd ..
+ 1571  2016-12-07 11:57:25 ll
+ 1572  2016-12-07 11:57:30 cd decision-server/
+ 1573  2016-12-07 11:57:31 ll
+ 1574  2016-12-07 11:57:43 atom .*
+ 1575  2016-12-07 12:08:40 vi destroy_all.sh
+ 1576  2016-12-07 12:08:52 ll
+ 1577  2016-12-07 12:08:58 mv destroy_all.sh ../Stuff/
+ 1578  2016-12-07 12:09:03 cd ../Stuff/
+ 1579  2016-12-07 12:09:08 sh -v destroy_all.sh 
+ 1580  2016-12-07 12:10:00 pwd
+ 1581  2016-12-07 12:10:03 cd ../,,
+ 1582  2016-12-07 12:10:07 cd ../..
+ 1583  2016-12-07 12:10:07 ll
+ 1584  2016-12-07 12:10:08 cd ..
+ 1585  2016-12-07 12:10:09 ll
+ 1586  2016-12-07 12:10:31 oc login https://master.na.openshift.opentlc.com
+ 1587  2016-12-07 12:12:36 ll
+ 1588  2016-12-07 12:12:44 cd bxms-advanced-infrastructure-lab/
+ 1589  2016-12-07 12:12:49 cd xpaas/process-server/
+ 1590  2016-12-07 12:12:49 ll
+ 1591  2016-12-07 12:13:15 oc create -f processserver-63-is.yaml 
+ 1592  2016-12-07 12:14:14 subl processserver-mysql-persistent-s2i.yaml 
+ 1593  2016-12-07 12:14:24 atom processserver-mysql-persistent-s2i.yaml 
+ 1594  2016-12-07 12:16:06 oc create -f processserver-mysql-persistent-s2i.yaml 
+ 1595  2016-12-07 12:16:28 pwd
+ 1596  2016-12-07 12:16:34 cd ../..
+ 1597  2016-12-07 12:16:36 cd ..
+ 1598  2016-12-07 12:16:37 ll
+ 1599  2016-12-07 12:16:49 git clone https://github.com/gpe-mw-training/bxms-xpaas-policyquote-process
+ 1600  2016-12-07 12:17:05 cd bxms-xpaas-policyquote-process/
+ 1601  2016-12-07 12:17:06 ll
+ 1602  2016-12-07 12:17:15 cat .git/config 
+ 1603  2016-12-07 12:17:19 cd ..
+ 1604  2016-12-07 12:17:20 ll
+ 1605  2016-12-07 12:17:22 ls -ltr
+ 1606  2016-12-07 12:17:39 tar cvzf b ./bxms-xpaas-policyquote*
+ 1607  2016-12-07 12:17:49 history
+ 1608  2016-12-07 12:18:35 git remote add gogs 
+ 1609  2016-12-07 12:18:42 git remote add gogs  http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/decision-server-s2i/policyquote.git
+ 1610  2016-12-07 12:19:03 pwd
+ 1611  2016-12-07 12:19:06 ll
+ 1612  2016-12-07 12:19:17 cd bxms-xpaas-policyquote-process/
+ 1613  2016-12-07 12:19:18 ll
+ 1614  2016-12-07 12:20:28 git remote add gogs  http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/process-server-s2i/policyquote.git
+ 1615  2016-12-07 12:20:36 git push gogs master
+ 1616  2016-12-07 12:23:15 ll
+ 1617  2016-12-07 12:23:18 cle
+ 1618  2016-12-07 12:23:20 cls
+ 1619  2016-12-07 12:23:21 clear
+ 1620  2016-12-07 12:23:22 ll
+ 1621  2016-12-07 12:23:56 cat readme.md 
+ 1622  2016-12-07 12:29:42 git remote add gogs  http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/process-server-s2i/policyquote.git
+ 1623  2016-12-07 12:29:48 ll
+ 1624  2016-12-07 12:29:50 cd ..
+ 1625  2016-12-07 12:29:51 ll
+ 1626  2016-12-07 12:29:59 tar xvzf b
+ 1627  2016-12-07 12:30:00 ll
+ 1628  2016-12-07 12:30:05 rm -rf bxms-*
+ 1629  2016-12-07 12:30:06 ll
+ 1630  2016-12-07 12:30:10 tar xvzf b
+ 1631  2016-12-07 12:30:12 cd -
+ 1632  2016-12-07 12:30:22 git remote add gogs  http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/process-server-s2i/policyquote.git
+ 1633  2016-12-07 12:31:34 ll
+ 1634  2016-12-07 12:31:37 cd ..
+ 1635  2016-12-07 12:31:38 ll
+ 1636  2016-12-07 12:32:59 git clone https://github.com/gpe-mw-training/bxms-advanced-infrastructure-lab.git
+ 1637  2016-12-07 12:33:02 ll
+ 1638  2016-12-07 12:33:14 tar cvzf b bxms*
+ 1639  2016-12-07 12:33:15 ll
+ 1640  2016-12-07 12:33:36 cd bxms-advanced-infrastructure-lab/
+ 1641  2016-12-07 12:33:40 cd xpaas/process-server/
+ 1642  2016-12-07 12:33:41 ll
+ 1643  2016-12-07 12:33:54 oc create -f processserver-63-is.yaml 
+ 1644  2016-12-07 12:34:32 oc create -f processserver-mysql-persistent-s2i.yaml 
+ 1645  2016-12-07 12:34:44 cd ..
+ 1646  2016-12-07 12:34:44 ll
+ 1647  2016-12-07 12:34:47 cd process-server/
+ 1648  2016-12-07 12:34:48 ll
+ 1649  2016-12-07 12:34:58 cd ..
+ 1650  2016-12-07 12:35:00 ll
+ 1651  2016-12-07 12:35:02 cd ..
+ 1652  2016-12-07 12:35:02 ll
+ 1653  2016-12-07 12:35:31 rm bxms-xpaas-policyquote-process/
+ 1654  2016-12-07 12:35:37 rm -rf bxms-xpaas-policyquote-process/
+ 1655  2016-12-07 12:35:52 oc project
+ 1656  2016-12-07 12:35:59 ll
+ 1657  2016-12-07 12:36:08 history
+ 1658  2016-12-07 12:36:13 git remote add gogs  http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/process-server-s2i/policyquote.git
+ 1659  2016-12-07 12:36:30 ll
+ 1660  2016-12-07 12:36:45 cd bxms-xpaas-policyquote-process/
+ 1661  2016-12-07 12:36:50 git remote add gogs  http://grwallac:Spike09@gogs-grwallac-redhat-com-bxms-infra.cloudapps.na.openshift.opentlc.com/process-server-s2i/policyquote.git
+ 1662  2016-12-07 12:37:00 git push gogs master
+ 1663  2016-12-07 12:37:56 ll
+ 1664  2016-12-07 12:37:58 cd policyquote-process/
+ 1665  2016-12-07 12:38:01 ll
+ 1666  2016-12-07 12:38:17 mkdir configuration
+ 1667  2016-12-07 12:38:38 touch configuration/application-users.properties configuration/application-roles.properties
+ 1668  2016-12-07 12:38:40 ll configuration/
+ 1669  2016-12-07 12:39:01 vi configuration/application-users.properties 
+ 1670  2016-12-07 12:39:26 vi configuration/application-roles.properties 
+ 1671  2016-12-07 12:39:41 gs
+ 1672  2016-12-07 12:39:48 git status
+ 1673  2016-12-07 12:39:57 git add configuration/*
+ 1674  2016-12-07 12:40:06 git status
+ 1675  2016-12-07 12:40:40 git commit -am "Users & Roles (default) for the Application"
+ 1676  2016-12-07 12:40:52 git status
+ 1677  2016-12-07 12:40:59 git push gogs master
+ 1678  2016-12-07 12:42:14 export proc-app=`pwd`
+ 1679  2016-12-07 12:42:23 export procapp=`pwd`
+ 1680  2016-12-07 12:42:28 pwd
+ 1681  2016-12-07 12:42:29 cd ..
+ 1682  2016-12-07 12:42:30 ll
+ 1683  2016-12-07 12:42:31 cd ..
+ 1684  2016-12-07 12:42:32 ll
+ 1685  2016-12-07 12:42:46 tar cvzf c b* 
+ 1686  2016-12-07 12:42:49 clear
+ 1687  2016-12-07 12:42:50 ll
+ 1688  2016-12-07 12:43:02 cd bxms-advanced-infrastructure-lab/
+ 1689  2016-12-07 12:43:03 cd xpaas/
+ 1690  2016-12-07 12:43:05 cd process-server/
+ 1691  2016-12-07 12:43:06 ll
+ 1692  2016-12-07 12:43:29 vi build_6.sh
+ 1693  2016-12-07 12:46:07 ll
+ 1694  2016-12-07 12:46:10 ll ..
+ 1695  2016-12-07 12:46:14 ll ../..
+ 1696  2016-12-07 12:46:21 bash
+ 1697  2016-12-07 12:47:24 ll
+ 1698  2016-12-07 12:47:27 vi build_6.sh 
+ 1699  2016-12-07 12:48:38 ll
+ 1700  2016-12-07 12:48:57 clear
+ 1701  2016-12-07 12:49:04 script logit
+ 1702  2016-12-07 13:32:59 history|grep log
+ 1703  2016-12-07 13:33:17 oc login https://master.na.openshift.opentlc.com
+ 1704  2016-12-07 13:33:32 ll
+ 1705  2016-12-07 13:33:40 script logit2
+ 1706  2016-12-07 14:31:17 pwd
+ 1707  2016-12-07 14:31:18 ll
+ 1708  2016-12-07 14:31:25 git status
+ 1709  2016-12-07 14:31:38 git pull
+ 1710  2016-12-07 14:31:56 git add *.sh
+ 1711  2016-12-07 14:32:05 git commit -m "new scripts"
+ 1712  2016-12-07 14:32:22 git push 
+ 1713  2016-12-07 14:32:53 history|grep git
+ 1714  2016-12-07 14:33:03 ll
+ 1715  2016-12-07 14:33:29 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user kieserver:$kieserver_password -d @policyquote-start-process-payload.json "$policyquote_app/kie-server/services/rest/server/containers/policyquote-process/processes/policyquote.PolicyQuoteProcess/instances"
+ 1716  2016-12-07 14:33:42 vi restart.sh
+ 1717  2016-12-07 14:34:50 pwd
+ 1718  2016-12-07 14:34:54 ll
+ 1719  2016-12-07 14:35:00 chmod +x restart.sh 
+ 1720  2016-12-07 14:35:03 ./restart.sh 
+ 1721  2016-12-07 14:35:29 ll
+ 1722  2016-12-07 14:51:38 find rpm -qa|grep http
+ 1723  2016-12-07 14:51:44 find rpm -Qa|grep http
+ 1724  2016-12-07 14:51:52 yum search http
+ 1725  2016-12-07 14:52:03 yum search http|grep ^http
+ 1726  2016-12-07 14:52:40 yum search http|grep ligh
+ 1727  2016-12-08 07:23:16 cd 
+ 1728  2016-12-08 07:23:19 cd Downloads/
+ 1729  2016-12-08 07:23:21 ls -ltr
+ 1730  2016-12-08 07:23:27 ll *.bin
+ 1731  2016-12-08 07:23:59 for i in `echo *.bin`; do mv $i `echo $i|sed 's/\.bin//'
+ 1732  2016-12-28 12:58:08 `; done
+ 1733  2016-12-08 07:24:40 ls -ltr
+ 1734  2016-12-08 07:24:53 atom L*
+ 1735  2016-12-08 07:27:51 atom Labs_Module05*
+ 1736  2016-12-08 13:39:35 pwd
+ 1737  2016-12-08 13:39:38 cd Desktop/
+ 1738  2016-12-08 13:39:39 ll
+ 1739  2016-12-08 13:39:42 cd pycharm-community-2016.3/
+ 1740  2016-12-08 13:39:42 ll
+ 1741  2016-12-08 13:39:46 more Install-Linux-tar.txt 
+ 1742  2016-12-08 13:39:58 ll
+ 1743  2016-12-08 13:40:17 cd cd bin
+ 1744  2016-12-08 13:40:18 ll
+ 1745  2016-12-08 13:40:31 cd bin
+ 1746  2016-12-08 13:40:32 ll
+ 1747  2016-12-08 13:40:46 ./pycharm.sh 
+ 1748  2016-12-08 13:47:00 more restart.py 
+ 1749  2016-12-08 13:47:08 ./restart.py 
+ 1750  2016-12-08 13:47:19 ll
+ 1751  2016-12-08 13:47:31 which pycharm
+ 1752  2016-12-08 13:47:40 cd /usr/local/bin/
+ 1753  2016-12-08 13:47:41 ll
+ 1754  2016-12-08 13:47:52 cd /opt
+ 1755  2016-12-08 13:47:53 ll
+ 1756  2016-12-08 13:48:07 cd -
+ 1757  2016-12-08 13:48:15 ll
+ 1758  2016-12-08 13:48:25 cd ~/Desktop/pycharm-community-2016.3/
+ 1759  2016-12-08 13:48:26 ll
+ 1760  2016-12-08 13:48:31 more build.txt 
+ 1761  2016-12-08 13:48:47 cd -
+ 1762  2016-12-08 13:48:48 ll
+ 1763  2016-12-08 13:48:54 cd /opt/pycharm-community-2016.2.3/
+ 1764  2016-12-08 13:48:55 ll
+ 1765  2016-12-08 13:49:02 ll bin
+ 1766  2016-12-08 13:49:07 cd ..
+ 1767  2016-12-08 13:49:07 ll
+ 1768  2016-12-08 13:49:17 mv ~/Desktop/pycharm-community-2016.3/ .
+ 1769  2016-12-08 13:49:22 sudo mv ~/Desktop/pycharm-community-2016.3/ .
+ 1770  2016-12-08 13:49:23 ll
+ 1771  2016-12-08 13:49:48 cd /usr/local/bin
+ 1772  2016-12-08 13:49:49 ll
+ 1773  2016-12-08 13:49:56 rm charm
+ 1774  2016-12-08 13:49:59 sudo rm charm
+ 1775  2016-12-08 13:50:21 ln  /opt/pycharm-community-2016.3/bin/pycharm.sh charm
+ 1776  2016-12-08 13:50:25 sudo ln  /opt/pycharm-community-2016.3/bin/pycharm.sh charm
+ 1777  2016-12-08 13:50:26 ll
+ 1778  2016-12-08 13:50:31 rm charm
+ 1779  2016-12-08 13:50:36 sudo rm charm!
+ 1780  2016-12-08 13:50:38 sudo rm charm
+ 1781  2016-12-08 13:50:41 ll
+ 1782  2016-12-08 13:50:47 sudo
+ 1783  2016-12-08 13:50:50 sudo -
+ 1784  2016-12-08 13:50:55 sudo -i 
+ 1785  2016-12-08 13:51:30 charm
+ 1786  2016-12-08 13:51:58 sudo -i
+ 1787  2016-12-08 13:52:28 pycharm
+ 1788  2016-12-08 13:25:05 vi history_thur
+ 1789  2016-12-09 07:11:49 more env.sh
+ 1790  2016-12-09 07:12:49 ll
+ 1791  2016-12-09 07:12:52 more sendit.sh 
+ 1792  2016-12-09 07:13:12 atom .
+ 1793  2016-12-09 07:15:50 charm .
+ 1794  2016-12-09 07:10:16 pwd
+ 1795  2016-12-09 07:10:23 cd Desktop/ArchiveL/SRC/
+ 1796  2016-12-09 07:10:25 git clone --recursive https://github.com/jason-callaway/openshift-disconnected
+ 1797  2016-12-09 07:11:05 ll
+ 1798  2016-12-09 07:11:11 cd openshift-disconnected/
+ 1799  2016-12-09 07:11:12 ll
+ 1800  2016-12-09 07:11:29 ssh-agent bash
+ 1801  2016-12-09 07:37:12 cd Downloads/
+ 1802  2016-12-09 07:37:13 ls -ltr
+ 1803  2016-12-09 07:37:31 rm -rf ansible_aws_deployer-master\(1\).zip 
+ 1804  2016-12-09 07:37:33 ls -ltr
+ 1805  2016-12-09 07:37:54 mv openshift-assessment.adoc.bin openshift-assessment.adoc
+ 1806  2016-12-09 07:37:57 ls -ltr
+ 1807  2016-12-09 07:41:56 atom .
+ 1808  2016-12-08 07:20:52 history|grep f00d
+ 1809  2016-12-08 07:20:56 ssh grwallac-redhat.com@oselab-f00d.oslab.opentlc.com
+ 1810  2016-12-08 07:58:11 ps -ef|grep -i vpn
+ 1811  2016-12-08 07:58:30 strings /usr/libexec/nm-vpnc-service
+ 1812  2016-12-08 07:59:53 clear
+ 1813  2016-12-08 08:00:09 ssh grwallac-redhat.com@oselab-ae9c.oslab.opentlc.com
+ 1814  2016-12-08 08:20:13 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com
+ 1815  2016-12-08 08:48:52 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com "sudo tail -f /root/.oselab.log"
+ 1816  2016-12-08 08:49:10 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com
+ 1817  2016-12-08 08:49:49 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com "tail -f /root/.oselab.log"
+ 1818  2016-12-08 08:50:02 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com
+ 1819  2016-12-08 08:51:07 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com "tail -f LOG"
+ 1820  2016-12-08 08:53:35 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com
+ 1821  2016-12-09 07:10:08 clear
+ 1822  2016-12-09 07:10:14 ssh grwallac-redhat.com@oselab-30c1.oslab.opentlc.com
+ 1823  2016-12-12 10:27:30 pwd
+ 1824  2016-12-12 10:27:32 cd Desktop/
+ 1825  2016-12-12 10:27:36 cd ArchiveL/
+ 1826  2016-12-12 10:27:42 mkdir Vagrants
+ 1827  2016-12-12 10:27:45 cd Vagrants/
+ 1828  2016-12-12 10:27:50 vagrant init openshift/origin-all-in-one
+ 1829  2016-12-12 10:29:12 sudo yum install ruby
+ 1830  2016-12-12 10:29:27 sudo yum install rubygems
+ 1831  2016-12-12 10:31:34 sudo yum install ruby
+ 1832  2016-12-12 10:31:59 sudo yum install rubygems
+ 1833  2016-12-12 10:32:18 sudo gem update --system
+ 1834  2016-12-12 10:33:11 sudo gem install vagrant
+ 1835  2016-12-12 10:34:13 sudu yum -y install vagrant
+ 1836  2016-12-12 10:34:19 sudo yum -y install vagrant
+ 1837  2016-12-12 10:34:46 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.rpm
+ 1838  2016-12-12 10:35:33 yum install oh-my-vagrant
+ 1839  2016-12-12 10:35:42 sudo yum install oh-my-vagrant
+ 1840  2016-12-13 06:38:41 cd 
+ 1841  2016-12-13 06:38:44 cd Downloads/
+ 1842  2016-12-13 06:39:08 unzip openshift-ansible-master\(1\).zip 
+ 1843  2016-12-13 06:39:17 ls -ltr
+ 1844  2016-12-13 06:39:27 unzip openshift-ansible-master\(1\).zip |more
+ 1845  2016-12-13 06:39:40 cd openshift-ansible-master/
+ 1846  2016-12-13 06:39:41 ll
+ 1847  2016-12-13 06:39:43 atom .
+ 1848  2016-12-13 06:46:46 more /etc/polkit-1/rules.d/50-org.libvirt.unix.manage.rule
+ 1849  2016-12-13 06:46:49 sudo more /etc/polkit-1/rules.d/50-org.libvirt.unix.manage.rule
+ 1850  2016-12-13 06:46:58 cd /etc/polkit-1/rules.d/
+ 1851  2016-12-13 06:47:02 sudo -i
+ 1852  2016-12-13 07:15:41 pwd
+ 1853  2016-12-13 07:15:48 cd ArchiveL/
+ 1854  2016-12-13 07:15:49 ll
+ 1855  2016-12-13 07:15:53 cd URLs/
+ 1856  2016-12-13 07:15:56 dest=`pwd`
+ 1857  2016-12-13 07:16:01 cd ..
+ 1858  2016-12-13 07:16:02 ll
+ 1859  2016-12-13 07:16:06 cd _____\ CLEAN\ AND\ SORT\ THESE/
+ 1860  2016-12-13 07:16:07 ll
+ 1861  2016-12-13 07:17:09 ll $dest
+ 1862  2016-12-13 07:17:15 ll|more
+ 1863  2016-12-13 07:17:25 mv *.desktop $dest
+ 1864  2016-12-13 07:17:28 ll
+ 1865  2016-12-13 07:17:53 for i in `echo *.desktop`; do echo $i
+ 1866  2016-12-13 07:18:12 echo $dest
+ 1867  2016-12-13 07:18:20 for i in `echo *.desktop`; do echo $i; mv "$i" /home/grwallac/Desktop/ArchiveL/URLs; done
+ 1868  2016-12-13 07:18:59 for i in `echo *.desktop`; do echo $i; # mv "$i" /home/grwallac/Desktop/ArchiveL/URLs; done
+ 1869  2016-12-13 07:19:06 for i in `echo *.desktop`; do echo $i; done
+ 1870  2016-12-13 07:19:20 for i in `echo "*.desktop"`; do echo $i; done
+ 1871  2016-12-13 07:19:31 for i in `echo "*.desktop"`; do echo $i; # mv "$i" /home/grwallac/Desktop/ArchiveL/URLs; done
+ 1872  2016-12-13 07:20:07 for i in `echo "*.desktop"`; do echo $i; mv "$i" /home/grwallac/Desktop/ArchiveL/URLs; done
+ 1873  2016-12-13 07:20:10 ll
+ 1874  2016-12-13 07:21:05 for i in `echo "*.desktop"`; do echo $i; mv "$i" /home/grwallac/Desktop/ArchiveL/URLs; done
+ 1875  2016-12-13 07:23:38 cd /etc/openvpn/
+ 1876  2016-12-13 07:23:39 ll
+ 1877  2016-12-13 07:33:10 pwd
+ 1878  2016-12-13 07:33:11 cd
+ 1879  2016-12-13 07:33:14 cd Downloads/
+ 1880  2016-12-13 07:33:20 echo $dest
+ 1881  2016-12-13 07:33:28 cd 
+ 1882  2016-12-13 07:33:36 cd Desktop/ArchiveL/URLs/
+ 1883  2016-12-13 07:33:45 export dest=`pwd`
+ 1884  2016-12-13 07:33:47 cd 
+ 1885  2016-12-13 07:33:49 cd Downloads/
+ 1886  2016-12-13 07:33:57 ll *.desktop
+ 1887  2016-12-13 07:34:19 mv *.desktop $dest
+ 1888  2016-12-13 08:50:53 time
+ 1889  2016-12-13 08:50:55 date
+ 1890  2016-12-13 08:50:58 history
+ 1891  2016-12-13 08:51:02 clear
+ 1892  2016-12-13 08:51:08 cd 
+ 1893  2016-12-13 08:51:12 vi .bashrc
+ 1894  2016-12-13 08:51:30 view bash_completion.sh 
+ 1895  2016-12-13 08:51:59 history|grep complete
+ 1896  2016-12-13 08:52:05 sudo -i
+ 1897  2016-12-14 13:01:10 ssh 192.168.122.16
+ 1898  2016-12-14 13:01:30 ssh root@192.168.122.16
+ 1899  2016-12-13 13:41:29 cd 
+ 1900  2016-12-13 13:41:32 cd Downloads/
+ 1901  2016-12-13 13:41:32 ll
+ 1902  2016-12-13 13:41:39 ls -ltr
+ 1903  2016-12-13 13:42:20 sudo -i
+ 1904  2016-12-13 13:42:35 vi deploy
+ 1905  2016-12-13 13:43:57 chmod +x deploy
+ 1906  2016-12-13 13:43:58 ll
+ 1907  2016-12-13 13:44:33 ./deploy rheleval rhel-server-7.2-x86_64-dvd.iso
+ 1908  2016-12-13 13:58:54 ls -ltr
+ 1909  2016-12-13 13:59:14 find /home/grwallac -name "*.qcow2" -ls
+ 1910  2016-12-13 13:59:39 find /home/grwallac -name "*.qcow2" -exec ls -lFah {} \;
+ 1911  2016-12-13 14:00:10 cp /home/grwallac/.local/libvirt/images/rheleval.qcow2 /home/grwallac/Downloads/rheleval.qcow2
+ 1912  2016-12-13 14:00:14 find /home/grwallac -name "*.qcow2" -exec ls -lFah {} \;
+ 1913  2016-12-13 14:00:24 ls -ltr
+ 1914  2016-12-13 14:00:31 ls -ltrh
+ 1915  2016-12-13 14:00:53 rm rhel-server-7.3-x86_64-dvd.iso
+ 1916  2016-12-13 14:11:57 l s-ltr
+ 1917  2016-12-13 14:11:58 ls -ltr
+ 1918  2016-12-13 14:12:04 rm rheleval.qcow2
+ 1919  2016-12-13 14:12:07 df -h
+ 1920  2016-12-13 14:12:28 cd 
+ 1921  2016-12-13 14:12:47 find . -name "*.qcow2" -ls
+ 1922  2016-12-13 14:13:19 cd .local
+ 1923  2016-12-13 14:13:21 cd libvirt/
+ 1924  2016-12-13 14:13:22 ll
+ 1925  2016-12-13 14:13:24 cd images/
+ 1926  2016-12-13 14:13:24 ll
+ 1927  2016-12-13 14:13:25 date
+ 1928  2016-12-13 14:13:32 rm rheleval.qcow2 
+ 1929  2016-12-13 14:13:33 cd ..
+ 1930  2016-12-13 14:13:35 rm -rf images/
+ 1931  2016-12-13 14:13:36 ll
+ 1932  2016-12-13 14:13:37 cd ..
+ 1933  2016-12-13 14:13:43 rm -r libvirt/
+ 1934  2016-12-13 14:13:44 ll
+ 1935  2016-12-13 14:13:47 ll -R
+ 1936  2016-12-13 14:13:57 cd
+ 1937  2016-12-13 14:13:58 ll
+ 1938  2016-12-13 14:29:43 find . -name "*cow2" -ls
+ 1939  2016-12-13 14:29:49 cd VirtualMachines/
+ 1940  2016-12-13 14:29:50 ll
+ 1941  2016-12-13 14:30:00 cp rhel001.qcow2  ~/Downloads/
+ 1942  2016-12-13 14:30:03 \sudo cp rhel001.qcow2  ~/Downloads/
+ 1943  2016-12-13 14:36:16 man virt-sysprep
+ 1944  2016-12-13 14:37:43 sudo yum install /usr/bin/virt-sysprep
+ 1945  2016-12-13 14:47:46 ll
+ 1946  2016-12-14 04:48:09 cd 
+ 1947  2016-12-14 04:48:11 cd Downloads/
+ 1948  2016-12-14 04:48:15 ll *cow*
+ 1949  2016-12-14 04:48:34 cp rhel-guest-image-7.3-35.x86_64.qcow2 rhel-guest-image-7.3-35.x86_64.qcow2.SAV
+ 1950  2016-12-14 04:48:48 ll *cow*
+ 1951  2016-12-14 04:49:02 rm rhel-guest-image-7.3-35.x86_64\(1\).qcow2 
+ 1952  2016-12-14 04:49:05 ll *cow*
+ 1953  2016-12-14 04:49:55 rm rhel001.qcow2
+ 1954  2016-12-14 07:31:16 ls -ltr
+ 1955  2016-12-14 07:56:38 df -h
+ 1956  2016-12-14 07:59:04 c d/etc/libvirt.qemu
+ 1957  2016-12-14 07:59:19 cd /etc/libvirt/
+ 1958  2016-12-14 07:59:21 sudo -i
+ 1959  2016-12-14 10:22:00 ll
+ 1960  2016-12-14 10:22:05 ls -ltr
+ 1961  2016-12-14 10:22:11 ls -lFah
+ 1962  2016-12-14 10:22:14 ls -lFarh
+ 1963  2016-12-14 10:22:19 ls -lFath
+ 1964  2016-12-14 10:22:24 ll -h
+ 1965  2016-12-14 10:22:58 mkdir ISO
+ 1966  2016-12-14 10:23:04 mv *.iso ISO
+ 1967  2016-12-14 10:23:04 ll
+ 1968  2016-12-14 10:30:38 virsh qemu-agent-command infra1
+ 1969  2016-12-14 10:31:51 virsh qemu-agent-command
+ 1970  2016-12-14 10:32:02 virsh list
+ 1971  2016-12-14 10:32:14 virsh qemu-agent-command rheleval
+ 1972  2016-12-14 10:32:34 virsh destroy rheleval
+ 1973  2016-12-14 10:32:38 virsh list
+ 1974  2016-12-14 10:32:59 cd
+ 1975  2016-12-14 10:33:09 ./clone_vms.sh  infra1
+ 1976  2016-12-14 10:33:21 ll gen*
+ 1977  2016-12-14 10:33:29 sudo ./clone_vms.sh infra1
+ 1978  2016-12-14 10:33:44 virsh list
+ 1979  2016-12-14 10:33:51 sudo ./clone_vms.sh infra2
+ 1980  2016-12-14 10:33:56 virsh list
+ 1981  2016-12-14 10:34:12 virsh qemu-agent
+ 1982  2016-12-14 10:34:16 virsh qemu-agent-command
+ 1983  2016-12-14 10:34:24 virsh qemu-agent-command infra2
+ 1984  2016-12-14 10:34:34 virsh qemu-agent-command infra2 nodeinfo
+ 1985  2016-12-14 10:34:48 virsh qemu-agent-command infra2 
+ 1986  2016-12-14 10:34:54 sudo -i
+ 1987  2016-12-14 08:00:48 atom /etc/libvirt/qemu
+ 1988  2016-12-14 12:42:38 nmap
+ 1989  2016-12-14 12:42:40 telnet
+ 1990  2016-12-14 12:42:56 yum whereis telnet
+ 1991  2016-12-14 12:43:03 yum --help
+ 1992  2016-12-14 12:43:51 history|grep yum|sort -u
+ 1993  2016-12-14 12:44:40 yum whereis nmap
+ 1994  2016-12-14 14:21:05 subscription-manager register
+ 1995  2016-12-14 14:21:18 sudo subscription-manager register
+ 1996  2016-12-14 14:21:45 which subscription-manager
+ 1997  2016-12-14 14:21:51 file /usr/bin/subscription-manager
+ 1998  2016-12-14 14:21:59 file /usr/bin/consolehelper
+ 1999  2016-12-14 13:30:44 history
+ 2000  2016-12-14 13:30:52 history|grep start
+ 2001  2016-12-14 13:31:01 history|grep virsh
+ 2002  2016-12-14 13:31:12 sudo -i
+ 2003  2016-12-14 13:31:40 for i in dns infra1 infra2 ; do sudo virsh start $i;  done
+ 2004  2016-12-14 13:32:16 for i in `seq 1 3` ; do sudo virsh start master${i};  done
+ 2005  2016-12-14 13:33:15 ssh master2.mydomain.org
+ 2006  2016-12-14 13:58:51 ssh master3
+ 2007  2016-12-14 13:58:58 vi /etc/resolv.conf
+ 2008  2016-12-14 13:59:54 sudo vi /etc/resolv.conf
+ 2009  2016-12-14 14:00:12 clear
+ 2010  2016-12-14 14:00:16 ssh master3
+ 2011  2016-12-14 14:00:25 ssh master3.mydomain.org
+ 2012  2016-12-14 14:00:50 ps -ef|grep name
+ 2013  2016-12-14 14:01:13 nslookup master3.mydomain.org
+ 2014  2016-12-14 14:01:34 sudo vi /etc/resolv.conf
+ 2015  2016-12-14 14:01:41 nslookup master3.mydomain.org
+ 2016  2016-12-14 14:02:25 systemctl list-unit-files
+ 2017  2016-12-14 14:06:38 systemctl list-unit-files|sort -k2
+ 2018  2016-12-14 14:07:00 systemctl list-unit-files|sort -k2|tee /tmp/services
+ 2019  2016-12-14 14:15:38 ssh infra1
+ 2020  2016-12-14 14:15:44 ssh infra1.mydomain.org
+ 2021  2016-12-14 14:15:58 ssh   master3.mydomain.org
+ 2022  2016-12-14 14:16:56 vi /etc/hosts
+ 2023  2016-12-14 14:17:56 sudo vi /etc/hosts
+ 2024  2016-12-14 14:18:11 ssh dns
+ 2025  2016-12-14 14:18:25 ssh -l jboss dns
+ 2026  2016-12-14 14:25:18 view /etc/rhsm/rhsm.conf
+ 2027  2016-12-14 14:39:18 cd .ssh
+ 2028  2016-12-14 14:39:18 ll
+ 2029  2016-12-14 14:39:23 cat id_rsa.pub 
+ 2030  2016-12-15 07:04:29 ssh root@master1
+ 2031  2016-12-15 06:44:29 ssh master3
+ 2032  2016-12-15 06:44:38 ssh root@master3
+ 2033  2016-12-15 10:31:19 atom ready2
+ 2034  2016-12-14 15:08:43 sudo -i
+ 2035  2016-12-15 11:07:25 atom ready3
+ 2036  2016-12-15 10:22:28 ssh dns
+ 2037  2016-12-15 10:22:33 ssh root@dns
+ 2038  2016-12-15 10:38:40 ssh root@master1
+ 2039  2016-12-14 14:34:12 sudo vi /etc/hosts
+ 2040  2016-12-14 14:36:26 ssh -l jboss master1 "cat /etc/selinux/config"
+ 2041  2016-12-14 14:38:27 ssh root@master1 "subscription-manager list --available"
+ 2042  2016-12-14 14:38:51 ssh root@master1 
+ 2043  2016-12-14 14:41:16 cd
+ 2044  2016-12-14 14:41:20 cd .ssh
+ 2045  2016-12-14 14:43:11 for i in master2 master3 infra1 infra2; do ssh root@${i} "mkdir -f .ssh"; echo $i; done
+ 2046  2016-12-14 14:44:07 for i in master2 master3 infra1 infra2; do ssh root@${i} "mkdir  .ssh"; echo $i; done
+ 2047  2016-12-14 14:45:15 for i in master2 master3 infra1 infra2; do echo $i; cat id_rsa.pub | ssh root@${i} 'cat >> .ssh/authorized_keys && chmod 0600 .ssh/authorized_keys'; done
+ 2048  2016-12-14 14:47:30 for i in master2 master3 infra1 infra2; do ssh root@${i}; done
+ 2049  2016-12-14 14:47:42 ssh master1
+ 2050  2016-12-14 14:47:58 for i in master1; do echo $i; cat id_rsa.pub | ssh root@${i} 'cat >> .ssh/authorized_keys && chmod 0600 .ssh/authorized_keys'; done
+ 2051  2016-12-14 14:48:16 for i in master1; do ssh root@${i} "mkdir  .ssh"; echo $i; done
+ 2052  2016-12-14 14:48:26 ssh root@master1
+ 2053  2016-12-14 14:48:38 ssh dns
+ 2054  2016-12-14 14:48:46 ssh root@dns
+ 2055  2016-12-14 14:48:57 for i in dns; do ssh root@${i} "mkdir  .ssh"; echo $i; done
+ 2056  2016-12-14 14:49:16 for i in dns; do echo $i; cat id_rsa.pub | ssh root@${i} 'cat >> .ssh/authorized_keys && chmod 0600 .ssh/authorized_keys'; done
+ 2057  2016-12-14 14:49:28 ssh root@dns
+ 2058  2016-12-14 14:50:26 ssh master1
+ 2059  2016-12-14 14:50:33 ssh root@master1
+ 2060  2016-12-14 14:52:04 for i in master1 master2 master3 infra1 infra2; do echo $i; subscription-manager register --username=rhn-gps-grwallac --password=Scruffy\!2022; echo; done
+ 2061  2016-12-14 14:53:16 for i in master1 master2 master3 infra1 infra2; do echo $i; ssh root@${i}; done
+ 2062  2016-12-14 14:57:00 for i in master1 master2 master3 infra1 infra2; do echo $i; ssh root@${i} subscription-manager list --available echo ; done
+ 2063  2016-12-14 14:57:26 for i in master1 master2 master3 infra1 infra2; do echo $i; ssh root@${i} "subscription-manager list --available && echo" ; done
+ 2064  2016-12-14 14:58:29 ssh dns
+ 2065  2016-12-14 14:58:34 ssh root@dns
+ 2066  2016-12-14 15:01:49 ssh root@master1
+ 2067  2016-12-14 15:04:20 pwd
+ 2068  2016-12-14 15:04:21 cd
+ 2069  2016-12-14 15:04:23 cd VirtualMachines/
+ 2070  2016-12-14 15:04:24 ll
+ 2071  2016-12-14 15:05:04 mkdir ../VMs
+ 2072  2016-12-14 15:05:28 time rsync * ../VMs
+ 2073  2016-12-14 15:05:35 sudo time rsync * ../VMs
+ 2074  2016-12-14 15:05:45 cd ../VMs/
+ 2075  2016-12-14 15:05:46 ll
+ 2076  2016-12-14 15:05:48 cd -
+ 2077  2016-12-14 15:05:58 sudo su
+ 2078  2016-12-16 19:43:26 ifconfig
+ 2079  2016-12-16 19:44:26 ping google.com
+ 2080  2016-12-16 19:38:29 history
+ 2081  2016-12-16 19:38:45 history|grep vir
+ 2082  2016-12-16 19:38:51 virsh list
+ 2083  2016-12-16 19:39:27 virsh
+ 2084  2016-12-16 19:40:36 clear
+ 2085  2016-12-16 19:40:42 history |grep start
+ 2086  2016-12-16 19:40:55 for i in dns infra1 infra2 ; do sudo virsh start $i;  done
+ 2087  2016-12-16 19:40:59 for i in `seq 1 3` ; do sudo virsh start master${i};  done
+ 2088  2016-12-16 19:41:22 ssh dns
+ 2089  2016-12-16 19:41:26 ssh root@dns
+ 2090  2016-12-18 09:52:00 history
+ 2091  2016-12-18 09:52:08 for i in dns infra1 infra2 ; do sudo virsh start $i;  done
+ 2092  2016-12-18 09:52:16 for i in `seq 1 3` ; do sudo virsh start master${i};  done
+ 2093  2016-12-18 09:52:27 ssh root@master1
+ 2094  2016-12-18 09:53:40 ssh root@master2 systemctl status firewalld
+ 2095  2016-12-18 09:53:47 ssh root@master3 systemctl status firewalld
+ 2096  2016-12-18 09:53:59 ssh root@infra1 systemctl status firewalld
+ 2097  2016-12-18 09:54:29 ssh root@infra2 systemctl status firewalld
+ 2098  2016-12-18 09:54:43 ssh root@infra2 systemctl status NetworkManager
+ 2099  2016-12-18 09:55:10 ssh root@master2 systemctl status NetworkManager
+ 2100  2016-12-18 09:55:35 ping -c 1 master1.mydomain.org
+ 2101  2016-12-18 09:56:48 ssh root@master2 
+ 2102  2016-12-19 20:36:38 pwd
+ 2103  2016-12-19 20:36:44 vi hosts
+ 2104  2016-12-19 20:39:45 cat hosts
+ 2105  2016-12-19 20:54:50 vi hosts
+ 2106  2016-12-19 12:52:55 oc login https://api.ded-stage-aws.openshift.com
+ 2107  2016-12-19 13:35:24 ll
+ 2108  2016-12-19 13:35:28 cd VirtualMachines/
+ 2109  2016-12-19 13:35:29 ll
+ 2110  2016-12-19 13:36:04 cd ..
+ 2111  2016-12-19 13:36:05 ll
+ 2112  2016-12-19 13:36:06 ls -ltr
+ 2113  2016-12-19 13:36:20 history|grep generic
+ 2114  2016-12-19 13:36:29 sudo -i
+ 2115  2016-12-19 20:41:32 ssh root@192.168.122.232
+ 2116  2016-12-19 20:49:14 ssh root@10.3.31.21
+ 2117  2016-12-19 20:49:43 ifconfig -a
+ 2118  2016-12-19 20:54:21 ifconfig
+ 2119  2016-12-19 20:57:01 ifconfig -a
+ 2120  2016-12-19 20:57:59 for i in `seq 1 3` ; do sudo virsh start master${i};  done
+ 2121  2016-12-19 20:58:22 vi hosts
+ 2122  2016-12-19 20:58:27 cat hosts
+ 2123  2016-12-19 20:58:32 ssh master1
+ 2124  2016-12-19 20:58:56 ssh root@10.3.31.21
+ 2125  2016-12-19 20:59:05 route -l
+ 2126  2016-12-19 20:59:11 route -p
+ 2127  2016-12-19 20:59:14 route -v
+ 2128  2016-12-19 20:59:31 ifconfig|grep br
+ 2129  2016-12-19 21:05:19 for i in `seq 1 3` ; do sudo virsh start master${i};  done
+ 2130  2016-12-19 21:05:40 for i in dns infra1 infra2 ; do sudo virsh start $i;  done
+ 2131  2016-12-19 21:06:00 virsh
+ 2132  2016-12-19 21:07:33 ifconfig -a
+ 2133  2016-12-19 21:10:55 vi hosts
+ 2134  2016-12-19 21:18:47 cat hosts
+ 2135  2016-12-19 21:19:43 ifconfig
+ 2136  2016-12-19 21:20:48 reboot
+ 2137  2016-12-20 12:50:42 cat h
+ 2138  2016-12-20 12:51:00 for i in master1 master3 infra2 infra1 ; do cat k; ssh root@${i} "mkdir /root/.ssh" ; scp k root@${i}:/root/.ssh/authorized_keys ; ssh root@${i} "chmod 0600 /root/.ssh/authorized_keys"; done
+ 2139  2016-12-20 12:53:42 vi k
+ 2140  2016-12-20 12:53:50 for i in master1 master3 infra2 infra1 ; do cat k; ssh root@${i} "mkdir /root/.ssh" ; scp k root@${i}:/root/.ssh/authorized_keys ; ssh root@${i} "chmod 0600 /root/.ssh/authorized_keys"; done
+ 2141  2016-12-20 12:54:33 ssh root@master1
+ 2142  2016-12-20 12:54:54 for i in master1 master3 infra2 infra1 ; do cat k; ssh root@${i} "mkdir /root/.ssh" ; scp k root@${i}:/root/.ssh/authorized_keys ; ssh root@${i} "chmod 0600 /root/.ssh/authorized_keys"; done
+ 2143  2016-12-20 12:55:54 ssh root@master1
+ 2144  2016-12-20 12:55:59 ssh root@master2
+ 2145  2016-12-20 12:56:04 ssh root@master3
+ 2146  2016-12-20 12:56:14 ssh root@master2
+ 2147  2016-12-20 12:56:18 ssh root@master1
+ 2148  2016-12-20 12:56:31 ssh master3
+ 2149  2016-12-20 12:56:37 ssh root@master3
+ 2150  2016-12-20 12:57:47 alias
+ 2151  2016-12-20 12:57:52 cd
+ 2152  2016-12-20 12:57:57 vi .bashrc
+ 2153  2016-12-20 12:59:24 source .bashrc
+ 2154  2016-12-20 12:59:26 m2
+ 2155  2016-12-20 12:59:28 m3
+ 2156  2016-12-20 12:59:31 i1
+ 2157  2016-12-20 12:59:48 i2
+ 2158  2016-12-20 12:59:56 alias
+ 2159  2016-12-20 13:00:05 vi .bashrc
+ 2160  2016-12-20 13:00:21 i2
+ 2161  2016-12-20 13:00:24 i1
+ 2162  2016-12-20 13:00:36 cat h
+ 2163  2016-12-20 13:00:41 i1
+ 2164  2016-12-20 13:00:57 clear
+ 2165  2016-12-20 13:01:04 unalias i1
+ 2166  2016-12-20 13:01:08 unalias m1
+ 2167  2016-12-20 13:01:11 unalias m2
+ 2168  2016-12-20 13:01:14 unalias m3
+ 2169  2016-12-20 13:01:18 source .bashrc
+ 2170  2016-12-20 10:30:42 sudo yum -y install slack
+ 2171  2016-12-20 10:32:57 ll
+ 2172  2016-12-20 10:33:18 find / -name slack-2.3.4-0.1.fc21.x86_64.rpm -ls
+ 2173  2016-12-20 10:33:24 sudo find / -name slack-2.3.4-0.1.fc21.x86_64.rpm -ls
+ 2174  2016-12-20 10:33:45 rpm -i /var/cache/yum/x86_64/7Workstation/slack/packages/slack-2.3.4-0.1.fc21.x86_64.rpm
+ 2175  2016-12-20 10:33:48 sudo rpm -i /var/cache/yum/x86_64/7Workstation/slack/packages/slack-2.3.4-0.1.fc21.x86_64.rpm
+ 2176  2016-12-20 10:33:57 slack
+ 2177  2016-12-20 12:45:47 for i in `seq 1 3` ; do sudo virsh start master${i};  done
+ 2178  2016-12-20 12:45:56 for i in dns infra1 infra2 ; do sudo virsh start $i;  done
+ 2179  2016-12-20 12:46:09 cat hosts
+ 2180  2016-12-20 12:46:10 cd
+ 2181  2016-12-20 12:46:13 cat hosts
+ 2182  2016-12-20 12:46:29 ssh root@infra1
+ 2183  2016-12-20 12:46:35 vi /etc/hosts
+ 2184  2016-12-20 12:48:14 sudo vi /etc/hosts
+ 2185  2016-12-20 12:49:16 ssh jboss@master1
+ 2186  2016-12-20 13:04:22 ssh root@master1
+ 2187  2016-12-20 14:26:51 cd
+ 2188  2016-12-20 13:01:19 i1
+ 2189  2016-12-20 13:01:36 i2
+ 2190  2016-12-20 13:01:42 alias
+ 2191  2016-12-20 13:01:49 i2
+ 2192  2016-12-20 13:01:55 unalias m2
+ 2193  2016-12-20 13:01:57 m1
+ 2194  2016-12-20 13:01:59 m3
+ 2195  2016-12-20 13:02:07 dns
+ 2196  2016-12-20 13:02:14 ssh root@dns
+ 2197  2016-12-20 14:27:57 sudo atom /etc/hosts
+ 2198  2016-12-20 14:35:02 cat subUP 
+ 2199  2016-12-20 14:35:54 history
+ 2200  2016-12-20 14:36:11 ssh dns
+ 2201  2016-12-20 14:36:17 dns
+ 2202  2016-12-20 14:36:26 source ~/.bashrc
+ 2203  2016-12-20 19:55:13 redhat-ddns-client config
+ 2204  2016-12-20 19:59:20 cd /etc/openvpn
+ 2205  2016-12-20 19:59:21 ll
+ 2206  2016-12-20 20:02:15 cp ~/Downloads/*.opvn .
+ 2207  2016-12-20 20:02:21 ll ~/Downloads/
+ 2208  2016-12-20 20:02:41 cp ~/Downloads/*.ovpn .
+ 2209  2016-12-20 20:02:48 sudo cp ~/Downloads/*.ovpn .
+ 2210  2016-12-20 20:02:51 ll
+ 2211  2016-12-20 20:03:20 cd /etc/pki
+ 2212  2016-12-20 20:03:21 ll
+ 2213  2016-12-20 20:03:23 cd tls
+ 2214  2016-12-20 20:03:24 ll
+ 2215  2016-12-20 20:03:34 cd certs/
+ 2216  2016-12-20 20:03:35 ll
+ 2217  2016-12-20 20:04:29 cd /usr/share
+ 2218  2016-12-20 20:04:31 ll -d o*
+ 2219  2016-12-20 20:05:44 cd -
+ 2220  2016-12-20 20:05:45 ll
+ 2221  2016-12-20 20:06:00 cd /etc/openvpn
+ 2222  2016-12-20 20:06:01 ll
+ 2223  2016-12-20 20:06:31 openvpn
+ 2224  2016-12-20 20:06:47 openvpn --config PHX2.ovpn 
+ 2225  2016-12-20 20:06:56 more PHX2.ovpn 
+ 2226  2016-12-20 20:07:29 ll
+ 2227  2016-12-20 20:07:31 vi PHX2.ovpn 
+ 2228  2016-12-20 20:07:56 sudo vi *
+ 2229  2016-12-20 20:09:33 ll
+ 2230  2016-12-20 20:09:38 openvpn --config PHX2.ovpn 
+ 2231  2016-12-20 20:09:51 sudo vi *
+ 2232  2016-12-20 20:10:30 openvpn --config PHX2.ovpn 
+ 2233  2016-12-20 20:10:38 cat PHX2.ovpn 
+ 2234  2016-12-20 14:32:51 ssh gwsrhel72
+ 2235  2016-12-20 14:33:01 ssh root@gwsrhel72
+ 2236  2016-12-20 14:33:17 ssh cloud-user@gwsrhel72
+ 2237  2016-12-20 17:59:11 cat /etc/hosts|grep rhel
+ 2238  2016-12-20 17:59:29 ssh cloud-user@gwsrhell72-jump
+ 2239  2016-12-20 18:09:30 ssh cloud-user@gwsrhel72
+ 2240  2016-12-20 18:12:45 grep -n master  /etc/hosts
+ 2241  2016-12-20 18:17:41 ssh cloud-user@master3.inside.grel.com
+ 2242  2016-12-20 12:49:52 ssh root@dns
+ 2243  2016-12-20 13:02:31 clear
+ 2244  2016-12-20 13:02:48 for i in master1 master3 infra1 infra2; do ssh $i " subscription-manager register --username=rhn-gps-grwallac
+ 2245  2016-12-28 12:58:08 "; done
+ 2246  2016-12-20 13:03:16 for i in master1 master3 infra1 infra2; do ssh root@$i " subscription-manager register --username=rhn-gps-grwallac
+ 2247  2016-12-28 12:58:08 "; done
+ 2248  2016-12-20 13:06:18 for i in master1 master3 infra1 infra2; do ssh root@$i " subscription-manager list --available"; done
+ 2249  2016-12-20 13:07:36 vi subUP
+ 2250  2016-12-20 13:08:35 chmod +x subUP 
+ 2251  2016-12-20 13:08:37 ll su*
+ 2252  2016-12-20 13:09:13 for i in master1 master3 infra1 infra2; do echo $i ; scp subUP root@${i}: ; done
+ 2253  2016-12-20 13:09:44 for i in master1 master3 infra1 infra2; do echo $i ; ssh root@$i subUP ; done
+ 2254  2016-12-20 14:10:03 \
+ 2255  2016-12-20 14:10:16 sudo atom /etc/hosts
+ 2256  2016-12-20 14:27:16 for i in master1 master3 infra1 infra2; do echo $i ; ssh root@$i subUP ; done
+ 2257  2016-12-20 14:27:25 for i in master1 master3 infra1 infra2; do echo $i ; ssh root@$i /root/subUP ; done
+ 2258  2016-12-20 14:58:12 ssh root@master1.grel.com
+ 2259  2016-12-20 14:58:49 ssh root@master1.inside.grel.com 
+ 2260  2016-12-20 14:59:18 telnet 172.17.161.3
+ 2261  2016-12-20 14:59:25 ssh 172.17.161.3
+ 2262  2016-12-20 14:59:45 ssh cloud-user@master1.inside.grel.com 
+ 2263  2016-12-20 21:56:45 ssh cloud-user@209.132.178.119
+ 2264  2016-12-20 14:36:28 dns
+ 2265  2016-12-20 14:36:32 alias|grep dn
+ 2266  2016-12-20 14:36:34 alias
+ 2267  2016-12-20 14:36:48 ssh root@dns
+ 2268  2016-12-20 14:38:30 cat subUP 
+ 2269  2016-12-20 14:50:10 history
+ 2270  2016-12-20 14:50:13 ll
+ 2271  2016-12-20 14:50:15 cat subUP 
+ 2272  2016-12-20 14:50:37 vi subUP 
+ 2273  2016-12-20 20:38:48 cd 
+ 2274  2016-12-20 20:38:50 cd .ssh
+ 2275  2016-12-20 20:38:50 ll
+ 2276  2016-12-20 20:39:05 cat id_rsa.pub 
+ 2277  2016-12-20 21:29:44 ssh cloud-user@209.132.178.29
+ 2278  2016-12-20 21:45:25 ssh cloud-user@209.132.178.119
+ 2279  2016-12-20 21:30:39 ssh root@dns
+ 2280  2016-12-20 22:19:36 ssh cloud-user@209.132.178.29
+ 2281  2016-12-20 22:19:41 ll
+ 2282  2016-12-20 22:20:02 vi known_hosts
+ 2283  2016-12-20 22:20:10 ssh cloud-user@209.132.178.29
+ 2284  2016-12-20 22:38:46 ssh cloud-user@209.132.178.119
+ 2285  2016-12-20 22:39:19 ssh root@dns
+ 2286  2016-12-19 21:22:18 for i in dns infra1 infra2 ; do sudo virsh start $i;  done
+ 2287  2016-12-19 21:22:29 for i in `seq 1 3` ; do sudo virsh start master${i};  done
+ 2288  2016-12-19 21:22:36 cat hosts
+ 2289  2016-12-19 21:22:41 ifconfig -a
+ 2290  2016-12-20 22:40:41 ssh cloud-user@209.132.178.12
+ 2291  2016-12-20 22:40:47 ssh cloud-user@209.132.178
+ 2292  2016-12-20 22:41:01 ssh cloud-user@209.132.178.44
+ 2293  2016-12-20 22:41:44 ssh cloud-user@209.132.178.151
+ 2294  2016-12-20 22:41:55 ssh cloud-user@209.132.178.250
+ 2295  2016-12-20 22:45:56 vi update_system.sh
+ 2296  2016-12-20 22:46:21 for i in 29 12 44 110 119 121 151 20
+ 2297  2016-12-20 22:46:25 for i in 29 12 44 110 119 121 151 250; do
+ 2298  2016-12-20 22:46:33 chmod +x update_system.sh 
+ 2299  2016-12-20 22:46:37 for i in 29 12 44 110 119 121 151 250; do scp update_system.sh cloud-user@209.132.178.${i}:; echo $i; done
+ 2300  2016-12-20 22:50:16 for i in 29 12 44 110 119 121 151 250; do echo $i; done
+ 2301  2016-12-20 22:41:32 ssh cloud-user@209.132.178.121
+ 2302  2016-12-20 22:51:10 history
+ 2303  2016-12-20 22:51:45 ssh cloud-user@209.132.178.12
+ 2304  2016-12-20 22:53:16 ssh cloud-user@209.132.178.29
+ 2305  2016-12-20 23:12:30 ssh cloud-user@209.132.178.44
+ 2306  2016-12-20 23:17:46 for i in 29 12 44 110 119 121 151 250; do scp update_system.sh cloud-user@209.132.178.${i}:; echo $i; done
+ 2307  2016-12-20 23:06:36 ssh cloud-user@209.132.178.151
+ 2308  2016-12-20 22:41:21 ssh cloud-user@209.132.178.110
+ 2309  2016-12-20 23:03:18 ssh cloud-user@209.132.178.119
+ 2310  2016-12-20 23:04:17 ssh cloud-user@209.132.178.121
+ 2311  2016-12-20 22:54:29 ssh cloud-user@209.132.178.44
+ 2312  2016-12-20 23:39:55 iptables
+ 2313  2016-12-20 23:40:00 docker
+ 2314  2016-12-20 23:40:28 systemctl status docker
+ 2315  2016-12-20 23:41:02 d
+ 2316  2016-12-20 23:38:36 ping glw-ose3-node2.osop.rhcloud.com
+ 2317  2016-12-20 23:38:45 dig glw-ose3-node2.osop.rhcloud.com
+ 2318  2016-12-20 23:39:40 git
+ 2319  2016-12-20 23:39:43 tmux
+ 2320  2016-12-20 23:41:50 ssh cloud-user@209.132.178.44
+ 2321  2016-12-20 23:42:28 hostname
+ 2322  2016-12-20 23:42:33 ssh cloud-user@209.132.178.44
+ 2323  2016-12-20 23:42:43 ssh cloud-user@209.132.178.250
+ 2324  2016-12-21 00:29:30 cd .ssh
+ 2325  2016-12-21 00:29:31 ll
+ 2326  2016-12-21 00:29:38 cat id_rsa.pub 
+ 2327  2016-12-21 00:32:34 cd && scp cloud-user@209.132.178.121:s .
+ 2328  2016-12-21 00:32:40 ll s
+ 2329  2016-12-21 00:32:47 tar tvxf s
+ 2330  2016-12-21 00:32:55 tar tvzf s
+ 2331  2016-12-21 00:33:26 for i in 29 12 44 110 119 121 151 250; do scp s  cloud-user@209.132.178.${i}:; echo $i; done
+ 2332  2016-12-21 00:34:14 for i in 29 12 44 110 119 121 151 250; do  ssh cloud-user@209.132.178.$i ; done
+ 2333  2016-12-21 00:44:33 ssh cloud-user@209.132.178.12
+ 2334  2016-12-20 23:10:20 ssh cloud-user@209.132.178.250
+ 2335  2016-12-20 23:45:33 ssh cloud-user@209.132.178.110
+ 2336  2016-12-20 23:47:14 ssh cloud-user@209.132.178.119
+ 2337  2016-12-20 23:47:50 ssh cloud-user@209.132.178.121
+ 2338  2016-12-20 23:48:52 ssh cloud-user@209.132.178.110
+ 2339  2016-12-20 23:49:29 ssh cloud-user@209.132.178.119
+ 2340  2016-12-20 23:49:46 ssh cloud-user@209.132.178.121
+ 2341  2016-12-20 23:49:53 ssh cloud-user@209.132.178.110
+ 2342  2016-12-20 23:50:10 ssh cloud-user@209.132.178.29
+ 2343  2016-12-20 23:51:19 ssh cloud-user@209.132.178.12
+ 2344  2016-12-20 23:52:02 ssh cloud-user@209.132.178.44
+ 2345  2016-12-20 23:52:36 ssh cloud-user@209.132.178.110
+ 2346  2016-12-20 23:52:48 ssh cloud-user@209.132.178.119
+ 2347  2016-12-20 23:52:57 ssh cloud-user@209.132.178.121
+ 2348  2016-12-20 23:53:05 ssh cloud-user@209.132.178.151
+ 2349  2016-12-20 23:53:53 ssh cloud-user@209.132.178.250
+ 2350  2016-12-20 23:54:34 for i in 29 12 44 110 119 121 151 250; do echo $i; done
+ 2351  2016-12-20 23:55:02 for i in 29 12 44 110 119 121 151 250; do echo $i; ssh 209.132.178.${i} "docker -v "; done
+ 2352  2016-12-20 23:55:27 for i in 29 12 44 110 119 121 151 250; do echo $i; ssh 209.132.178.${i} ; done
+ 2353  2016-12-20 23:55:43 for i in 29 12 44 110 119 121 151 250; do echo $i; ssh cloud-user@209.132.178.${i} "docker -v "; done
+ 2354  2016-12-20 23:55:55 ssh cloud-user@209.132.178.250
+ 2355  2016-12-20 23:56:18 ssh cloud-user@209.132.178.110
+ 2356  2016-12-21 00:09:19 ssh cloud-user@209.132.178.119
+ 2357  2016-12-21 00:12:17 ssh cloud-user@209.132.178.121
+ 2358  2016-12-21 00:27:39 ssh root@209.132.178.121
+ 2359  2016-12-21 00:27:55 ssh cloud-user@209.132.178.121
+ 2360  2016-12-21 00:40:02 ssh cloud-user@209.132.178.12
+ 2361  2016-12-21 00:40:38 ssh cloud-user@209.132.178.121
+ 2362  2016-12-21 00:53:49 ssh cloud-user@209.132.178.110
+ 2363  2016-12-21 00:54:25 ssh cloud-user@209.132.178.119
+ 2364  2016-12-21 00:55:54 ssh cloud-user@209.132.178.151
+ 2365  2016-12-21 00:56:18 ssh cloud-user@209.132.178.250
+ 2366  2016-12-21 01:09:32 ssh cloud-user@209.132.178.119
+ 2367  2016-12-21 01:14:16 ll
+ 2368  2016-12-21 01:14:26 tar xvzf  s
+ 2369  2016-12-21 01:14:30 cd root
+ 2370  2016-12-21 01:14:30 ll
+ 2371  2016-12-21 01:14:32 cd .ssh
+ 2372  2016-12-21 01:14:33 ll
+ 2373  2016-12-21 01:14:53 mv id_rsa id_os1.pem
+ 2374  2016-12-21 01:15:02 ll *pem
+ 2375  2016-12-21 01:15:07 mv *pem ~/.ssh
+ 2376  2016-12-21 01:15:13 pwd
+ 2377  2016-12-21 01:15:14 cd 
+ 2378  2016-12-21 01:15:17 pwd
+ 2379  2016-12-21 01:15:20 rm -rf root
+ 2380  2016-12-21 01:15:31 vi .bashrc
+ 2381  2016-12-21 01:16:54 source .bashrc
+ 2382  2016-12-21 01:16:55 ll
+ 2383  2016-12-21 01:16:56 alias
+ 2384  2016-12-21 01:17:04 lb
+ 2385  2016-12-21 01:17:13 vi .bashrc
+ 2386  2016-12-21 01:17:27 source .bashrc
+ 2387  2016-12-21 01:17:31 lb
+ 2388  2016-12-21 01:17:40 vi .bashrc
+ 2389  2016-12-21 01:18:05 source .bashrc
+ 2390  2016-12-21 01:19:52 sudo vi /etc/hosts
+ 2391  2016-12-21 01:28:03 cat hosts
+ 2392  2016-12-21 01:28:19 mv hosts hostlist
+ 2393  2016-12-21 01:28:21 cat /etc/hosts
+ 2394  2016-12-21 01:18:07 lb
+ 2395  2016-12-21 01:18:20 vi .bashrc
+ 2396  2016-12-21 01:30:02 source .bashrc
+ 2397  2016-12-21 01:30:04 alias
+ 2398  2016-12-21 01:30:07 m1
+ 2399  2016-12-21 01:30:11 cd 
+ 2400  2016-12-21 01:30:13 cd .ssh
+ 2401  2016-12-21 01:30:14 ll
+ 2402  2016-12-21 01:30:21 mv known_hosts known_hosts.1
+ 2403  2016-12-21 01:30:22 cd
+ 2404  2016-12-21 01:30:24 m1
+ 2405  2016-12-21 01:30:29 m2
+ 2406  2016-12-21 01:30:35 m3
+ 2407  2016-12-21 01:30:40 lb
+ 2408  2016-12-21 01:30:45 n1
+ 2409  2016-12-21 01:30:50 n2
+ 2410  2016-12-21 01:31:03 in1
+ 2411  2016-12-21 01:31:10 in2
+ 2412  2016-12-21 01:31:17 vi .bashrc
+ 2413  2016-12-21 01:31:35 source .bashrc
+ 2414  2016-12-21 00:37:11 ssh cloud-user@209.132.178.29
+ 2415  2016-12-21 01:01:24 ssh cloud-user@209.132.178.121
+ 2416  2016-12-21 01:35:12 m1
+ 2417  2016-12-21 01:33:25 m2
+ 2418  2016-12-21 01:31:38 in2
+ 2419  2016-12-21 01:31:45 in1
+ 2420  2016-12-21 01:31:54 clear
+ 2421  2016-12-21 01:31:57 m1
+ 2422  2016-12-21 01:36:02 m1
+ 2423  2016-12-21 01:36:30 m2
+ 2424  2016-12-21 01:36:43 m3
+ 2425  2016-12-21 01:58:12 m1
+ 2426  2016-12-21 02:05:59 m3
+ 2427  2016-12-21 02:02:35 m2
+ 2428  2016-12-20 23:16:15 ssh cloud-user@209.132.178.12
+ 2429  2016-12-20 23:16:25 vi .ssh/known_hosts
+ 2430  2016-12-20 23:16:30 ssh cloud-user@209.132.178.12
+ 2431  2016-12-21 01:44:20 N
+ 2432  2016-12-21 02:10:35 m1
+ 2433  2016-12-21 02:10:51 m1
+ 2434  2016-12-21 20:55:43 cat /etc/host
+ 2435  2016-12-21 20:55:45 cat /etc/hosts
+ 2436  2016-12-21 20:56:45 hostname
+ 2437  2016-12-21 20:56:49 m1
+ 2438  2016-12-21 20:58:44 m3
+ 2439  2016-12-21 20:59:59 m1
+ 2440  2016-12-21 21:00:25 n1
+ 2441  2016-12-21 21:00:54 n2
+ 2442  2016-12-21 21:01:18 in1
+ 2443  2016-12-21 21:01:41 in2
+ 2444  2016-12-21 21:02:11 lb
+ 2445  2016-12-21 20:18:17 dig ipa.opentlc.com
+ 2446  2016-12-21 20:18:40 host
+ 2447  2016-12-21 20:18:51 host `hostname`
+ 2448  2016-12-21 20:18:59 m1
+ 2449  2016-12-21 20:51:49 m2
+ 2450  2016-12-21 20:51:57 m3
+ 2451  2016-12-21 20:52:44 lb
+ 2452  2016-12-23 01:15:51 cd 
+ 2453  2016-12-23 01:15:54 cd Downloads/
+ 2454  2016-12-23 01:15:55 ls -ltr
+ 2455  2016-12-23 01:16:00 vi accessKeys.csv 
+ 2456  2016-12-23 01:16:57 cd 
+ 2457  2016-12-23 01:16:59 cd .ssh
+ 2458  2016-12-23 01:17:00 ll
+ 2459  2016-12-23 01:17:07 cat id_os1.pem 
+ 2460  2016-12-23 01:17:09 ll
+ 2461  2016-12-23 01:17:21 lb
+ 2462  2016-12-23 01:18:46 cd
+ 2463  2016-12-23 01:18:49 cd Downloads/
+ 2464  2016-12-23 01:18:53 ls -ltr
+ 2465  2016-12-23 01:18:56 vi accessKeys.csv 
+ 2466  2016-12-23 01:19:21 cat accessKeys.csv 
+ 2467  2016-12-23 01:19:30 vi accessKeys.csv 
+ 2468  2016-12-23 01:19:39 cat accessKeys.csv 
+ 2469  2016-12-23 01:25:38 vi accessKeys.csv 
+ 2470  2016-12-21 17:59:11 n1
+ 2471  2016-12-21 17:59:20 n2
+ 2472  2016-12-21 18:05:16 n1
+ 2473  2016-12-21 18:05:44 in2
+ 2474  2016-12-21 20:02:42 reset
+ 2475  2016-12-21 20:02:48 m1
+ 2476  2016-12-21 20:15:21 pwd
+ 2477  2016-12-21 20:15:23 cd Desktop/
+ 2478  2016-12-21 20:15:28 ls -lFa openshift_server_PUBLIC.lst 
+ 2479  2016-12-21 20:15:37 chmod 666 openshift_server_PUBLIC.lst 
+ 2480  2016-12-21 20:15:40 sudo chmod 666 openshift_server_PUBLIC.lst 
+ 2481  2016-12-21 20:15:50 grep NOT openshift_server_PUBLIC.lst 
+ 2482  2016-12-24 01:16:31 https://public.os1.phx2.redhat.com/dashboard/project/instances/ 
+ 2483  2016-12-24 01:16:40 https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&tmskey=1dom_03&domainToCheck=gwallabies.com 
+ 2484  2016-12-26 13:24:38 ssh 192.168.0.100
+ 2485  2016-12-26 13:24:59 reset
+ 2486  2016-12-26 13:25:04 history
+ 2487  2016-12-26 13:25:09 history|ssh
+ 2488  2016-12-24 01:16:31 https://public.os1.phx2.redhat.com/dashboard/project/instances/ 
+ 2489  2016-12-24 01:16:40 https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&tmskey=1dom_03&domainToCheck=gwallabies.com 
+ 2490  2016-12-26 13:24:38 ssh 192.168.0.100
+ 2491  2016-12-26 13:24:59 reset
+ 2492  2016-12-26 13:25:04 history
+ 2493  2016-12-26 13:25:09 history|ssh
+ 2494  2016-12-26 13:25:20 history|grep open
+ 2495  2016-12-27 00:07:14 nslookup test.cloudapps-$GUID.oslab.opentlc.com
+ 2496  2016-12-27 00:07:29 nslookup test.cloudapps-$GUID.oslab.opentlc.com 8.8.8.8
+ 2497  2016-12-27 00:07:35 nslookup test.cloudapps-$GUID.oslab.opentlc.com 
+ 2498  2016-12-27 00:10:07 nslookup test.cloudapps-.oslab.opentlc.com 
+ 2499  2016-12-27 00:10:27 nslookup test.cloudapps-fee9.oslab.opentlc.com
+ 2500  2016-12-27 00:10:44 nslookup *.oslab.opentlc.com
+ 2501  2016-12-27 00:10:53 dig oslab.opentlc.com
+ 2502  2016-12-27 00:11:05 dig *.opentlc.com
+ 2503  2016-12-27 00:14:16 dig -tAXFR opentlc.com
+ 2504  2016-12-27 00:26:32 for node in   master1.example.com                                infranode1.example.com                                node1.example.com                                node2.example.com;                                do                                echo installing NetworkManager on $node ;                                  ssh $node "yum -y install NetworkManager";                                done
+ 2505  2016-12-27 00:46:06 dig oslab.opentlc.com
+ 2506  2016-12-27 00:46:22 dig +nocmd oslab.opentlc.com
+ 2507  2016-12-27 00:46:38 history|grep dig
+ 2508  2016-12-27 00:47:53 dig +nocmd opentlc.com ANY
+ 2509  2016-12-27 00:48:26 dig +nocmd opentlc.com ANY +multiline +noall +answer
+ 2510  2016-12-27 00:48:47 dig +nocmd opentlc.com any  +multiline +noall +answer
+ 2511  2016-12-27 00:48:53 dig +nocmd opentlc.com ANY
+ 2512  2016-12-27 00:49:02 dig opentlc.com ANY
+ 2513  2016-12-27 00:49:17 dig +nocmd ipa1.opentlc.com any  +multiline +noall +answer
+ 2514  2016-12-27 00:49:21 dig +nocmd ipa2.opentlc.com any  +multiline +noall +answer
+ 2515  2016-12-27 00:49:27 dig +nocmd ipa3.opentlc.com any  +multiline +noall +answer
+ 2516  2016-12-27 00:49:36 dig opentlc.com ANY
+ 2517  2016-12-26 13:28:44 vi NEWEST
+ 2518  2016-12-26 13:29:20 chmod +x NEWEST 
+ 2519  2016-12-26 13:29:24 ./NEWEST 
+ 2520  2016-12-26 13:29:37 cat NEWEST 
+ 2521  2016-12-26 13:29:41 vi NEWEST 
+ 2522  2016-12-26 13:30:44 cat NEWEST 
+ 2523  2016-12-26 18:14:48 sudo -i
+ 2524  2016-12-26 18:19:06 ssh master1
+ 2525  2016-12-26 18:19:17 id
+ 2526  2016-12-26 18:22:08 sudo -i
+ 2527  2016-12-26 18:34:16 vi NEWEST 
+ 2528  2016-12-26 18:36:31 pwd
+ 2529  2016-12-26 18:36:32 ll
+ 2530  2016-12-26 18:36:34 cd .ssh
+ 2531  2016-12-26 18:36:34 ll
+ 2532  2016-12-26 18:36:42 chattr +i id*
+ 2533  2016-12-26 18:36:50 sudo chattr +i id*
+ 2534  2016-12-26 18:36:51 ll
+ 2535  2016-12-26 18:36:54 lsattr
+ 2536  2016-12-26 18:37:07 sudo -i
+ 2537  2016-12-26 18:46:16 ll
+ 2538  2016-12-26 18:46:17 cd
+ 2539  2016-12-26 18:46:23 sh -v NEWEST 
+ 2540  2016-12-26 18:47:30 ssh -v  grwallac-redhat.com@oselab-fee9.oslab.opentlc.com
+ 2541  2016-12-27 20:40:27 N=1
+ 2542  2016-12-27 20:41:01 for vol in pv{${n}..${n}+25}; do echo $vol; done
+ 2543  2016-12-27 20:41:33 n=0
+ 2544  2016-12-27 20:41:35 for vol in pv{${n}..${n}+25}; do echo $vol; done
+ 2545  2016-12-27 20:41:47 expr $n+25
+ 2546  2016-12-27 20:41:58 `expr $n+25`
+ 2547  2016-12-27 20:42:08 expr $n + 25
+ 2548  2016-12-27 20:42:27 for vol in pv{${n}..`expr ${n} + 25 `}; do echo $vol; done
+ 2549  2016-12-27 20:42:44 for vol in pv{seq `${n}..`expr ${n} + 25 ``}; do echo $vol; done
+ 2550  2016-12-27 20:43:10 for vol in `seq ${n}..`expr ${n} + 25 ``; do echo $vol; done
+ 2551  2016-12-27 20:43:34 for vol in `seq 1-`expr $n + 25``; do echo $vol; done
+ 2552  2016-12-27 20:47:06 for i in `eval echo { $n..`eval $n + 25`}
+ 2553  2016-12-28 12:58:08 do
+ 2554  2016-12-28 12:58:08 echo $i
+ 2555  2016-12-28 12:58:08 done
+ 2556  2016-12-27 20:47:17 for i in `eval echo { $n..`eval $n + 25`}`; do echo $i; done
+ 2557  2016-12-27 20:47:35 echo $n
+ 2558  2016-12-27 20:47:39 echo $n+25
+ 2559  2016-12-27 20:47:49 echo `eval $n + 25`
+ 2560  2016-12-27 20:47:58 echo `expr $n + 25`
+ 2561  2016-12-27 20:48:19 for i in {$n..`expr $n + 25`}; do echo $n; done
+ 2562  2016-12-27 20:48:36 for i in {$n..`expr $n + 25`}; do echo $i; done
+ 2563  2016-12-27 20:50:04 for i in `seq $n `expr $n + 25``; do echo $i; done
+ 2564  2016-12-27 20:50:21 seq $n `expr $n + 25`
+ 2565  2016-12-27 20:50:39 for i in $(seq $n `expr $n + 25`); do echo $i; done
+ 2566  2016-12-27 22:35:32 sudo yum install spice-xpi
+ 2567  2016-12-27 22:35:59 sudo yum install virt-viewer
+ 2568  2016-12-27 22:36:43 sudo yum install spice-xpi
+ 2569  2016-12-27 22:37:08 sudo yum install virt-viewer
+ 2570  2016-12-27 22:40:10 dig 4rhevm-otlclabgrwallacred-jnli7bdg.srv.ravcloud.com/
+ 2571  2016-12-27 22:40:22 dig 4rhevm-otlclabgrwallacred-jnli7bdg.srv.ravcloud.com
+ 2572  2016-12-28 12:58:10 cd
+ 2573  2016-12-28 12:58:11 pwd
+ 2574  2016-12-28 12:58:13 ll
+ 2575  2016-12-28 12:58:16 cd Desktop/
+ 2576  2016-12-28 12:58:17 ll
+ 2577  2016-12-28 12:58:32 pwd
+ 2578  2016-12-28 12:58:33 ll
+ 2579  2016-12-28 12:58:38 cat Foreman.desktop 
+ 2580  2016-12-28 12:58:52 cd ArchiveL/
+ 2581  2016-12-28 12:58:52 ll
+ 2582  2016-12-28 12:58:56 cd SRC/
+ 2583  2016-12-28 12:58:56 ll
+ 2584  2016-12-28 12:59:11 echo "# ose-training" >> README.md
+ 2585  2016-12-28 12:59:11 git init
+ 2586  2016-12-28 12:59:11 git add README.md
+ 2587  2016-12-28 12:59:11 git commit -m "first commit"
+ 2588  2016-12-28 12:59:11 git remote add origin https://github.com/grwallac/ose-training.git
+ 2589  2016-12-28 12:59:11 git push -u origin master
+ 2590  2016-12-28 12:59:36 echo "# ose-training" >> README.md
+ 2591  2016-12-28 12:59:36 git init
+ 2592  2016-12-28 12:59:36 git add README.md
+ 2593  2016-12-28 12:59:36 git commit -m "first commit"
+ 2594  2016-12-28 12:59:36 git remote add origin https://github.com/grwallac/ose-training.git
+ 2595  2016-12-28 12:59:36 git push -u origin master
+ 2596  2016-12-28 13:02:16 ll
+ 2597  2016-12-28 13:02:18 pwd
+ 2598  2016-12-28 13:02:26 git status
+ 2599  2016-12-28 13:02:36 vi a
+ 2600  2016-12-28 13:02:50 ll
+ 2601  2016-12-28 13:02:54 rm README.md 
+ 2602  2016-12-28 13:02:54 ll
+ 2603  2016-12-28 13:03:01 mkdir ose-training
+ 2604  2016-12-28 13:03:03 cd ose-training/
+ 2605  2016-12-28 13:03:07 sh ../a
+ 2606  2016-12-28 13:03:21 ll
+ 2607  2016-12-28 13:03:24 cd ..
+ 2608  2016-12-28 13:03:24 ll
+ 2609  2016-12-28 13:03:33 rm -rf .git
+ 2610  2016-12-28 13:03:37 ll .idea
+ 2611  2016-12-28 13:03:45 ls -ltr
+ 2612  2016-12-28 13:03:48 cat a
+ 2613  2016-12-28 13:03:58 mv a ose-training/populate
+ 2614  2016-12-28 13:04:00 cd -
+ 2615  2016-12-28 13:04:00 ll
+ 2616  2016-12-28 13:04:07 alias gs='git status'
+ 2617  2016-12-28 13:04:08 gs
+ 2618  2016-12-28 13:04:14 git add populate
+ 2619  2016-12-28 13:04:24 git commit -am "init script"
+ 2620  2016-12-28 13:04:49 git config --global user.name "GRWallac"
+ 2621  2016-12-28 13:05:04 git config --globale user.email "grwallac@redhat.com"
+ 2622  2016-12-28 13:05:09 git config --global user.email "grwallac@redhat.com"
+ 2623  2016-12-28 13:05:11 gs
+ 2624  2016-12-28 13:05:13 git push
+ 2625  2016-12-28 13:05:35 cd
+ 2626  2016-12-28 13:05:37 cd .ssh
+ 2627  2016-12-28 13:06:14 ssh-keygen -t dsa -f /home/grwallac/.ssh/github_grw.id_dsa
+ 2628  2016-12-28 13:06:19 ll
+ 2629  2016-12-28 13:06:24 cat echo "# ose-training" >> README.md
+ 2630  2016-12-28 13:06:24 git init
+ 2631  2016-12-28 13:06:24 git add README.md
+ 2632  2016-12-28 13:06:24 git commit -m "first commit"
+ 2633  2016-12-28 13:06:24 git remote add origin https://github.com/grwallac/ose-training.git
+ 2634  2016-12-28 13:06:24 git push -u origin master
+ 2635  2016-12-28 13:06:28 clear
+ 2636  2016-12-28 13:06:30 ll
+ 2637  2016-12-28 13:06:35 cat github_grw.id_dsa.pub
+ 2638  2016-12-28 13:07:57 cd -
+ 2639  2016-12-28 13:07:58 ll
+ 2640  2016-12-28 13:08:06 cd Desktop/ArchiveL/SRC/
+ 2641  2016-12-28 13:08:06 ll
+ 2642  2016-12-28 13:08:13 git clone git@github.com:grwallac/miscellaneous.git
+ 2643  2016-12-28 13:08:18 ll
+ 2644  2016-12-28 13:08:21 cd miscellaneous/
+ 2645  2016-12-28 13:08:28 cat ../ose-training/populate 
+ 2646  2016-12-28 13:08:33 git init
+ 2647  2016-12-28 13:08:43 git add README.md
+ 2648  2016-12-28 13:09:11 echo "MISCELLANEOUS" >> README.md
+ 2649  2016-12-28 13:09:14 git add README.md
+ 2650  2016-12-28 13:09:37 git remote add origin git@github.com:grwallac/miscellaneous.git
+ 2651  2016-12-28 13:09:43 gs
+ 2652  2016-12-28 13:09:47 git add README.md
+ 2653  2016-12-28 13:10:05 git commit -am "initialization"
+ 2654  2016-12-28 13:10:15 git push origin
+ 2655  2016-12-28 13:10:27 gs
+ 2656  2016-12-28 13:10:33 git push
+ 2657  2016-12-28 13:11:01 git config push.default matching
+ 2658  2016-12-28 13:11:03 git push
+ 2659  2016-12-28 13:11:16 git checkout master
+ 2660  2016-12-28 13:11:28 git push -u origin master
+ 2661  2016-12-28 13:50:01 pwd
+ 2662  2016-12-28 13:50:02 ll
+ 2663  2016-12-28 13:50:07 git pull
+ 2664  2016-12-28 13:50:10 ll
+ 2665  2016-12-28 13:50:11 cd ..
+ 2666  2016-12-28 13:50:12 ll
+ 2667  2016-12-28 13:50:14 cd ose-training/
+ 2668  2016-12-28 13:50:17 git pull
+ 2669  2016-12-28 13:50:20 ll
+ 2670  2016-12-28 13:50:25 cat URLs 
+ 2671  2016-12-28 13:50:29 cd Advanced-HA/
+ 2672  2016-12-28 13:50:30 ll
+ 2673  2016-12-28 13:50:32 cd ..
+ 2674  2016-12-28 13:50:33 ll
+ 2675  2016-12-28 15:00:17 history>local_hist

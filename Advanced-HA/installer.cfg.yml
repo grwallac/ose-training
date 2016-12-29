@@ -1,0 +1,112 @@
+ansible_callback_facts_yaml: /root/.config/openshift/.ansible/callback_facts.yaml
+ansible_config: /usr/share/atomic-openshift-utils/ansible.cfg
+ansible_inventory_path: /root/.config/openshift/hosts
+ansible_log_path: /tmp/ansible.log
+deployment:
+  ansible_ssh_user: root
+  hosts:
+  - connect_to: master1
+    hostname: master1.example.com
+    ip: 192.168.0.101
+    node_labels: '{''region'': ''infra''}'
+    public_hostname: master1.example.com
+    public_ip: 192.168.0.101
+    roles:
+    - master
+    - etcd
+    - node
+    - storage
+  - connect_to: master2
+    hostname: master2.example.com
+    ip: 192.168.0.102
+    node_labels: '{''region'': ''infra''}'
+    public_hostname: master2.example.com
+    public_ip: 192.168.0.102
+    roles:
+    - master
+    - etcd
+    - node
+  - connect_to: master3
+    hostname: master3.example.com
+    ip: 192.168.0.103
+    public_hostname: master3.example.com
+    public_ip: 192.168.0.103
+    roles:
+    - master
+    - etcd
+    - node
+  - connect_to: node1
+    hostname: node1.example.com
+    ip: 192.168.0.201
+    public_hostname: node1.example.com
+    public_ip: 192.168.0.201
+    roles:
+    - node
+  - connect_to: node2
+    hostname: node2.example.com
+    ip: 192.168.0.202
+    public_hostname: node2.example.com
+    public_ip: 192.168.0.202
+    roles:
+    - node
+  - connect_to: node3
+    hostname: node3.example.com
+    ip: 192.168.0.203
+    public_hostname: node3.example.com
+    public_ip: 192.168.0.203
+    roles:
+    - node
+  - connect_to: node4
+    hostname: node4.example.com
+    ip: 192.168.0.204
+    public_hostname: node4.example.com
+    public_ip: 192.168.0.204
+    roles:
+    - node
+  - connect_to: node5
+    hostname: node5.example.com
+    ip: 192.168.0.205
+    public_hostname: node5.example.com
+    public_ip: 192.168.0.205
+    roles:
+    - node
+  - connect_to: node6
+    hostname: node6.example.com
+    ip: 192.168.0.206
+    public_hostname: node6.example.com
+    public_ip: 192.168.0.206
+    roles:
+    - node
+  - connect_to: infranode1
+    hostname: infranode1-5c90.oslab.opentlc.com
+    ip: 192.168.0.251
+    public_hostname: infranode1-5c90.oslab.opentlc.com
+    public_ip: 192.168.0.251
+    roles:
+    - node
+  - connect_to: infranode2
+    hostname: infranode2-5c90.oslab.opentlc.com
+    ip: 192.168.0.252
+    public_hostname: infranode2-5c90.oslab.opentlc.com
+    public_ip: 192.168.0.252
+    roles:
+    - node
+  - connect_to: loadbalancer.example.com
+    hostname: loadbalancer.example.com
+    preconfigured: true
+    public_hostname: loadbalancer.example.com
+    roles:
+    - master_lb
+  master_routingconfig_subdomain: ''
+  proxy_exclude_hosts: ''
+  proxy_http: ''
+  proxy_https: ''
+  roles:
+    etcd: {}
+    master: {}
+    master_lb: {}
+    node: {}
+    storage: {}
+variant: openshift-enterprise
+variant_version: '3.3'
+version: v2

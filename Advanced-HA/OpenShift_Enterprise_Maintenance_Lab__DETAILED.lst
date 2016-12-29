@@ -1,0 +1,553 @@
+Advanced HA LAB -- web page -- https://rh.dokeos.com/main/document/showinframes.php?cidReq=ADVTOPOSE&curdirpath=/&file=/Labs_Module02_HA_Deployment.html&tool=scenario&ref=818&step=4&activity_id=4
+
+
+
+OpenShift Enterprise Maintenance Lab
+1. Provision Lab Environment
+
+For this lab, you use the OPENTLC CloudForms appliance found at https://labs.opentlc.com to deploy all of the servers in the lab environment.
+1.1. Order Lab
+
+    Go to https://labs.opentlc.com and use your credentials to log in to the OPENTLC labs provisioning system, which is built on top of Red Hat CloudForms to provide a self-service portal.
+
+
+        If you are using this system for the first time or have never set a password for your OPENTLC account, point your browser to https://www.opentlc.com/account, select Activate Account, and follow the instructions.
+
+        If you do not remember your username or password, use this site to reset your password or obtain a username reminder.
+
+    Navigate to Services → Catalogs → All Services → OPENTLC Cloud Infrastructure Labs.
+
+    On the left side of the screen, locate OpenShift 3.2 Advanced HA Lab for the OpenShift Enterprise 3.2 Advanced High Availability (HA) Lab and click Order at the right side of the screen.
+
+    To order your environment, click Submit at the lower right.
+
+        In a few minutes you receive an email describing how to connect to the environment.
+        	Do not select App Control → Start after ordering the lab. The lab is already starting. Selecting Start may corrupt the lab environment or cause other complications.
+
+    Wait about 20 minutes to allow your environment to build.
+
+    (Optional) Select Status to receive an email with the status of your environment.
+    	The lab environment is cloud-based, so you can access it over the WAN from anywhere. However, do not expect its performance to match a bare-metal environment.
+
+1.2. Set Up SSH Connection
+
+To remotely access any of your lab systems using SSH, use your personal OPENTLC SSO username and public SSH key. Unless otherwise noted, you cannot use SSH to connect directly as root.
+	If you have not already done so, you must provide a public SSH key. To do this, follow the steps in the remainder of this section.
+
+    Go to https://www.opentlc.com/update and log in.
+
+    Paste your public key in that location.
+
+    Connect to your administration host via SSH using your OPENTLC username and private SSH key.
+
+    Replace $GUID in the example below with your personal GUID, which is provided at the top of the lab provisioning email.
+
+        Example using UNIX/Linux:
+
+        ssh -i ~/.ssh/yourprivatekey.key username-company.com@oselab-$GUID.oslab.opentlc.com
+
+
+
+            If you are using Windows, use a terminal program such as PuTTY instead of the command shown here.
+
+            For more information on using SSH and keys, see https://www.opentlc.com/ssh.html. s
+
+    Become the root user, using r3dh4t1! as your password, on the administration host:
+
+    [shacharb-redhat.com@oselab-e275 ~]$ su -
+
+2. Prepare to Install OpenShift Enterprise HA Cluster Deployment
+
+In this lab, you prepare the hosts for installation. You configure a DNS on the oselab administration server to serve the OpenShift Enterprise environment, and configure SSH keys and the IPA server.
+2.1. Prepare the Lab
+
+    Connect to the oselab server, replacing $GUID with your personal GUID:
+
+    Desktop$ ssh -i ~/.ssh/yourprivatekey username-company.com@oselab-$GUID.oslab.opentlc.com
+
+    Use the su command to become root:
+
+    [shacharb-redhat.com@oselab-e275 ~]$ su -
+    Password:
+
+        Use r3dh4t1! when prompted for the password.
+
+    Add example.com and oslab.opentlc.com to the /etc/resolv.conf file to enable resolving of internal DNS names:
+
+    [root@oselab-GUID ~]# sed -i 's/search/search example.com oslab.opentlc.com/g' /etc/resolv.conf
+
+    To disable StrictHostKeyChecking on the oselab host, configure /etc/ssh/ssh_conf:
+
+    [root@oselab-GUID ~]# echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+    Configure DNS entries on oselab to allow load balancing between the infranode servers:
+
+    [root@oselab-GUID ~]# curl -o /root/oselab.ha.dns.installer.sh http://www.opentlc.com/download/ose_advanced/resources/3.1/oselab.ha.dns.installer.sh
+    [root@oselab-GUID ~]# bash /root/oselab.ha.dns.installer.sh
+
+    Check that Docker is running on all the hosts in the cluster:
+
+    [root@oselab-GUID ~]# for node in master1 master2 master3 infranode1 infranode2 node1 node2 node3 node4 node5 node6
+     do
+       echo Checking docker status on $node :
+    ssh $node "systemctl status docker | grep Active"
+
+
+     done
+
+    	You can run a second time to see the output without the SSH notifications.
+
+        Expect the output to be similar to this example:
+
+        Checking docker status on master1 : Active: active (running) since Mon 2015-12-28 00:18:10 EST; 1h 18min ago
+        Checking docker status on master2 : Active: active (running) since Mon 2015-12-28 00:18:10 EST; 1h 18min ago
+        Checking docker status on master3 : Active: active (running) since Mon 2015-12-28 00:18:13 EST; 1h 18min ago
+        Checking docker status on infranode1 : Active: active (running) since Mon 2015-12-28 00:18:12 EST; 1h 18min ago
+        Checking docker status on infranode2 : Active: active (running) since Mon 2015-12-28 00:18:10 EST; 1h 18min ago
+        Checking docker status on node1 : Active: active (running) since Mon 2015-12-28 00:18:14 EST; 1h 18min ago
+        Checking docker status on node2 : Active: active (running) since Mon 2015-12-28 00:18:12 EST; 1h 18min ago
+        Checking docker status on node3 : Active: active (running) since Sun 2015-12-27 23:43:46 EST; 1h 52min ago
+        Checking docker status on node4 : Active: active (running) since Mon 2015-12-28 00:18:12 EST; 1h 18min ago
+        Checking docker status on node5 : Active: active (running) since Mon 2015-12-28 00:18:13 EST; 1h 18min ago
+        Checking docker status on node6 : Active: active (running) since Sun 2015-12-27 23:46:17 EST; 1h 50min ago
+
+    On the oselab host, set up the yum repository configuration file, /etc/yum.repos.d/open.repo, with the following repositories:
+
+    [root@oselab-GUID ~]# cat << EOF > /etc/yum.repos.d/open.repo
+    [rhel-x86_64-server-7]
+    name=Red Hat Enterprise Linux 7
+    baseurl=http://www.opentlc.com/repos/ose/3.3.beta//rhel-7-server-rpms
+    enabled=1
+    gpgcheck=0
+
+    [rhel-x86_64-server-extras-7]
+    name=Red Hat Enterprise Linux 7 Extras
+    baseurl=http://www.opentlc.com/repos/ose/3.3.beta//rhel-7-server-extras-rpms
+    enabled=1
+    gpgcheck=0
+
+    [rhel-x86_64-server-optional-7]
+    name=Red Hat Enterprise Linux 7 Optional
+    baseurl=http://www.opentlc.com/repos/ose/3.3.beta//rhel-7-server-optional-rpms
+    enabled=1
+    gpgcheck=0
+
+    # This repo is added for the OPENTLC environment not OSE
+    [rhel-x86_64-server-rh-common-7]
+    name=Red Hat Enterprise Linux 7 Common
+    baseurl=http://www.opentlc.com/repos/ose/3.3.beta//rhel-7-server-rh-common-rpms
+    enabled=1
+    gpgcheck=0
+
+    [rhel-7-server-ose-3.3-rpms]
+    name=Red Hat Enterprise Linux 7 OSE 3.3
+    baseurl=http://www.opentlc.com/repos/ose/3.3.beta//rhel-7-server-ose-3.3-rpms
+    enabled=1
+    gpgcheck=0
+
+    EOF
+
+    List the repositories on the oselab host:
+
+    [root@oselab-GUID ~]# yum clean all ; yum repolist
+
+        Expect the output to be similar to the following:
+
+        Loaded plugins: product-id
+        ...[output omitted]...
+        repo id                                        repo name                                           status
+        rhel-7-server-ose-3.3-rpms                     Red Hat Enterprise Linux 7 OSE 3                      323
+        rhel-x86_64-server-7                           Red Hat Enterprise Linux 7                          4,391
+        rhel-x86_64-server-extras-7                    Red Hat Enterprise Linux 7 Extras                      45
+        rhel-x86_64-server-optional-7                  Red Hat Enterprise Linux 7 Optional                 4,220
+        rhel-x86_64-server-rh-common-7                 Red Hat Enterprise Linux 7 Common                      19
+        repolist: 8,998
+
+        ...[output omitted]...
+
+    Configure the master nodes by copying the open.repo file directly from the oselab host to all of the nodes:
+
+    [root@oselab-GUID ~]# for node in master1 master2 master3 infranode1 infranode2 node1 node2 node3 node4 node5 node6
+                                        do
+                                          echo Copying open.repo to $node ;
+                                          scp /etc/yum.repos.d/open.repo ${node}.example.com:/etc/yum.repos.d/open.repo ;
+                                          ssh ${node}.example.com "yum clean all; yum repolist" ;
+                                       done
+
+                                       for node in master1 master2 master3 infranode1 infranode2 node1 node2 node3 node4 node5 node6
+                                                                           do
+                                                                             ssh ${node}.example.com "yum update -y" &
+                                                                          done
+
+    Download the CA certificate by running the following script on your oselab system:
+
+    [root@oselab-GUID ~]# wget http://idm.example.com/ipa/config/ca.crt -O /root/ipa-ca.crt
+
+        Ansible will distribute the CA certificate from the IDM server to the master nodes so that OpenShift Enterprise can make SSL-enabled LDAP connections to the IDM system.
+
+    Download the router certificates by running the following commands on your oselab system:
+
+    [root@oselab-GUID ~]# mkdir /root/certs ; http://www.opentlc.com/download/ose_fastadv/resources/3.2/router-certs.tar -O /root/certs/router-certs.tar ; tar xf /root/certs/router-certs.tar -C /root/certs
+
+3. Install OpenShift Enterprise HA Cluster Deployment
+
+In this section, you use the Ansible advanced installer to deploy OpenShift Enterprise as a clustered, HA installation that includes a load balancer in front of the API servers. The environment includes three masters, two infranodes, four nodes, and the load balancer. OpenShift Enterprise is also configured to authenticate against the IDM VM running within the environment.
+3.1. Prepare Environment
+
+    On the oselab host, install the atomic-openshift-utils package, which includes the installer and has Ansible and the playbooks as dependencies:
+
+    [root@oselab-GUID ~]# yum -y install atomic-openshift-utils
+
+    Create the /etc/ansible/hosts file for the deployment:
+
+    [root@oselab-GUID ~]# cat << EOF > /etc/ansible/hosts
+    # Create an OSEv3 group that contains the master, nodes, etcd, and lb groups.
+    # The lb group lets Ansible configure HAProxy as the load balancing solution.
+    # Comment lb out if your load balancer is preconfigured.
+    [OSEv3:children]
+    masters
+    nodes
+    etcd
+    lb
+    nfs
+
+    # Set variables common for all OSEv3 hosts
+    [OSEv3:vars]
+    ansible_ssh_user=root
+    deployment_type=openshift-enterprise
+
+    # LDAP auth
+    openshift_master_identity_providers=[{'name': 'idm', 'challenge': 'true', 'login': 'true', 'kind': 'LDAPPasswordIdentityProvider', 'attributes': {'id': ['dn'], 'email': ['mail'], 'name': ['cn'], 'preferredUsername': ['uid']}, 'bindDN': 'uid=admin,cn=users,cn=accounts,dc=example,dc=com', 'bindPassword': 'r3dh4t1!', 'ca': '/etc/origin/master/ipa-ca.crt', 'insecure': 'false', 'url': 'ldap://idm.example.com/cn=users,cn=accounts,dc=example,dc=com?uid?sub?(memberOf=cn=ose-user,cn=groups,cn=accounts,dc=example,dc=com)'}]
+    openshift_master_ldap_ca_file=/root/ipa-ca.crt
+
+    # Native high availability cluster method with optional load balancer.
+    # If no lb group is defined installer assumes that a load balancer has
+    # been preconfigured. For installation the value of
+    # openshift_master_cluster_hostname must resolve to the load balancer
+    # or to one or all of the masters defined in the inventory if no load
+    # balancer is present.
+    openshift_master_cluster_method=native
+    openshift_master_cluster_hostname=loadbalancer1.example.com
+    openshift_master_cluster_public_hostname=loadbalancer1-$GUID.oslab.opentlc.com
+
+    # default subdomain to use for exposed routes
+    openshift_master_default_subdomain=cloudapps-$GUID.oslab.opentlc.com
+
+    # Configure metricsPublicURL in the master config for cluster metrics
+    # See: https://docs.openshift.com/enterprise/latest/install_config/cluster_metrics.html
+    openshift_master_metrics_public_url=https://metrics.cloudapps-$GUID.oslab.opentlc.com
+
+    # Enable cockpit
+    osm_use_cockpit=false
+
+    # default project node selector
+    osm_default_node_selector='region=primary'
+    openshift_hosted_router_selector='region=infra'
+    openshift_hosted_router_replicas=1
+    openshift_hosted_router_certificate={"certfile": "/root/certs/router.crt", "keyfile": "/root/certs/router.key", "cafile": "/root/certs/router-ca.crt"}
+    openshift_hosted_registry_selector='region=infra'
+    openshift_hosted_registry_replicas=1
+
+    openshift_hosted_registry_storage_kind=nfs
+    openshift_hosted_registry_storage_access_modes=['ReadWriteMany']
+    openshift_hosted_registry_storage_host=oselab.example.com
+    openshift_hosted_registry_storage_nfs_directory=/srv/nfs
+    openshift_hosted_registry_storage_volume_name=registry
+    openshift_hosted_registry_storage_volume_size=5Gi
+
+
+    # Force setting of system hostname when configuring OpenShift
+    # This works around issues related to installations that do not have valid dns
+    # entries for the interfaces attached to the host.
+    openshift_set_hostname=True
+
+    [nfs]
+    oselab.example.com
+
+    # host group for masters
+    [masters]
+    master1.example.com
+    master2.example.com
+    master3.example.com
+
+    # host group for etcd
+    [etcd]
+    master1.example.com
+    master2.example.com
+    master3.example.com
+
+    # Specify load balancer host
+    [lb]
+    loadbalancer1.example.com
+
+
+    # host group for nodes, includes region info
+    [nodes]
+    master[1:3].example.com
+    infranode1.example.com openshift_node_labels="{'region': 'infra', 'zone': 'THX-1138'}" openshift_hostname=infranode1.example.com
+    infranode2.example.com openshift_node_labels="{'region': 'infra', 'zone': 'THX-1139'}" openshift_hostname=infranode2.example.com
+    node[1:3].example.com openshift_node_labels="{'region': 'primary', 'zone': 'THX-1138'}"
+    node[4:6].example.com openshift_node_labels="{'region': 'primary', 'zone': 'THX-1139'}"
+    EOF
+
+    Run the ansible-playbook command to start the installation process:
+
+    [root@oselab-GUID ~]# ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml
+
+    	The installation takes at least 20 minutes.
+
+    After the ansible-playbook command finishes, verify that you see output similar to the following:
+
+    PLAY RECAP ********************************************************************
+    infranode1.example.com     : ok=55   changed=22   unreachable=0    failed=0
+    infranode2.example.com     : ok=55   changed=22   unreachable=0    failed=0
+    loadbalancer1.example.com  : ok=22   changed=0    unreachable=0    failed=0
+    localhost                  : ok=14   changed=0    unreachable=0    failed=0
+    master1.example.com        : ok=321  changed=44   unreachable=0    failed=0
+    master2.example.com        : ok=167  changed=42   unreachable=0    failed=0
+    master3.example.com        : ok=167  changed=42   unreachable=0    failed=0
+    node1.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node2.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node3.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node4.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node5.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node6.example.com          : ok=55   changed=22   unreachable=0    failed=0
+
+    Connect to one of the master hosts:
+
+    [root@oselab-GUID ~]# ssh root@master1.example.com
+
+    Run the oc get nodes command to display the nodes:
+
+    [root@master1-GUID ~]# oc get nodes --show-labels
+
+        Expect your output to be similar to the following:
+
+        NAME                     STATUS                     AGE       LABELS
+        infranode1.example.com   Ready                      1h        kubernetes.io/hostname=infranode1.example.com,region=infra,zone=THX-1138
+        infranode2.example.com   Ready                      1h        kubernetes.io/hostname=infranode2.example.com,region=infra,zone=THX-1139
+        master1.example.com      Ready,SchedulingDisabled   1h        kubernetes.io/hostname=master1.example.com
+        master2.example.com      Ready,SchedulingDisabled   1h        kubernetes.io/hostname=master2.example.com
+        master3.example.com      Ready,SchedulingDisabled   1h        kubernetes.io/hostname=master3.example.com
+        node1.example.com        Ready                      1h        kubernetes.io/hostname=node1.example.com,region=primary,zone=THX-1138
+        node2.example.com        Ready                      1h        kubernetes.io/hostname=node2.example.com,region=primary,zone=THX-1138
+        node3.example.com        Ready                      1h        kubernetes.io/hostname=node3.example.com,region=primary,zone=THX-1138
+        node4.example.com        Ready                      1h        kubernetes.io/hostname=node4.example.com,region=primary,zone=THX-1139
+        node5.example.com        Ready                      1h        kubernetes.io/hostname=node5.example.com,region=primary,zone=THX-1139
+        node6.example.com        Ready                      1h        kubernetes.io/hostname=node6.example.com,region=primary,zone=THX-1139
+
+3.2. Configure default Namespace
+
+In this section, you change the default namespace to ensure that pods in this namespace always use an region=infra-labeled node. The system default node selector, configured via the installer, ensures that all of the other pods end up being distributed throughout the nodes that are not labeled region=infra.
+
+    On any of the master hosts, edit the default namespace to set`openshift.io/node-selector` to region=infra:
+
+    [root@master1-GUID ~]# oc annotate namespace default openshift.io/node-selector='region=infra' --overwrite
+
+    Check that the default namespace updates with your changes:
+
+    [root@master1-GUID ~]# oc get namespace default -o yaml | grep infra
+        openshift.io/node-selector: region=infra
+
+3.3. Verify LDAP Configuration
+
+    Navigate your browser to https://loadbalancer1-$GUID.oslab.opentlc.com:8443, the load balancer URL.
+
+    Attempt to log in as one of the users in IDM using the following credentials:
+
+        user: user1
+
+        pass: openshift
+
+4. Configure HA NFS-Backed Registry and HAProxy Router
+
+In this series of steps, you deploy both the default router and integrated registry on the infranode hosts, configure a persistent volume back end for the registry, and scale the registry and router deployments to cover all the infranode hosts.
+4.1. Deploy Registry
+
+    NFS on oselab to serve as a persistent storage back end is already deploy because of :
+
+    [root@oselab-GUID ~]# grep '\[nfs\]' -A1  /etc/ansible/hosts
+    [nfs]
+    oselab.example.com
+
+    Check the status of your pod:
+
+    [root@master1-GUID ~]# oc get pods
+
+    	This process may take a few minutes the first time you run it, because the images are pulled from the registry.
+    	If you need to re-create manually the registry use the following command [root@master1-GUID ~]# oadm registry --replicas=1 --create --credentials=/etc/origin/master/openshift-registry.kubeconfig
+
+    Run oc status:
+
+    [root@master1-GUID ~]# oc status
+
+        Expect your output to be similar to the following:
+
+        In project default on server https://loadbalancer1-$GUID.oslab.opentlc.com:8443
+
+        svc/docker-registry - 172.30.201.142:5000
+          dc/docker-registry deploys docker.io/openshift3/ose-docker-registry:v3.1.0.4
+            #1 deployed 29 seconds ago - 1 pod
+
+        svc/kubernetes - 172.30.0.1 ports 443, 53, 53
+
+        To see more, use 'oc describe <resource>/<name>'.
+        You can use 'oc get all' to see a list of other objects.
+
+    Test the ability to communicate with the registry’s service port:
+
+    curl -v 172.30.41.32:5000/healthz.
+
+    Test the registry for connectivity:
+
+     [root@master1-GUID ~]# echo
+    oc get service docker-registry --template '{{.spec.portalIP}}:{{index .spec.ports 0 "port"}}/healthz'
+
+     172.30.42.118:5000/healthz
+     [root@master1-GUID ~]# curl -v
+    oc get service docker-registry --template '{{.spec.portalIP}}:{{index .spec.ports 0 "port"}}/healthz'
+
+        Expect the output to be similar to the following:
+
+        * About to connect() to 172.30.42.118 port 5000 (#0)
+        *   Trying 172.30.42.118...
+        * Connected to 172.30.42.118 (172.30.42.118) port 5000 (#0)
+        > GET /healthz HTTP/1.1
+        > User-Agent: curl/7.29.0
+        > Host: 172.30.42.118:5000
+        > Accept: */*
+        >
+        < HTTP/1.1 200 OK
+        < Content-Type: application/json; charset=utf-8
+        < Docker-Distribution-Api-Version: registry/2.0
+        < Date: Thu, 26 Nov 2015 06:56:11 GMT
+        < Content-Length: 3
+        <
+        {}
+        * Connection #0 to host 172.30.42.118 left intact
+
+4.2. Create PV and PVC for Registry
+
+    Create the PersistentVolume:
+
+    [root@master1-GUID ~]# echo '{
+      "apiVersion": "v1",
+      "kind": "PersistentVolume",
+      "metadata": {
+        "name": "registry-volume"
+      },
+      "spec": {
+        "capacity": {
+            "storage": "3Gi"
+            },
+        "accessModes": [ "ReadWriteMany" ],
+        "nfs": {
+            "path": "/srv/nfs/registry",
+            "server": "oselab-'"$GUID"'.oslab.opentlc.com"
+        }
+      }
+    }' | oc create -f -
+
+    Create the PersistentVolumeClaim:
+
+    [root@master1-GUID ~]# echo '{
+      "apiVersion": "v1",
+      "kind": "PersistentVolumeClaim",
+      "metadata": {
+        "name": "registry-claim"
+      },
+      "spec": {
+        "accessModes": [ "ReadWriteMany" ],
+        "resources": {
+          "requests": {
+            "storage": "3Gi"
+          }
+        }
+      }
+    }' | oc create -n default -f -
+
+4.3. Update Registry Volume and Scale
+
+    Update the volume information for the registry and then scale out the registry:
+
+    [root@master1-GUID ~]# oc volume dc/docker-registry --add --overwrite -t persistentVolumeClaim --claim-name=registry-claim --name=registry-storage
+    [root@master1-GUID ~]# oc scale dc/docker-registry --replicas=2
+
+    Because there are known issues with NFS file attribute synchronization, you need to modify the registry service’s load-balancing behavior:
+
+    [root@master1-GUID ~]# oc get -o yaml svc docker-registry | \
+          sed 's/(sessionAffinity:s**).*/1ClientIP/' | \
+          oc replace -f -
+
+    	The scale for the registry can be set when it is initially deployed.
+
+    Determine where your pods are deployed:
+
+    [root@master1-GUID ~]# oc get pod -o wide
+
+        Expect your output to be similar to the following:
+
+        NAME                      READY     STATUS    RESTARTS   AGE       NODE
+        docker-registry-2-4j79s   1/1       Running   0          2m        infranode2-e476.oslab.opentlc.com
+        docker-registry-2-kvfhn   1/1       Running   0          2m        infranode1-e476.oslab.opentlc.com
+
+    Look at the connected NFS clients:
+
+    [root@oselab-GUID ~]# netstat -an | grep 2049
+    tcp        0      0 0.0.0.0:2049            0.0.0.0:*               LISTEN
+    tcp        0      0 192.168.0.254:2049      192.168.0.251:946       ESTABLISHED
+    tcp        0      0 192.168.0.254:2049      192.168.0.252:771       ESTABLISHED
+    tcp6       0      0 :::2049                 :::*                    LISTEN
+    udp        0      0 0.0.0.0:2049            0.0.0.0:*
+    udp6       0      0 :::2049                 :::*
+
+4.4. Re-deploy Router (Reference Only)
+
+    Delete the old Router
+
+    [root@master1-GUID ~]# oc delete dc/router svc/router
+
+    Create a CA certificate for the default router:
+
+    [root@master1-GUID ~]# CA=/etc/origin/master
+    [root@master1-GUID ~]# oadm ca create-server-cert --signer-cert=$CA/ca.crt \
+           --signer-key=$CA/ca.key --signer-serial=$CA/ca.serial.txt \
+           --hostnames='*.cloudapps-$GUID.oslab.opentlc.com' \
+           --cert=cloudapps.crt --key=cloudapps.key
+
+    Combine cloudapps.crt and cloudapps.key with CA into a single Privacy Enhanced Mail (PEM) format file, which the router needs before it is deployed:
+
+    [root@master1-GUID ~]# cat cloudapps.crt cloudapps.key $CA/ca.crt > /etc/origin/master/cloudapps.router.pem
+
+    Deploy the default router:
+
+     [root@master1-GUID ~]# oadm router trainingrouter --replicas=2 \
+      --credentials='/etc/origin/master/openshift-router.kubeconfig' \
+      --service-account=router --stats-password=\'r3dh@t1!'
+
+        Expect your output to be similar to the following:
+
+        DeploymentConfig "trainingrouter" created
+        Service "trainingrouter" created
+
+    On a separate terminal, monitor the status of your pods:
+
+    [root@master1-GUID ~]#  oc get pods -w
+    NAME                      READY     STATUS    RESTARTS   AGE
+    docker-registry-1-diqlc   1/1       Running   0          11m
+    trainingrouter-mpzxx      1/1       Running   0          23s
+
+        The Docker registry pods are likely to be listed as well in the above output.
+
+    (Optional) Run get pods again, this time using the wide option to generate more information in the output:
+
+    [root@master1-GUID ~]# oc get pod --all-namespaces -o wide
+
+    Type Ctrl+C to exit the oc get pods watch.
+
+    Examine the pods' distribution between the nodes:
+
+    [root@master1-GUID ~]# oadm manage-node infranode1-$GUID.oslab.opentlc.com infranode2-$GUID.oslab.opentlc.com --list-pods
+
+
+Build Version: 1.1 : Last updated 2016-08-13 21:30:16 EDT

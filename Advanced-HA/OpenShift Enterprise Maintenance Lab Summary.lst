@@ -1,0 +1,383 @@
+INSTALLATION _ WEB PAGE  https://rh.dokeos.com/main/document/showinframes.php?cidReq=ADVTOPOSE&curdirpath=/&file=/Labs_Module02_HA_Deployment_Open.html&tool=scenario&ref=817&step=17&activity_id=24
+
+
+OpenShift Enterprise Maintenance Lab -- Summary !!
+
+1. Provision Lab Environment
+
+For this lab, you use the OPENTLC CloudForms appliance found at https://labs.opentlc.com to deploy all of the servers in the lab environment.
+1.1. Order Lab
+
+    Go to https://labs.opentlc.com and use your credentials to log in to the OPENTLC labs provisioning system, which is built on top of Red Hat CloudForms to provide a self-service portal.
+
+
+        If you are using this system for the first time or have never set a password for your OPENTLC account, point your browser to https://www.opentlc.com/account, select Activate Account, and follow the instructions.
+
+        If you do not remember your username or password, use this site to reset your password or obtain a username reminder.
+
+    Navigate to Services → Catalogs → All Services → OPENTLC Cloud Infrastructure Labs.
+
+    On the left side of the screen, locate OpenShift 3.2 Advanced HA Lab for the OpenShift Enterprise 3.2 Advanced High Availability (HA) Lab and click Order at the right side of the screen.
+
+    To order your environment, click Submit at the lower right.
+
+        In a few minutes you receive an email describing how to connect to the environment.
+        	Do not select App Control → Start after ordering the lab. The lab is already starting. Selecting Start may corrupt the lab environment or cause other complications.
+
+    Wait about 20 minutes to allow your environment to build.
+
+    (Optional) Select Status to receive an email with the status of your environment.
+    	The lab environment is cloud-based, so you can access it over the WAN from anywhere. However, do not expect its performance to match a bare-metal environment.
+
+1.2. Set Up SSH Connection
+
+To remotely access any of your lab systems using SSH, use your personal OPENTLC SSO username and public SSH key. Unless otherwise noted, you cannot use SSH to connect directly as root.
+	If you have not already done so, you must provide a public SSH key. To do this, follow the steps in the remainder of this section.
+
+    Go to https://www.opentlc.com/update and log in.
+
+    Paste your public key in that location.
+
+    Connect to your administration host via SSH using your OPENTLC username and private SSH key.
+
+    Replace $GUID in the example below with your personal GUID, which is provided at the top of the lab provisioning email.
+
+        Example using UNIX/Linux:
+
+        ssh -i ~/.ssh/yourprivatekey.key username-company.com@oselab-$GUID.oslab.opentlc.com
+
+
+
+            If you are using Windows, use a terminal program such as PuTTY instead of the command shown here.
+
+            For more information on using SSH and keys, see https://www.opentlc.com/ssh.html. s
+
+    Become the root user, using r3dh4t1! as your password, on the administration host:
+
+    [shacharb-redhat.com@oselab-e275 ~]$ su -
+
+2. Lab Overview and Objectives
+2.1. Lab Overview
+
+    In this lab our goal is to install and configure a Highly Available OpenShift Cluster, consisting of:
+
+        1 x Administration Server (oselab-GUID.oselab.opentlc.com, oselab.example.com)
+
+        1 x IPA Server ( idm.example.com, ipa.example.com)
+
+        1 x LoadBalancer (loadbalancer-GUID.oselab.opentlc.com, loadbalancer.example.com)
+
+        3 x OpenShift Master (master{1,2,3}-GUID.oselab.opentlc.com, master{1,2,3}.example.com)
+
+        2 x OpenShift Infrastructure Node (infranode{1,2}-GUID.oselab.opentlc.com, infranode{1,2}.example.com)
+
+        6 x OpenShift Worker Node (node{1-6}-GUID.oselab.opentlc.com, node{1-6}.example.com)
+
+    In the following sections you will find partial instructions to guide you on your way, to creating your HA OpenShift Cluster.
+
+    The instructions are not complete and you are expected to utilize what you have learned in class, OpenShift Documentation and previous Red Hat Enterprise Linux experience.
+
+    There is more than one way to achieve success in the lab, but consider using the resources provided and treat the provided environment as "client constraints or requests" that cannot be changed.
+
+2.2. Provided Resources
+
+    Administration Server
+
+        Public hostname: oselab-GUID.oselab.opentlc.com, Internal hostname: oeselab.example.com.
+
+        The Administration Server is to be used as a DNS server for our environment.
+
+        The Administration Server is to be used as a "jumpbox" to connect to all the servers in the internal network.
+
+        An ns DNS record has been created for *.cloudapps-GUID.oselab.opentlc.com and points to the Administrator Server’s Public IP.
+
+    An IDM hosts - idm.example.com:
+
+LDAP groups
+
+    "ose-users" group - All users who have access to OpenShift
+
+    "portalapp" group - Developers in the "Portal App" Project
+
+    "paymentapp" group - Developers in the "Payment App" Project
+
+    "ose-production" group - Administrators and Operations team, have access to modify projects in production
+
+    "ose-platform" group - users with full cluster administration control
+    	Users and Groups are already created in our IPA (idm.example.com) host.
+
+LDAP users
+
+    Andrew, portal1 and portal2 are Developers in the "Portal App" team.
+
+    Marina, payment1 and payment2 are Developers in the "Payment App" team.
+
+    Karla, prod1 and prod2 are Operations administrators in the "Portal App" and "Payment App" teams.
+
+        David, admin1 and admin2 are members of the "ose-platform" group with full cluster administration control.
+        	All user passwords are "r3dh4t1!"
+
+2.3. Lab objectives and Success Criteria
+
+    Install 3 OpenShift Master nodes:
+
+        Each Master will host a Replica of the ETCD state database.
+
+        Masters will be accessed through a Load-balancer installed on a host residing on a public facing network.
+
+    Install 6 nodes:
+
+        All nodes should be available for pod deployment.
+
+        Nodes will not be directly accessible from the public/external network.
+
+        Nodes will be labeled in a manner conducive for an HA deployment.
+
+    Install 2 Infranodes:
+
+        Infranodes will reside in a public facing network and will provide access to all pods and services running on the OpenShift cluster.
+
+        a DNS host will direct all inquiries to *.cloudapps-GUID.oselab.opentlc.com to the infranodes in a round robin method.
+
+    Optional objective :
+
+        Configure the IDM authentication server (idm.example.com) to serve as an authentication provider for the OpenShift Cluster.
+
+            Success Criteria:
+
+                Infrastructure HA - The OpenShift environment will allow deployment of Pods and services after manually shutting down a master node host.
+
+                Application HA - Your applications (pods) will be available after shutting down 2 nodes, and an infranode at random.
+
+	The Next few sections provide general direction to achieve your goals, you can use them as a guide for the required tasks.
+3. Prepare to Install OpenShift Enterprise HA Cluster Deployment
+
+In this lab, you prepare the hosts for installation. You configure a DNS on the oselab administration server to serve the OpenShift Enterprise environment, and configure SSH keys and the IPA server.
+3.1. Prepare the Lab
+
+    Connect to the oselab server, replacing $GUID with your personal GUID:
+
+    Desktop$ ssh -i ~/.ssh/yourprivatekey username-company.com@oselab-$GUID.oslab.opentlc.com
+
+    Use the su command to become root:
+
+    [shacharb-redhat.com@oselab-e275 ~]$ su -
+    Password:
+
+        Use r3dh4t1! when prompted for the password.
+
+    Add example.com and oslab.opentlc.com to the /etc/resolv.conf file to enable resolving of internal DNS names:
+
+    To disable StrictHostKeyChecking on the oselab host, configure /etc/ssh/ssh_conf.
+
+    Configure DNS entries on oselab to allow load balancing between the infranode servers:
+
+    Check that Docker is running on all the hosts in the cluster
+
+    On the oselab host, set up the yum repository configuration file, /etc/yum.repos.d/open.repo, with the following repositories:
+
+    [root@oselab-GUID ~]# cat &lt;&lt; EOF > /etc/yum.repos.d/open.repo
+    [rhel-x86_64-server-7]
+    name=Red Hat Enterprise Linux 7
+    baseurl=http://www.opentlc.com/repos/ose_advanced/3.2/rhel-7-server-rpms
+    enabled=1
+    gpgcheck=0
+
+    [rhel-x86_64-server-extras-7]
+    name=Red Hat Enterprise Linux 7 Extras
+    baseurl=http://www.opentlc.com/repos/ose_advanced/3.2/rhel-7-server-extras-rpms
+    enabled=1
+    gpgcheck=0
+
+    [rhel-x86_64-server-optional-7]
+    name=Red Hat Enterprise Linux 7 Optional
+    baseurl=http://www.opentlc.com/repos/ose_advanced/3.2/rhel-7-server-optional-rpms
+    enabled=1
+    gpgcheck=0
+
+    # This repo is added for the OPENTLC environment not OSE
+    [rhel-x86_64-server-rh-common-7]
+    name=Red Hat Enterprise Linux 7 Common
+    baseurl=http://www.opentlc.com/repos/ose_advanced/3.2/rhel-7-server-rh-common-rpms
+    enabled=1
+    gpgcheck=0
+
+    [rhel-7-server-ose-3.2-rpms\]
+    name=Red Hat Enterprise Linux 7 OSE 3.2
+    baseurl=http://www.opentlc.com/repos/ose_advanced/3.2/rhel-7-server-ose-3.2-rpms
+    enabled=1
+    gpgcheck=0
+
+    EOF
+
+    Configure all nodes by copying the open.repo file directly from the oselab host to all of the nodes:
+
+    [OPTIONAL] Distribute the CA certificate by running the following script on your oselab system:
+    	You can get the ipa-ca.crt file from our provided ipa server (idm.example.com) using the following command: wget http://idm.example.com/ipa/config/ca.crt -O /etc/origin/master/ipa-ca.crt
+
+4. Install OpenShift Enterprise HA Cluster Deployment
+
+In this section, you use the Ansible advanced installer to deploy OpenShift Enterprise as a clustered, HA installation that includes a load balancer in front of the API servers. The environment includes three masters, two infranodes, four nodes, and the load balancer. OpenShift Enterprise is also configured to authenticate against the IDM VM running within the environment.
+4.1. Prepare Environment
+
+    On the oselab host, install the atomic-openshift-utils package, which includes the installer and has Ansible and the playbooks as dependencies.
+
+    Create the /etc/ansible/hosts file for the deployment.
+    	An example file is easy to find Online, you can find a template and modify it to fit our needs. .. Define the "masters", "nodes", "etcd" and "lb" host groups. .. Be sure you are using ansible to deploy an "openshift-enterprise" deployment type. .. [OPTIONAL], define LDAP Authentication, use the following - bindDN: uid=admin,cn=users,cn=accounts,dc=example,dc=com - 'url: \'ldap://idm.example.com/cn=users,cn=accounts,dc=example,dc=com?uid?sub?(memberOf=cn=ose-user,cn=groups,cn=accounts,dc=example,dc=com)
+
+        Use the "native" HA clustering method and define "loadbalancer1-$GUID.oslab.opentlc.com" as the load balancer for the masters.
+
+        Defind th default Subdomain for the cluster: cloudapps-$GUID.oslab.opentlc.com
+
+        Define the following labels for each host in the cluster: "region", "zone", "infra"
+
+    Run the ansible-playbook command to start the installation process:
+    	The installation takes at least 20 minutes.
+
+4.2. Verify your initial install
+
+    After the ansible-playbook command finishes, verify that you see output similar to the following:
+
+    PLAY RECAP ********************************************************************
+    infranode1.example.com     : ok=55   changed=22   unreachable=0    failed=0
+    infranode2.example.com     : ok=55   changed=22   unreachable=0    failed=0
+    loadbalancer1.example.com  : ok=22   changed=0    unreachable=0    failed=0
+    localhost                  : ok=14   changed=0    unreachable=0    failed=0
+    master1.example.com        : ok=321  changed=44   unreachable=0    failed=0
+    master2.example.com        : ok=167  changed=42   unreachable=0    failed=0
+    master3.example.com        : ok=167  changed=42   unreachable=0    failed=0
+    node1.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node2.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node3.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node4.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node5.example.com          : ok=55   changed=22   unreachable=0    failed=0
+    node6.example.com          : ok=55   changed=22   unreachable=0    failed=0
+
+    Connect to one of the master hosts:
+
+    [root@oselab-GUID ~]# ssh root@master1.example.com
+
+    Run the oc get nodes command to display the nodes:
+
+    [root@master1-GUID ~]# oc get nodes
+
+        Expect your output to be similar to the following:
+
+        NAME                                LABELS                                                                          STATUS                     AGE
+        infranode1-9b5f.oslab.opentlc.com   infra=true,kubernetes.io/hostname=192.168.0.251,region=primary,zone=THX-1138    Ready                      1h
+        infranode2-9b5f.oslab.opentlc.com   infra=true,kubernetes.io/hostname=192.168.0.252,region=primary,zone=THX-1139    Ready                      1h
+        master1-9b5f.oslab.opentlc.com      kubernetes.io/hostname=192.168.0.101                                            Ready,SchedulingDisabled   1h
+        master2-9b5f.oslab.opentlc.com      kubernetes.io/hostname=192.168.0.102                                            Ready,SchedulingDisabled   1h
+        master3-9b5f.oslab.opentlc.com      kubernetes.io/hostname=192.168.0.103                                            Ready,SchedulingDisabled   1h
+        node1-9b5f.oslab.opentlc.com        infra=false,kubernetes.io/hostname=192.168.1.201,region=primary,zone=THX-1138   Ready                      1h
+        node2-9b5f.oslab.opentlc.com        infra=false,kubernetes.io/hostname=192.168.1.202,region=primary,zone=THX-1138   Ready                      1h
+        node3-9b5f.oslab.opentlc.com        infra=false,kubernetes.io/hostname=192.168.1.203,region=primary,zone=THX-1138   Ready                      1h
+        node4-9b5f.oslab.opentlc.com        infra=false,kubernetes.io/hostname=192.168.2.204,region=primary,zone=THX-1139   Ready                      1h
+        node5-9b5f.oslab.opentlc.com        infra=false,kubernetes.io/hostname=192.168.2.205,region=primary,zone=THX-1139   Ready                      1h
+        node6-9b5f.oslab.opentlc.com        infra=false,kubernetes.io/hostname=192.168.2.206,region=primary,zone=THX-1139   Ready                      1h
+
+4.3. Configure default Namespace
+
+In this section, you change the default namespace to ensure that pods in this namespace always use an infra-labeled node. The system default node selector, configured via the installer, ensures that all of the other pods end up being distributed throughout the nodes that are not labeled infra.
+
+    On any of the master hosts , edit the default namespace to use a default node selector and "lock" deployments in the default project only to nodes labeled as "infra=true".
+    	Be careful not to make any changes to the mcs, supplemental-groups, or uid-range entries.
+
+4.4. Verify LDAP Configuration
+
+    Navigate your browser to https://loadbalancer1-$GUID.oslab.opentlc.com:8443, the load balancer URL.
+
+    Attempt to log in as one of the users in IDM using the following credentials:
+
+        user: user1
+
+        pass: r3dh4t1!
+
+4.5. Configure HA NFS-Backed Registry and HAProxy Router
+
+In this series of steps, you deploy both the default router and integrated registry on the infranode hosts, configure a persistent volume back end for the registry, and scale the registry and router deployments to cover all the infranode hosts.
+4.6. Deploy Registry
+
+    Configure NFS on oselab to serve as a persistent storage back end:
+
+    [root@oselab-GUID ~]# curl -o /root/oselab.nfs.installer.sh http://www.opentlc.com/download/ose_advanced/resources/3.1/oselab.nfs.installer.sh
+    [root@oselab-GUID ~]# bash /root/oselab.nfs.installer.sh
+
+    On one of the master hosts, create the Docker registry:
+
+    Test the ability to communicate with the registry’s service port:
+
+    curl -v 172.30.41.32:5000/healthz.
+
+    	Your registry service IP will be different than this example.
+
+    Test the registry for connectivity:
+
+     [root@master1-GUID ~]# echo
+    oc get service docker-registry --template \'{{.spec.portalIP}}:{{index .spec.ports 0 "port"}}/healthz'
+
+     172.30.42.118:5000/healthz
+     [root@master1-GUID ~]# curl -v
+    oc get service docker-registry --template \'{{.spec.portalIP}}:{{index .spec.ports 0 "port"}}/healthz'
+
+        Expect the output to be similar to the following:
+
+        * About to connect() to 172.30.42.118 port 5000 (#0)
+        *   Trying 172.30.42.118...
+        * Connected to 172.30.42.118 (172.30.42.118) port 5000 (#0)
+        > GET /healthz HTTP/1.1
+        > User-Agent: curl/7.29.0
+        > Host: 172.30.42.118:5000
+        > Accept: */*
+        >
+        < HTTP/1.1 200 OK
+        < Content-Type: application/json; charset=utf-8
+        < Docker-Distribution-Api-Version: registry/2.0
+        < Date: Thu, 26 Nov 2015 06:56:11 GMT
+        < Content-Length: 3
+        <
+        {}
+        * Connection #0 to host 172.30.42.118 left intact
+
+4.7. Create PV and PVC for Registry
+
+    Create the PersistentVolume:
+
+        "path": "/srv/nfs/registry",
+
+        "server": "oselab-"$GUID"\.oslab.opentlc.com"
+
+4.8. Update Registry Volume and Scale
+
+    Update the volume information for the registry and then scale out the registry to have 2 replicas:
+
+    Because there are known issues with NFS file attribute synchronization, you need to modify the registry service’s load-balancing behavior:
+
+    [root@master1-GUID ~]# oc get -o yaml svc docker-registry | \
+          sed \'s/\(sessionAffinity:\s**\).\*/\1ClientIP/' | \
+          oc replace -f -
+
+    	The scale for the registry can be set when it is initially deployed.
+
+4.9. Deploy Router
+
+    Create a CA certificate for the default router.
+
+    Deploy the default router.
+
+        Expect your output to be similar to the following:
+
+        DeploymentConfig "trainingrouter" created
+        Service "trainingrouter" created
+
+    (Optional) Run get pods again, this time using the wide option to generate more information in the output:
+
+    [root@master1-GUID ~]# oc get pod --all-namespaces -o wide
+
+    Examine the pods' distribution between the nodes:
+
+    [root@master1-GUID ~]# oadm manage-node infranode1-$GUID.oslab.opentlc.com infranode2-$GUID.oslab.opentlc.com --list-pods
+
+4.10. Test your environment meets all Success Criteria
+
+Build Version: 1.1 : Last updated 2016-08-13 21:30:16 EDT

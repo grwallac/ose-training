@@ -1,0 +1,44 @@
+
+      [OSEv3:children]
+      nodes
+      masters
+      nfs
+      etcd
+      lb
+
+      [OSEv3:vars]
+      ansible_ssh_user=root
+      openshift_master_cluster_method=native
+      openshift_master_cluster_hostname=loadbalancer.example.com
+      openshift_master_cluster_public_hostname=loadbalancer.example.com
+      deployment_type=openshift-enterprise
+
+      [nodes]
+      master1  openshift_ip=192.168.0.101 openshift_public_ip=192.168.0.101 openshift_hostname=master1.example.com openshift_public_hostname=master1.example.com openshift_node_labels="{'region': 'infra'}" openshift_schedulable=False
+      master2  openshift_ip=192.168.0.102 openshift_public_ip=192.168.0.102 openshift_hostname=master2.example.com openshift_public_hostname=master2.example.com openshift_node_labels="{'region': 'infra'}" openshift_schedulable=False
+      master3  openshift_ip=192.168.0.103 openshift_public_ip=192.168.0.103 openshift_hostname=master3.example.com openshift_public_hostname=master3.example.com openshift_schedulable=False
+      node1  openshift_ip=192.168.0.201 openshift_public_ip=192.168.0.201 openshift_hostname=node1.example.com openshift_public_hostname=node1.example.com openshift_schedulable=True
+      node2  openshift_ip=192.168.0.202 openshift_public_ip=192.168.0.202 openshift_hostname=node2.example.com openshift_public_hostname=node2.example.com openshift_schedulable=True
+      node3  openshift_ip=192.168.0.203 openshift_public_ip=192.168.0.203 openshift_hostname=node3.example.com openshift_public_hostname=node3.example.com openshift_schedulable=True
+      node4  openshift_ip=192.168.0.204 openshift_public_ip=192.168.0.204 openshift_hostname=node4.example.com openshift_public_hostname=node4.example.com openshift_schedulable=True
+      node5  openshift_ip=192.168.0.205 openshift_public_ip=192.168.0.205 openshift_hostname=node5.example.com openshift_public_hostname=node5.example.com openshift_schedulable=True
+      node6  openshift_ip=192.168.0.206 openshift_public_ip=192.168.0.206 openshift_hostname=node6.example.com openshift_public_hostname=node6.example.com openshift_schedulable=True
+      infranode1  openshift_ip=192.168.0.251 openshift_public_ip=192.168.0.251 openshift_hostname=infranode1-5c90.oslab.opentlc.com openshift_public_hostname=infranode1-5c90.oslab.opentlc.com openshift_schedulable=True
+      infranode2  openshift_ip=192.168.0.252 openshift_public_ip=192.168.0.252 openshift_hostname=infranode2-5c90.oslab.opentlc.com openshift_public_hostname=infranode2-5c90.oslab.opentlc.com openshift_schedulable=True
+      infranode3  openshift_ip=192.168.0.253 openshift_public_ip=192.168.0.253 openshift_hostname=infranode3-5c90.oslab.opentlc.com openshift_public_hostname=infranode3-5c90.oslab.opentlc.com openshift_schedulable=True
+
+
+      [masters]
+      master1  openshift_ip=192.168.0.101 openshift_public_ip=192.168.0.101 openshift_hostname=master1.example.com openshift_public_hostname=master1.example.com
+      master2  openshift_ip=192.168.0.102 openshift_public_ip=192.168.0.102 openshift_hostname=master2.example.com openshift_public_hostname=master2.example.com
+      master3  openshift_ip=192.168.0.103 openshift_public_ip=192.168.0.103 openshift_hostname=master3.example.com openshift_public_hostname=master3.example.com
+
+      [nfs]
+      master1  openshift_ip=192.168.0.101 openshift_public_ip=192.168.0.101 openshift_hostname=master1.example.com openshift_public_hostname=master1.example.com
+
+      [etcd]
+      master1  openshift_ip=192.168.0.101 openshift_public_ip=192.168.0.101 openshift_hostname=master1.example.com openshift_public_hostname=master1.example.com
+      master2  openshift_ip=192.168.0.102 openshift_public_ip=192.168.0.102 openshift_hostname=master2.example.com openshift_public_hostname=master2.example.com
+      master3  openshift_ip=192.168.0.103 openshift_public_ip=192.168.0.103 openshift_hostname=master3.example.com openshift_public_hostname=master3.example.com
+
+      [lb]
