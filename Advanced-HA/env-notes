@@ -28,3 +28,6 @@ LDAP groups
      Success Criteria:
         Infrastructure HA - The OpenShift environment will allow deployment of Pods and services after manually shutting down a master node host.
         Application HA - Your applications (pods) will be available after shutting down 2 nodes, and an infranode at random.
+
+
+---------------------------
