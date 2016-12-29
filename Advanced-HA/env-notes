@@ -31,3 +31,100 @@ LDAP groups
 
 
 ---------------------------
+
+loadbalancer.example.com
+
+-------------------------------------------------------------------------------
+*** Installation Summary ***
+
+Hosts:
+- master1
+  - OpenShift master
+  - OpenShift node (Unscheduled)
+  - Etcd Member
+- master2
+  - OpenShift master
+  - OpenShift node (Unscheduled)
+  - Etcd Member
+- master3
+  - OpenShift master
+  - OpenShift node (Unscheduled)
+  - Etcd Member
+- node1
+  - OpenShift node (Dedicated)
+- node2
+  - OpenShift node (Dedicated)
+- node3
+  - OpenShift node (Dedicated)
+- node4
+  - OpenShift node (Dedicated)
+- node5
+  - OpenShift node (Dedicated)
+- node6
+  - OpenShift node (Dedicated)
+- infranode1
+  - OpenShift node (Dedicated)
+- infranode2
+  - OpenShift node (Dedicated)
+
+Total OpenShift masters: 3
+Total OpenShift nodes: 11
+
+NOTE: Multiple masters specified, this will be an HA deployment with a separate
+etcd cluster. You will be prompted to provide the FQDN of a load balancer and
+a host for storage once finished entering hosts.
+
+
+Do you want to add additional hosts? [y/N]:
+
+Setting up high-availability masters requires a load balancing solution.
+Please provide the FQDN of a host that will be configured as a proxy. This
+can be either an existing load balancer configured to balance all masters on
+port 8443 or a new host that will have HAProxy installed on it.
+
+If the host provided is not yet configured, a reference HAProxy load
+balancer will be installed. It's important to note that while the rest of the
+environment will be fault-tolerant, this reference load balancer will not be.
+It can be replaced post-installation with a load balancer with the same
+hostname.
+
+Enter hostname or IP address: loadbalancer.example.com
+
+-=-=-=-=-=-=-=-=-=-=-=-=
+The following is a list of the facts gathered from the provided hosts. The
+hostname for a system inside the cluster is often different from the hostname
+that is resolveable from command-line or web clients, therefore these settings
+cannot be validated automatically.
+
+For some cloud providers, the installer is able to gather metadata exposed in
+the instance, so reasonable defaults will be provided.
+
+Please confirm that they are correct before moving forward.
+
+
+master1,192.168.0.101,192.168.0.101,master1.example.com,master1.example.com
+master2,192.168.0.102,192.168.0.102,master2.example.com,master2.example.com
+master3,192.168.0.103,192.168.0.103,master3.example.com,master3.example.com
+node1,192.168.0.201,192.168.0.201,node1.example.com,node1.example.com
+node2,192.168.0.202,192.168.0.202,node2.example.com,node2.example.com
+node3,192.168.0.203,192.168.0.203,node3.example.com,node3.example.com
+node4,192.168.0.204,192.168.0.204,node4.example.com,node4.example.com
+node5,192.168.0.205,192.168.0.205,node5.example.com,node5.example.com
+node6,192.168.0.206,192.168.0.206,node6.example.com,node6.example.com
+infranode1,192.168.0.251,192.168.0.251,infranode1-5c90.oslab.opentlc.com,infranode1-5c90.oslab.opentlc.com
+infranode2,192.168.0.252,192.168.0.252,infranode2-5c90.oslab.opentlc.com,infranode2-5c90.oslab.opentlc.com
+
+Format:
+
+connect_to,IP,public IP,hostname,public hostname
+
+Notes:
+ * The installation host is the hostname from the installer's perspective.
+ * The IP of the host should be the internal IP of the instance.
+ * The public IP should be the externally accessible IP associated with the instance
+ * The hostname should resolve to the internal IP from the instances
+   themselves.
+ * The public hostname should resolve to the external IP from hosts outside of
+   the cloud.
+
+Do the above facts look correct? [y/N]:
