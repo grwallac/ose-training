@@ -2,7 +2,29 @@ LDAP groups
     "ose-users" group - All users who have access to OpenShift
     "portalapp" group - Developers in the "Portal App" Project
     "paymentapp" group - Developers in the "Payment App" Project
-    "ose-production" group - Administrators and Operations team, have access to modify projects in production 
+    "ose-production" group - Administrators and Operations team, have access to modify projects in production
     "ose-platform" group - users with full cluster administration control
-    
+
 ---------------------
+
+2.3. Lab objectives and Success Criteria
+
+    Install 3 OpenShift Master nodes:
+        Each Master will host a Replica of the ETCD state database.
+        Masters will be accessed through a Load-balancer installed on a host residing on a public facing network.
+
+    Install 6 nodes:
+        All nodes should be available for pod deployment.
+        Nodes will not be directly accessible from the public/external network.
+        Nodes will be labeled in a manner conducive for an HA deployment.
+
+    Install 2 Infranodes:
+        Infranodes will reside in a public facing network and will provide access to all pods and services running on the OpenShift cluster.
+        a DNS host will direct all inquiries to *.cloudapps-GUID.oselab.opentlc.com to the infranodes in a round robin method.
+
+    Optional objective :
+        Configure the IDM authentication server (idm.example.com) to serve as an authentication provider for the OpenShift Cluster.
+
+     Success Criteria:
+        Infrastructure HA - The OpenShift environment will allow deployment of Pods and services after manually shutting down a master node host.
+        Application HA - Your applications (pods) will be available after shutting down 2 nodes, and an infranode at random.
